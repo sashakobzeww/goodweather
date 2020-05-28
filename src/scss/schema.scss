@@ -1,0 +1,99 @@
+/*
+   * 1. Палитра основных цветов
+   */
+$blue: #0207ff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$gray-100: #ececec;
+$gray-200: #a6aab0;
+$gray-600: #737373;
+
+/*
+   * 2. Базовая настройка шаблона
+   */
+$neutralColor: #fff;
+$primaryColor: #0C4DA2;
+$secondaryColor: #DED0A8;
+$bodyColor: #000;
+$bodyColorInverse: #000; // Проставляется тексту например при наведении, когда фон заливается другим цветом
+$bodyBackground: #ffffff;
+$bodyBackground-invert: #1b1d1f;
+$plainBackground: #F1F4F9; // Заливка блоков
+$plainBackgroundDarker: #d5e5ff;
+
+/*
+   * 3. Шрифты
+   *    изменяются только в режиме контруктора
+   *    на сайте использовать sass переменные, так как responsive font size не работает с css variables
+   */
+$fontSizeXS: 0.75rem; // 12px
+$fontSizeSM: 0.875rem; // 14px
+$fontSizeBASE: 1rem; // 16px
+$fontSizeMD: 1.125rem; // 18px
+$fontSizeLG: 1.25rem; // 20px
+$fontSizeXL: 1.5rem; // 24px
+$fontSize2XL: 2.25rem; // 36px
+$fontSize3XL: 3rem; // 48px
+
+
+/*
+   * 4. Текст
+   */
+$textOpacity: 0.6; // для светлого варианта текста
+$lineHeight: 1.5; // Базовый
+$lineHeightHeading: 1.1; // Для заголовков
+$textMuted-40: rgba(0, 0, 0, 0.3);
+$textMuted-60: #838f9d;
+$textMuted: $textMuted-60;
+
+/*
+   * 5. Сетка
+   */
+$page-margin-y: 4rem;
+// --container-width: #{$container-width};
+$container-spacer-x: 1rem;
+$grid-gap: 2rem;
+$grid-gap-sm: 1rem;
+
+/*
+   * 6. Границы и скругления
+   */
+$border-width: 1px;
+$border-radius: 8px;
+$border-color-dark: var(--text-muted-60);
+$border-color-light: rgba(0, 0, 0, 0.2);
+$border-color: var(--border-color-light);
+
+/*
+   * 7. Компоненты
+   */
+
+// 7.1 Карточки
+$card-spacer-y: 1.5rem;
+$card-spacer-x: 1.2rem;
+$card-bg: $bodyBackground; // Фон карточки
+$card-border-radius: 0px;
+
+// 7.3 Input
+$input-bg: #fff;
+$input-color: #000;
+$input-placeholder-color: #9AADC6;
+$input-border-radius: 3px;
+// $input-border-color: var(--border-color);
+// $input-border-width: var(--border-width);
+
+// 7.4 Buttons
+// $btn-color: var(--neutral-color);
+// $btn-border-radius: var(--border-radius);
+// $btn-padding-y: 1.1rem;
+// $btn-padding-x: 1.2rem;

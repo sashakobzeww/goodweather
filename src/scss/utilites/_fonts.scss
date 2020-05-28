@@ -1,0 +1,33 @@
+// font sizes
+.font-size-xs {
+  font-size: $fontSizeXS;
+}
+.font-size-sm {
+  font-size: $fontSizeSM;
+}
+.font-size-base {
+  font-size: $fontSizeBASE;
+}
+.font-size-md {
+  font-size: $fontSizeMD;
+}
+.font-size-lg {
+  font-size: $fontSizeLG;
+}
+.font-size-xl {
+  font-size: $fontSizeXL;
+}
+.font-size-2xl {
+  font-size: $fontSize2XL;
+}
+.font-size-3xl {
+  font-size: $fontSize3XL;
+}
+
+// font weight
+.font-weight-medium {
+  font-weight: 500;
+}
+.font-weight-bold {
+  font-weight: 700;
+}

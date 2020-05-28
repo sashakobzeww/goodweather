@@ -1,0 +1,7 @@
+$pfx: "footer";
+
+.#{$pfx} {
+  &__container {
+    background-color: #000;
+  }
+}

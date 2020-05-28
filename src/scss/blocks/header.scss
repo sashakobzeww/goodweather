@@ -1,0 +1,7 @@
+$pfx: "header";
+
+.#{$pfx} {
+  &__container {
+    background-color: red;
+  }
+}

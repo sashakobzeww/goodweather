@@ -1,0 +1,67 @@
+.no-underline {
+  text-decoration: none !important;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-body {
+  color: $bodyColor;
+}
+
+.text-inverse {
+  color: $bodyColorInverse;
+}
+
+.text-primary {
+  color: $primaryColor;
+}
+
+.text-secondary {
+  color: $secondaryColor;
+}
+
+.text-muted {
+  color: $textMuted;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.line-height-normal {
+  line-height: 1.5;
+}
+
+.text-spacing {
+  letter-spacing: 0.1em;
+}
+
+.font-weigth-bold {
+  font-weight: bold;
+}

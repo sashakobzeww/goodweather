@@ -1,0 +1,29 @@
+@import "./fonts.scss";
+@import "./_reset.scss";
+@import "./uikit.scss";
+@import "./base.scss";
+@import "./_type.scss";
+
+@import "./pugins/alerts.scss";
+@import "./pugins/swiper.scss";
+@import "./pugins/nouislider.scss";
+
+// functions
+@import "./functions/colors.scss";
+
+// components begine
+
+// home page
+
+// components end
+
+// elements begine
+@import "./elements/form-button.scss";
+@import "./elements/form-textarea.scss";
+@import "./elements/form-input.scss";
+@import "./elements/form-select.scss";
+@import "./elements/form-checkbox.scss";
+@import "./elements/ui-multiselect.scss";
+@import "./elements/ui-multirange.scss";
+
+// elements end

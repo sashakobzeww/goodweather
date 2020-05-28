@@ -1,0 +1,78 @@
+$pfx: "form-button";
+
+.#{$pfx} {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s,
+  border-color 0.3s;
+  color: $neutralColor;
+  border: 0;
+  span {
+    font-weight: bold;
+    color: $neutralColor;
+  }
+  svg {
+    margin-left: 1rem;
+    fill: currentColor
+  }
+
+  &-primary {
+    background-color: $primaryColor;
+    &:hover {
+      background-color: lighter($primaryColor, 2);
+    }
+  }
+  &-secondary {
+    background-color: $secondaryColor;
+  }
+  &-tertiary {
+    background-color: $bodyBackground;
+    span {
+      color: $bodyColorInverse;
+    }
+  }
+  &-tertiary-outline {
+    background-color: transparent;
+    border: solid 2px $bodyBackground;
+    span {
+      color: $bodyBackground;
+    }
+    svg {
+      fill: $bodyBackground;
+    }
+    &:hover {
+      background-color: $bodyBackground;
+      color: $bodyColorInverse;
+      span {
+        color: $bodyColorInverse;
+      }
+      svg {
+        fill: $bodyColorInverse;
+      }
+    }
+  }
+  /*
+    * size btn
+    */
+  &-sm {
+    height: 37px;
+    span {
+      font-size: 1rem;
+    }
+  }
+  &-base {
+    height: 52px;
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,29 @@
+$pfx: "form-input";
+
+.#{$pfx} {
+  label {
+    display: flex;
+    font-weight: 400;
+    margin-bottom: 12px;
+    line-height: 20px;
+    font-size: 1rem;
+    color: $input-placeholder-color;
+  }
+
+  input {
+    border: 0;
+    display: flex;
+    align-items: center;
+    background-color: $neutralColor;
+    border-radius: 3px;
+    padding: 0 1.25rem;
+    font-size: 1rem;
+    line-height: 1;
+    color: $input-color;
+    height: 52px;
+    width: 100%;
+    &::placeholder {
+      color: $input-placeholder-color;
+    }
+  }
+}

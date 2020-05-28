@@ -1,0 +1,11 @@
+@function lighter($color, $tone) { // TODO: Осветление цвета
+  $regulate: 16*$tone;
+
+  @return adjust-color($color, $red: $regulate, $green: $regulate, $blue: $regulate);
+}
+
+@function darker($color, $tone) { // TODO: Затемнение цвета
+  $regulate: -16*$tone;
+
+  @return adjust-color($color, $red: $regulate, $green: $regulate, $blue: $regulate);
+}

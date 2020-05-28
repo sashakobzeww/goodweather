@@ -1,0 +1,80 @@
+$pfx: "ui-multirange";
+
+.#{$pfx} {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 0.75rem;
+    font-size: $fontSizeBASE;
+    line-height: 20px;
+    font-weight: 400;
+    color: #9AADC6;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $input-border-radius;
+    background-color: $bodyBackground;
+    height: 48px;
+  }
+
+  input {
+    border: 0;
+    text-align: center;
+    font-size: $fontSizeMD;
+    color: $bodyColorInverse;
+    width: 50%;
+
+    &:first-child {
+      border-right: solid 1px $plainBackgroundDarker;
+    }
+
+    &:last-child {
+      border-left: solid 1px $plainBackgroundDarker;
+    }
+  }
+
+
+  .noUi-target {
+    margin-top: -3px;
+    background: transparent;
+    border: none;
+    height: 3px;
+  }
+
+  .noUi-connect {
+    background: $primaryColor;
+  }
+
+  .noUi-handle {
+    top: -10px;
+    left: calc(100% - 10px);
+    border: 0;
+    border-radius: 50%;
+    background: $primaryColor;
+    overflow: hidden;
+    box-shadow: none;
+    width: 20px;
+    height: 20px;
+
+    &:after {
+      display: none;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border-radius: 50%;
+      background: $neutralColor;
+      width: 6px;
+      height: 6px;
+    }
+  }
+}

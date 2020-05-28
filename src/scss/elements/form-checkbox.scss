@@ -1,0 +1,77 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.checkbox__input {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  appearance: none;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.checkbox__input:checked + .checkbox__toggle {
+  background-size: 70%;
+}
+
+.checkbox__toggle {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  position: relative;
+  margin-right: 10px;
+  background-size: 0;
+  border: solid 1px $primaryColor;
+  background-image: url("../img/svg/checked.svg");
+  transition: background-color 0.2s ease 0s;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.error_field .checkbox__toggle {
+  background-color: #d6082e;
+}
+
+@media (max-width: 767px) {
+  .checkbox__toggle {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.checkbox__content {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .checkbox__content {
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+.checkbox__text {
+  font-size: 13px;
+  a {
+    opacity: 0.8;
+    &:hover {
+      text-decoration: underline;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .checkbox__text {
+    font-size: 11px;
+  }
+}
+

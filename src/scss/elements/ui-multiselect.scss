@@ -1,0 +1,58 @@
+$pfx: "ui-multiselect";
+
+.#{$pfx} {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  span {
+    margin-bottom: 0.75rem;
+    font-size: $fontSizeBASE;
+    line-height: 20px;
+    font-weight: 400;
+    color: #9AADC6;
+  }
+  &__controls {
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    background-color: $bodyBackground;
+    border-radius: $input-border-radius;
+    label {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-right: 3px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover input ~ .checkmark {
+        background-color: $plainBackgroundDarker;
+      }
+      input {
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkmark {
+          background-color: $primaryColor;
+          color: $neutralColor;
+        }
+      }
+      .checkmark {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        margin-bottom: 0;
+        border-radius: 3px;
+        color: $bodyColor;
+        font-size: 20px;
+        height: 36px;
+        width: 36px;
+      }
+    }
+  }
+}
