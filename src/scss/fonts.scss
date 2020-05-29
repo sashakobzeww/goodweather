@@ -1,1 +1,10 @@
-// 
+// Museosanscyrl500
+@font-face {
+    font-family: 'Museosanscyrl500';
+    src: url('../fonts/MuseoSansCyrl/Museosanscyrl500.eot');
+    src: url('../fonts/MuseoSansCyrl/Museosanscyrl500.eot') format('embedded-opentype'),
+    url('../fonts/MuseoSansCyrl/Museosanscyrl500.woff2') format('woff2'),
+    url('../fonts/MuseoSansCyrl/Museosanscyrl500.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl/Museosanscyrl500.ttf') format('truetype'),
+    url('../fonts/MuseoSansCyrl/Museosanscyrl500.svg#Museosanscyrl500') format('svg');
+}
