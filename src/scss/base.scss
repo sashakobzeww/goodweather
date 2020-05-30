@@ -66,3 +66,237 @@ main {
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
+
+/*------------*/
+/*------------*/
+/*------------*/
+
+/*------------*/
+/*Общее*/
+/*------------*/
+
+p, a, h1, h2, h3, h4, h5, h6 {
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+}
+
+
+/*------------*/
+/*Заголовки*/
+/*------------*/
+
+// В модальном окне
+.title__1 {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 62px;
+    color: $_dark;
+}
+
+// В модальном окне
+.title__2 {
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 58px;
+    color: $neutralColor;
+}
+
+// Заголовок в шапке
+.title__3 {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 50px;
+    color: $neutralColor;
+}
+
+// Белый заголовок
+.title__4 {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 56px;
+    color: $neutralColor;
+}
+
+// Тёмный заголовок
+.title__5 {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 58px;
+    color: $_dark;
+}
+
+// Маленький тёмный заголовок:
+// - слайд 2-4 слайдеров
+// - карты
+// - секция Отделка
+// - другие ?
+.title__6 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: $_dark;
+}
+
+
+/*------------*/
+/*Тексты*/
+/*------------*/
+
+// В модальном окне
+.text__1 {
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 28px;
+    color: $_gray;
+    //text-align: center;
+}
+
+// Текст, который показывает шаг формы или номер слайда
+.text__2 {
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 56px;
+    color: $neutralColor;
+    opacity: 0.5;
+}
+
+// Справа от логотипа
+.text__3 {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    color: $neutralColor;
+    opacity: 0.5;
+}
+
+// В шапке два остальных текста
+.text__4 {
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 23px;
+    color: $neutralColor;
+}
+
+.infographics__big {
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 144px;
+    color: $_dark;
+}
+
+.infographics__small {
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 23px;
+    color: $_dark;
+}
+
+// Белый текст 1
+.text__5 {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 29px;
+    color: $neutralColor;
+}
+
+// Белый текст 2
+.text__6 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: $neutralColor;
+}
+
+.bubbleWhiteText {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 22px;
+    text-align: center;
+    color: $neutralColor;
+}
+
+// Маленький оранжевый текст
+.text__7 {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 27px;
+    color: $_orange;
+}
+
+// Текст слайда второго слайдера
+// Маленький тёмный текст
+.text__8 {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    color: $_gray;
+}
+
+// Текст слайда 3 и 4 слайдера, карты
+.text__9 {
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 30px;
+    color: $_gray;
+}
+
+// Подвал: текст справа от заголовка
+.text__10 {
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 27px;
+    color: $neutralColor;
+    opacity: 0.5;
+}
+
+
+/*------------*/
+/*Ссылки*/
+/*------------*/
+
+// Ссылка в шапке
+.link__1 {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 23px;
+    color: $neutralColor;
+}
+
+.menu-item {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 58px;
+    color: $neutralColor;
+
+    &__active {
+        opacity: 0.5;
+    }
+}
+
+// Документы текст
+.link__2 {
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 27px;
+    color: $_gray;
+
+    &--active {
+        color: $_orange;
+        // text decoration
+    }
+}
+
+// Ссылка телефона возле карты
+.link__3 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    color: $_dark;
+}
+
+
+/*------------*/
+/*Секция формы*/
+// + Вкладки
+// + Кнопки
+/*------------*/
