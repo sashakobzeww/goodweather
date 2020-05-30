@@ -75,7 +75,8 @@ main {
 /*Общее*/
 /*------------*/
 
-p, a, h1, h2, h3, h4, h5, h6 {
+p, a, h1, h2, h3, h4, h5, h6,
+button {
     font-family: Museo Sans Cyrl;
     font-style: normal;
 }
@@ -298,5 +299,75 @@ p, a, h1, h2, h3, h4, h5, h6 {
 /*------------*/
 /*Секция формы*/
 // + Вкладки
+// + Элементы управления слайдером
+/*------------*/
+
+
+/*------------*/
 // + Кнопки
 /*------------*/
+
+.btn {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+// Кнопка в модальном окне
+// В формах
+// Активная кнопка в планировке
+// В третьем слайдере
+// В первой вкладке
+// секция с прайсом (загрузка)
+.btn-orange-1 {
+    background: $_orange;
+    color: $neutralColor;
+
+    &--hover {
+        background: $_orange2;
+    }
+
+    &--inactive {
+        opacity: 0.3;
+    }
+}
+
+// В первой форме первая кнопка
+// Неактивная кнопка в планировке
+.btn-orange-2 {
+    border: 2px solid $_orange;
+    background-color: transparent;
+    color: $_dark;
+}
+
+// В модальном окне
+.btn-transparent {
+    border: 2px solid $neutralColor;
+    background-color: transparent;
+    color: $neutralColor;
+
+    &--hover {
+        opacity: 0.6;
+    }
+
+    &--inactive {
+        opacity: 0.2;
+    }
+}
+
+// На главном экране
+// Во вкладках
+.btn-white {
+    background: $neutralColor;
+    color: $_dark;
+
+    &--hover {
+        opacity: 0.6;
+    }
+
+    &--inactive {
+        opacity: 0.2;
+    }
+}
