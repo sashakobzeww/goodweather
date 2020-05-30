@@ -1,8 +1,11 @@
 .infographics {
+    background-color: #FDFDFD;
+    padding: 90px 0 110px;
+
     &__ul {
         width: 1300px;
         height: 383px;
-        margin: 90px auto 110px auto;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
     }
@@ -20,7 +23,6 @@
         background-position: center;
         background-repeat: no-repeat;
         position: absolute;
-        z-index: -1;
         &--1 {
             width: 182.5px;
             height: 179px;
@@ -54,7 +56,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: -1;
         &--1 {
             width: 44px;
             height: 58px;

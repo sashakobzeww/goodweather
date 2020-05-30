@@ -1,0 +1,70 @@
+.container {
+    width: 1592px;
+    max-width: 90% !important;
+    margin: 0 auto;
+}
+
+.title__h2 {
+    font-family: Museosanscyrl500;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 58px;
+    color: #413949;
+}
+
+.decoration {
+    padding-bottom: 166px;
+    background-color: #FDFDFD;
+
+    &__ul {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 50px;
+        margin-top: 75px;
+    }
+    &__li {
+
+    }
+    &__img {
+        max-width: 100%;
+        border-radius: 30px 30px 30px 0;
+    }
+    &__h3 {
+        font-family: Museosanscyrl500;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #413949;
+        margin: 40px 0 23px 0;
+    }
+    &__list {
+
+        &-li {
+            font-family: Museosanscyrl500;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 19px;
+            line-height: 30px;
+            color: #7C7781;
+            width: calc(100% - 35px);
+            margin-left: 35px;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                left: -35px;
+                top: 10px;
+                display: inline-block;
+                width: 8px;
+                height: 11px;
+                background-image: url("../img/petal.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
