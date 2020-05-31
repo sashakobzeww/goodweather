@@ -8,11 +8,17 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+
+        &--developer {
+            width: 100%;
+            height: 573px;
+        }
     }
 
     &__li {
         position: relative;
         flex: 1;
+
         &--3 {
             flex: 2;
         }
@@ -23,11 +29,13 @@
         background-position: center;
         background-repeat: no-repeat;
         position: absolute;
+
         &--1 {
             width: 182.5px;
             height: 179px;
             background-image: url("../img/infographics__bubble--1.svg");
         }
+
         &--2 {
             width: 131.5px;
             height: 109.5px;
@@ -35,11 +43,13 @@
             bottom: 0;
             right: 30px;
         }
+
         &--3 {
             width: 259px;
             height: 243px;
             background-image: url("../img/infographics__bubble--3.svg");
         }
+
         &--4 {
             width: 196px;
             height: 167.5px;
@@ -47,6 +57,31 @@
             bottom: 20px;
             left: -20px;
         }
+
+        &--5 {
+            width: 96px;
+            height: 94px;
+            background-image: url("../img/infographics__bubble--5.svg");
+            top: 140px;
+            right: 120px;
+        }
+
+        &--6 {
+            width: 233px;
+            height: 218px;
+            background-image: url("../img/infographics__bubble--6.svg");
+            bottom: 70px;
+            left: 0px;
+        }
+
+        &--7 {
+            width: 131px;
+            height: 130px;
+            background-image: url("../img/infographics__bubble--7.svg");
+            top: 150px;
+            left: 40px;
+        }
+
     }
 
     &__petal {
@@ -56,6 +91,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
         &--1 {
             width: 44px;
             height: 58px;
@@ -63,6 +99,7 @@
             right: 0;
             top: 103px;
         }
+
         &--3 {
             width: 70px;
             height: 92px;
@@ -70,6 +107,7 @@
             bottom: 44px;
             right: 194px;
         }
+
         &--4 {
             width: 34px;
             height: 45px;
@@ -77,22 +115,56 @@
             top: 91px;
             left: 6px;
         }
+
+        &--6 {
+            top: 100px;
+            left: 45px;
+            transform: rotate(58deg);
+            height: 67px;
+            width: 50px;
+        }
+
+        &--7 {
+            width: 34px;
+            height: 41px;
+            transform: rotate(-201deg);
+            top: 341px;
+            left: 56px;
+        }
     }
 
     &__texts {
         position: absolute;
         width: 100%;
+
         &--1 {
             top: 75px;
         }
+
         &--2 {
             bottom: 20px;
         }
+
         &--3 {
             top: 70px;
         }
+
         &--4 {
             bottom: 90px;
+            transform: translateX(30px);
+        }
+
+        &--5 {
+            top: 70px;
+            transform: translateX(30px);
+        }
+
+        &--6 {
+            bottom: 180px;
+        }
+
+        &--7 {
+            top: 100px;
             transform: translateX(30px);
         }
     }
@@ -115,5 +187,9 @@
         font-size: 19px;
         line-height: 23px;
         transform: translateY(-20px);
+    }
+
+    &--developer {
+        padding: 0;
     }
 }

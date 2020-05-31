@@ -1,0 +1,23 @@
+.developer {
+    display: flex;
+
+    &__left {
+        width: 30%;
+        background-image: url(../img/developer__left.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+    }
+
+    &__right {
+        width: 57%;
+    }
+
+    &__logo {
+        object-fit: cover;
+    }
+
+    &__h2 {
+        margin: 20px 0 35px;
+    }
+}
