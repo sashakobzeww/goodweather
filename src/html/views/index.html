@@ -2,6 +2,7 @@
 <%= _.template(require('./../includes/header.html').default)(data) %>
 
 <main>
+  <%= _.template(require('./../includes/price.html').default)() %>
   <%= _.template(require('./../includes/documents.html').default)() %>
   <%= _.template(require('./../includes/homeNeed.html').default)() %>
   <%= _.template(require('./../includes/decoration.html').default)() %>

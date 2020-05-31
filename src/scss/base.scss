@@ -348,6 +348,7 @@ button {
 .btn-orange-1 {
     background: $_orange;
     color: $neutralColor;
+    padding: 21px 33px 26px;
 
     &:hover {
         background: $_orange2;
@@ -355,6 +356,21 @@ button {
 
     &:disabled {
         opacity: 0.3;
+    }
+
+    &--download {
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 18px;
+            margin-right: 10px;
+            background-image: url(../img/download.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            transform: translateY(3px);
+        }
     }
 }
 

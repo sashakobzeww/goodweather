@@ -1,0 +1,27 @@
+.price {
+    display: flex;
+    margin: 260px auto 310px;
+
+    &__left, &__right {
+        width: 50%;
+        height: 100%;
+    }
+
+    &__left {
+    }
+
+    &__p {
+        margin: 21px 0 42px;
+    }
+
+    &__right {
+        height: 45vw;
+        position: absolute;
+        right: 0;
+        top: -260px;
+        background-image: url(../img/price__right.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+    }
+}
