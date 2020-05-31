@@ -30,4 +30,8 @@ $pfx: "footer";
     &__right {
         grid-gap: 10px;
     }
+
+    &__a {
+        transform: translateY(2px);
+    }
 }
