@@ -284,9 +284,9 @@ button {
     line-height: 27px;
     color: $_gray;
 
-    &--active {
+    &:hover {
         color: $_orange;
-        // text decoration
+        text-decoration: underline;
     }
 }
 
@@ -296,6 +296,26 @@ button {
     font-size: 30px;
     line-height: 36px;
     color: $_dark;
+}
+
+.download {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 27px;
+    color: $_orange;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 18px;
+        margin-right: 10px;
+        background-image: url(../img/download--orange.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transform: translateY(3px);
+    }
 }
 
 
