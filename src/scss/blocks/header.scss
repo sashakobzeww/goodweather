@@ -11,6 +11,7 @@ $pfx: "header";
     &__img {
         width: 130px;
         height: 70px;
+        object-fit: cover;
     }
 }
 
