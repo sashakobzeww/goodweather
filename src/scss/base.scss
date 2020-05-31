@@ -180,18 +180,22 @@ button {
     color: $neutralColor;
 }
 
-.infographics__big {
+.infographics__number, .infographics__text {
+    color: #413949;
+    text-align: center;
+}
+
+.infographics__number {
     font-weight: 600;
     font-size: 120px;
     line-height: 144px;
-    color: $_dark;
 }
 
-.infographics__small {
+.infographics__text {
     font-weight: normal;
     font-size: 19px;
     line-height: 23px;
-    color: $_dark;
+    transform: translateY(-20px);
 }
 
 // Белый текст 1
