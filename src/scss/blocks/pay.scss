@@ -1,0 +1,49 @@
+.pay {
+    margin-top: 130px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+
+    &__tab {
+
+        &-headers {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 56px;
+            margin: 0 calc( -56px / 2 );
+            padding: 0 calc( 56px / 2 );
+
+            &:before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                width: calc( ( 100% / 3 ) - 56px );
+                height: 4px;
+                background: #ffb52e;
+                border-radius: 10px;
+                left: calc( 56px / 2 );
+                bottom: 0;
+            }
+        }
+
+        &-header {
+            text-align: center;
+            font-weight: normal;
+            font-size: 19px;
+            line-height: 27px;
+            color: #7C7781;
+            cursor: pointer;
+            padding: 15px;
+
+            &--active {
+                font-weight: 600;
+                color: #413949;
+            }
+        }
+    }
+}
