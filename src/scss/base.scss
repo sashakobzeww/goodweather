@@ -456,7 +456,7 @@ button, label {
         grid-template-columns: auto 1fr;
         cursor: pointer;
 
-        &:before{
+        &:before {
             content: '';
             background-repeat: no-repeat;
             background-size: cover;
@@ -471,7 +471,8 @@ button, label {
 
     &__input {
         display: none;
-        &:checked  + label:before {
+
+        &:checked + label:before {
             background-image: url(../img/f-checkbox-input--checked.svg);
         }
     }
@@ -487,5 +488,118 @@ button, label {
     &-number {
         font-weight: bold;
         color: #413949;
+    }
+}
+
+// Поля ввода
+.f-field {
+
+    &__title {
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 20px;
+        color: #7C7781;
+        margin-bottom: 10px;
+    }
+
+    &__textarea, &__input {
+        width: 100%;
+        border: 1px solid #D7D7D7;
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 21px 27px;
+
+        &::placeholder {
+            font-weight: normal;
+            font-size: 19px;
+            line-height: 23px;
+            color: #B8B6BB;
+        }
+    }
+    &__textarea {
+        height: 150px;
+        resize: none;
+    }
+
+    &__input {
+    }
+
+    & + & {
+        margin-top: 23px;
+    }
+}
+
+// Персональные данные
+.personal-data {
+    margin: 32px 0 47px;
+
+    &__check {
+    }
+
+    &__label {
+        display: grid;
+        // gg
+        grid-gap: 12px;
+        grid-template-columns: auto 1fr;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            background-repeat: no-repeat;
+            // contain VS cover
+            background-size: contain;
+            background-position: center;
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            background-image: url(../img/f-checkbox-input--unchecked.svg);
+        }
+
+    }
+
+    &__input {
+        display: none;
+
+        &:checked + label:before {
+            background-image: url(../img/f-checkbox-input--checked.svg);
+        }
+    }
+
+    &__p, &__a {
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 20px;
+        color: #7C7781;
+
+    }
+
+    &__a {
+        text-decoration: underline;
+    }
+}
+
+
+// Телефон
+
+.tel {
+    &--dark {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+        color: #413949;
+    }
+
+    &--icon {
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-image: url(../img/tel--orange.svg);
+            margin-right: 13px;
+        }
     }
 }
