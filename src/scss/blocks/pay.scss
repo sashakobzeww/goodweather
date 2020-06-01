@@ -8,25 +8,25 @@
         margin-bottom: 80px;
     }
 
-    &__tab {
+    &__tabs {
 
         &-headers {
             position: relative;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 56px;
-            margin: 0 calc( -56px / 2 );
-            padding: 0 calc( 56px / 2 );
+            margin: 0 calc(-56px / 2);
+            padding: 0 calc(56px / 2);
 
             &:before {
                 content: "";
                 display: inline-block;
                 position: absolute;
-                width: calc( ( 100% / 3 ) - 56px );
+                width: calc((100% / 3) - 56px);
                 height: 4px;
                 background: #ffb52e;
                 border-radius: 10px;
-                left: calc( 56px / 2 );
+                left: calc(56px / 2);
                 bottom: 0;
             }
         }
@@ -46,4 +46,79 @@
             }
         }
     }
+
+    &__tab-list {
+
+    }
+
+    &__tab {
+        height: 750px;
+        display: grid;
+        grid-template-columns: 11fr 9fr;
+        grid-gap: 50px;
+        position: relative;
+
+        &-text {
+            position: absolute;
+
+            &-p {
+                width: 280px;
+                margin-top: 15px;
+            }
+        }
+
+        &-bubble {
+            width: 503px;
+            height: 489px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: url(../img/pay__tab-bubble--2.svg);
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+
+            &-p {
+                margin: 0 90px 30px 90px;
+            }
+
+        }
+
+        &-p {
+
+        }
+
+        &--2 {
+
+        }
+    }
+
+    &__left {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        &--2 {
+            background-image: url(../img/pay__left--2.png);
+        }
+
+        &--3 {
+            background-image: url(../img/pay__left--3.png);
+        }
+    }
+
+    &__right {
+        position: relative;
+
+        &--2 {
+
+        }
+    }
 }
+

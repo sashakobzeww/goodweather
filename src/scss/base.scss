@@ -249,12 +249,18 @@ button, label {
     color: $_gray;
 }
 
-// Текст слайда 3 и 4 слайдера, карты
+// Текст слайда 3 и 4 слайдера,
+// карты, на пузыре во втрой и третьей вкладке
 .text__9 {
     font-weight: normal;
     font-size: 19px;
     line-height: 30px;
     color: $_gray;
+
+    &--light {
+        text-align: center;
+        color: #ffffff;
+    }
 }
 
 // Подвал: текст справа от заголовка
