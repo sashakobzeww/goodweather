@@ -1,0 +1,56 @@
+.header, .infographics {
+    display: none !important;
+}
+
+.selection {
+    padding-top: 130px;
+
+    &__form {
+        margin-top: 60px;
+        padding: 80px 10% 100px;
+        background: #FFFFFF;
+        box-shadow: 0 20px 60px #F0F0F0;
+        border-radius: 46px;
+    }
+
+    &__step {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-gap: 48px;
+    }
+
+    &__left {
+    }
+
+    &__top {
+
+        &-p {
+            margin-top: 10px;
+            width: 70%;
+        }
+    }
+
+    &__content {
+    }
+
+    &__labels {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        margin: 37px 0 57px;
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 155px);
+        grid-gap: 30px;
+        margin-bottom: 35px;
+    }
+
+    &__right {
+        background-image: url(../img/selection__right--1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}

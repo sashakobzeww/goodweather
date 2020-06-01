@@ -1,70 +1,72 @@
 // App
 //
 * {
-  padding: 0;
-  margin: 0;
-  outline: none;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
 }
+
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
+
 body {
-  color: $neutralColor;
-  background-color: $bodyBackground;
-  font-family: "AvertaCY", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    color: $neutralColor;
+    background-color: $bodyBackground;
+    font-family: "AvertaCY", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji" !important;
-  overflow-x: hidden; // fix: Некоторые блоки могут выходить за пределы по горизонтале
-  color: $bodyColor;
-  font-weight: 400;
-  line-height: $lineHeight;
+    overflow-x: hidden; // fix: Некоторые блоки могут выходить за пределы по горизонтале
+    color: $bodyColor;
+    font-weight: 400;
+    line-height: $lineHeight;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1270px;
-  width: 100%;
-  @media (max-width: 1300px) {
-    padding: 0 1rem;
-  }
+    margin: 0 auto;
+    max-width: 1270px;
+    width: 100%;
+    @media (max-width: 1300px) {
+        padding: 0 1rem;
+    }
 }
 
 svg.inlineIcon {
-  fill: currentColor;
-  height: 1rem;
+    fill: currentColor;
+    height: 1rem;
 }
 
 main {
-  margin: 0 auto;
-  position: relative;
-  // max-width: 1920px;
-  width: 100%;
+    margin: 0 auto;
+    position: relative;
+    // max-width: 1920px;
+    width: 100%;
 }
 
 
 .error_field {
-  textarea,
-  input {
-    border: solid 1px #ec3e3f !important;
-  }
+    textarea,
+    input {
+        border: solid 1px #ec3e3f !important;
+    }
 }
 
 // mixins for fix styles fancybox
 @function max($numbers...) {
-  @return m#{a}x(#{$numbers});
+    @return m#{a}x(#{$numbers});
 }
 
 @function min($numbers...) {
-  @return m#{i}n(#{$numbers});
+    @return m#{i}n(#{$numbers});
 }
 
 /*------------*/
@@ -76,7 +78,7 @@ main {
 /*------------*/
 
 p, a, h1, h2, h3, h4, h5, h6,
-button {
+button, label {
     font-family: MuseoSansCyrl;
     font-style: normal;
 }
@@ -153,12 +155,20 @@ button {
 }
 
 // Текст, который показывает шаг формы или номер слайда
-.text__2 {
+.text__step {
     font-weight: normal;
     font-size: 19px;
     line-height: 56px;
-    color: $neutralColor;
     opacity: 0.5;
+    color: #7C7781;
+
+    &--light {
+        color: $neutralColor;
+    }
+
+    &--dark {
+        color: #7C7781;
+    }
 }
 
 // Справа от логотипа
@@ -331,13 +341,6 @@ button {
 
 
 /*------------*/
-/*Секция формы*/
-// + Вкладки
-// + Элементы управления слайдером
-/*------------*/
-
-
-/*------------*/
 // + Кнопки
 /*------------*/
 
@@ -348,6 +351,7 @@ button {
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
+    transition: 300ms;
 }
 
 // Кнопка в модальном окне
@@ -391,6 +395,12 @@ button {
     border: 2px solid $_orange;
     background-color: transparent;
     color: $_dark;
+
+    &:hover {
+        border: 2px solid $_orange;
+        background: $_orange;
+        color: $neutralColor;
+    }
 }
 
 // В модальном окне
@@ -421,5 +431,61 @@ button {
 
     &:disabled {
         color: rgba($_dark, 0.2);
+    }
+}
+
+
+/*------------*/
+/*Секция формы*/
+// + Вкладки
+// + Элементы управления слайдером
+/*------------*/
+
+/*------------*/
+// Формы
+/*------------*/
+
+.f-checkbox {
+    &__label {
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 23px;
+        color: #413949;
+        display: grid;
+        grid-gap: 28px;
+        grid-template-columns: auto 1fr;
+        cursor: pointer;
+
+        &:before{
+            content: '';
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            background-image: url(../img/f-checkbox-input--unchecked.svg);
+        }
+
+    }
+
+    &__input {
+        display: none;
+        &:checked  + label:before {
+            background-image: url(../img/f-checkbox-input--checked.svg);
+        }
+    }
+}
+
+
+.selection__count {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #7C7781;
+
+    &-number {
+        font-weight: bold;
+        color: #413949;
     }
 }
