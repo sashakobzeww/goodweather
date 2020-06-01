@@ -47,10 +47,6 @@
         }
     }
 
-    &__tab-list {
-
-    }
-
     &__tab {
         height: 750px;
         display: grid;
@@ -90,12 +86,8 @@
 
         }
 
-        &-p {
-
-        }
-
-        &--2 {
-
+        &--1 {
+            grid-template-columns: 3fr 3fr 4fr;
         }
     }
 
@@ -115,10 +107,82 @@
 
     &__right {
         position: relative;
+    }
 
-        &--2 {
+    &__payment {
+    }
 
+    &__banks {
+        margin-top: 60px;
+        display: grid;
+        grid-gap: 13px;
+    }
+
+    &__bank {
+        display: flex;
+        align-items: center;
+
+        &-a {
+            font-weight: normal;
+            font-size: 19px;
+            line-height: 30px;
+            color: #413949;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            &--spoiler {
+                font-weight: 600;
+                font-size: 19px;
+                line-height: 30px;
+                color: #FFB52E;
+            }
+
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 62px;
+                height: 62px;
+                background: #FFFFFF;
+                box-shadow: 0 20px 60px #F0F0F0;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 20px auto;
+                border-radius: 50%;
+                margin-right: 32px;
+            }
+
+            &--1 {
+                &:before {
+                    background-image: url(../img/pay__bank--1.svg);
+                }
+            }
+
+            &--2 {
+                &:before {
+                    background-image: url(../img/pay__bank--2.svg);
+                }
+            }
+
+            &--3 {
+                &:before {
+                    background-image: url(../img/pay__bank--3.svg);
+                }
+            }
+
+            &--4 {
+                &:before {
+                    background-image: url(../img/pay__bank--4.svg);
+                }
+            }
+
+            &--spoiler {
+                &:before {
+                    background-image: url(../img/pay__bank--spoiler.svg);
+                }
+            }
         }
     }
 }
+
 
