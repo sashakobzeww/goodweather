@@ -84,6 +84,11 @@
                 margin: 0 90px 30px 90px;
             }
 
+            &--1 {
+                top: 0;
+                bottom: auto;
+            }
+
         }
 
         &--1 {
@@ -183,6 +188,17 @@
             }
         }
     }
+
+    &__form {
+        display: grid;
+        grid-gap: 40px;
+        grid-template-rows: repeat(auto-fit, 110px);
+
+        &-btn {
+            margin: auto auto auto 0;
+        }
+    }
 }
+
 
 

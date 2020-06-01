@@ -532,6 +532,7 @@ button, label {
             color: #B8B6BB;
         }
     }
+
     &__textarea {
         height: 150px;
         resize: none;
@@ -542,6 +543,47 @@ button, label {
 
     & + & {
         margin-top: 23px;
+    }
+}
+
+// Диапазон
+.f-range {
+    position: relative;
+
+
+    &__text {
+        border: 1px solid #D3D3D3;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #413949;
+        padding: 20px 28px;
+        width: 100%;
+        margin-top: 7px;
+    }
+
+    &__range {
+        position: absolute;
+        width: calc( 100% - 10px );
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__unit {
+        position: absolute;
+    }
+
+    &:after {
+        content: attr(data-unit);
+        position: absolute;
+        right: 35px;
+        bottom: 24px;
+        font-size: 19px;
+        color: #7C7781;
+        pointer-events: none;
     }
 }
 
