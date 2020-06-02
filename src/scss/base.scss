@@ -252,11 +252,39 @@ button, label {
 
 // Текст слайда второго слайдера
 // Маленький тёмный текст
-.text__8 {
+.near__time {
     font-weight: normal;
     font-size: 17px;
     line-height: 30px;
     color: $_gray;
+
+    &--walk, &--car {
+        &:before {
+            content: '';
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
+        }
+    }
+
+    &--walk {
+        &:before {
+            transform: translateY(2px);
+            width: 7px;
+            height: 15px;
+            margin-right: 16px;
+            background-image: url(../img/near__time--walk.svg);
+        }
+    }
+
+    &--car {
+        &:before {
+            width: 18px;
+            height: 12px;
+            margin-right: 9px;
+            background-image: url(../img/near__time--car.svg);
+        }
+    }
 }
 
 // Текст слайда 3 и 4 слайдера,
@@ -566,7 +594,7 @@ button, label {
 
     &__range {
         position: absolute;
-        width: calc( 100% - 10px );
+        width: calc(100% - 10px);
         bottom: -8px;
         left: 50%;
         transform: translateX(-50%);
@@ -659,5 +687,23 @@ button, label {
             background-image: url(../img/tel--orange.svg);
             margin-right: 13px;
         }
+    }
+}
+
+.look-map {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 27px;
+    color: #FFB52E;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../img/geo.svg);
+        margin-right: 10px;
     }
 }
