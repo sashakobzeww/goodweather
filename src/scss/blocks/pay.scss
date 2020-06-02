@@ -17,17 +17,30 @@
             grid-gap: 56px;
             margin: 0 calc(-56px / 2);
             padding: 0 calc(56px / 2);
+        }
 
-            &:before {
-                content: "";
-                display: inline-block;
-                position: absolute;
-                width: calc((100% / 3) - 56px);
-                height: 4px;
-                background: #ffb52e;
-                border-radius: 10px;
+        &-border {
+            display: inline-block;
+            position: absolute;
+            width: calc((100% / 3) - 56px);
+            height: 4px;
+            background: #ffb52e;
+            border-radius: 10px;
+            bottom: 0;
+            transition: 300ms;
+
+            &--1 {
                 left: calc(56px / 2);
-                bottom: 0;
+            }
+
+            &--2 {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &--3 {
+                transform: translateX(-100%);
+                left: calc(100% - 28px);
             }
         }
 
