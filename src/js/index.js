@@ -9,6 +9,7 @@ import 'core-js/features/string/pad-end';
 import 'core-js/features/global-this';
 
 import "./modules/validate";
+import "./modules/sliders";
 
 import './includes/header';
 import './includes/footer';
