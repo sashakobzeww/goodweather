@@ -61,11 +61,22 @@
     }
 
     &__tab {
-        height: 750px;
-        display: grid;
         grid-template-columns: 11fr 9fr;
         grid-gap: 50px;
-        position: relative;
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+
+        &--active {
+            visibility: visible;
+            top: 0;
+            display: grid;
+            opacity: 1;
+            transition: 600ms;
+        }
 
         &-text {
             position: absolute;
@@ -106,6 +117,11 @@
 
         &--1 {
             grid-template-columns: 3fr 3fr 4fr;
+        }
+
+        &-list {
+            height: 750px;
+            position: relative;
         }
     }
 
