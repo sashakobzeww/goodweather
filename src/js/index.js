@@ -10,6 +10,7 @@ import 'core-js/features/global-this';
 
 import "./modules/validate";
 import "./modules/sliders";
+import "./modules/modals";
 
 import './includes/header';
 import './includes/footer';
