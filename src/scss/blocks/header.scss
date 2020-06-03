@@ -47,6 +47,31 @@ $pfx: "header";
             transform: translate(0, 2px);
         }
     }
+    &__tel {
+        transform: translateX(50vw);
+        transition: 500ms;
+
+        &--active {
+            transition: 500ms;
+            transform: none;
+        }
+    }
+    &__close {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        margin-left: 24px;
+        transition: 500ms;
+
+        &--active {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            opacity: 1;
+            transition: 500ms;
+            margin-left: 0;
+        }
+    }
     &__menu-button {
         cursor: pointer;
         background-color: transparent;
@@ -79,6 +104,7 @@ $pfx: "header";
         width: 50%;
         padding-left: 350px;
         position: relative;
+        overflow: hidden;
 
         &:before, &:after {
             content: '';
@@ -97,18 +123,30 @@ $pfx: "header";
             bottom: -20px;
         }
 
-        &-wrapper > * {
-            z-index: 1;
+        &-wrapper {
+            transform: translateX(-50vw);
+            transition: 500ms;
+
+            &--active {
+                transition: 500ms;
+                transform: none;
+            }
+
+            & > * {
+                z-index: 1;
+            }
         }
+
 
         &-p {
             margin: 20px 0 50px 0;
         }
     }
     &__center {
-        width: clamp(200px, 35vw, 553px);
-        height: clamp(200px, 35vw, 553px);
+        width: 0;
+        height: 0;
         object-fit: contain;
+        object-position: center;
         position: absolute;
         top: 0;
         right: 0;
@@ -117,5 +155,49 @@ $pfx: "header";
         margin: auto;
         border-radius: 50%;
         background-image: url(../img/header__center.jpg);
+        transition: 500ms;
+        opacity: 0;
+
+        &--active {
+            width: clamp(200px, 35vw, 553px);
+            height: clamp(200px, 35vw, 553px);
+            transition: 500ms;
+            opacity: 1;
+        }
+    }
+
+    &-nav {
+        position: absolute;
+        top: 50%;
+        right: -50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+        transition: 500ms;
+
+        &__a {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 58px;
+            color: $neutralColor;
+            margin-left: var(--i);
+            transition: 500ms;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        &--active {
+            right: 25%;
+            transition: 500ms;
+
+            & > .header-nav__a {
+                margin-left: 0;
+                transition: 500ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
     }
 }
