@@ -441,13 +441,20 @@ button, label {
     border: 2px solid $neutralColor;
     background-color: transparent;
     color: $neutralColor;
+    padding: 22px 47px;
 
     &:hover {
-        opacity: 0.6;
+        border: 2px solid transparent;
+        background-color: $neutralColor;
+        color: #413949;
     }
 
     &:disabled {
         opacity: 0.2;
+    }
+
+    & + .btn {
+        margin-left: 10px;
     }
 }
 
@@ -500,13 +507,25 @@ button, label {
             background-image: url(../img/f-checkbox-input--unchecked.svg);
         }
 
+        &--light {
+            color: $neutralColor;
+
+            &:before {
+                background-image: url(../img/f-checkbox-input--unchecked-light.svg);
+            }
+        }
+
     }
 
     &__input {
         display: none;
 
-        &:checked + label:before {
+        &:checked + .f-checkbox__label:before {
             background-image: url(../img/f-checkbox-input--checked.svg);
+        }
+
+        &:checked + .f-checkbox__label--light:before {
+            background-image: url(../img/f-checkbox-input--checked-light.svg);
         }
     }
 }

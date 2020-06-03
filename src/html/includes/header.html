@@ -43,7 +43,7 @@
 
             <h1 class="title__3">Дом на радость!</h1>
             <p class="header__right-p text__5">Квартиры от 42 000 ₽/м²</p>
-            <button class="btn btn-white">Подобрать квартиру</button>
+            <button class="btn btn-white" id="openQuiz">Подобрать квартиру</button>
 
         </div>
     </div>
@@ -58,5 +58,34 @@
         <a href="#" class="header-nav__a" style="--i: 320px">Пункт меню 5</a>
         <a href="#" class="header-nav__a" style="--i: 400px">Пункт меню 6</a>
     </nav>
+
+    <form class="header-quiz">
+        <div class="header-quiz__step">
+            <div class="header-quiz__top">
+                <p class="text__step text__step--light">01 / 04</p>
+                <h3 class="title__2">Сколько комнат Вам нужно?</h3>
+            </div>
+            <div class="header-quiz__content">
+                <ul class="header-quiz__labels">
+                    <li class="header-quiz__li">
+                        <input type="checkbox" name="header-quiz" id="header-quiz__1" class="f-checkbox__input">
+                        <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__1">Студии</label>
+                    </li>
+                    <li class="header-quiz__li">
+                        <input type="checkbox" name="header-quiz" id="header-quiz__2" class="f-checkbox__input">
+                        <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__2">1-комнатные квартиры</label>
+                    </li>
+                    <li class="header-quiz__li">
+                        <input type="checkbox" name="header-quiz" id="header-quiz__3" class="f-checkbox__input">
+                        <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__3">2-комнатные квартиры</label>
+                    </li>
+                </ul>
+                <div class="header-quiz__buttons">
+                    <button class="btn btn-transparent">Назад</button>
+                    <button class="btn btn-white">Дальше</button>
+                </div>
+            </div>
+        </div>
+    </form>
 
 </header>
