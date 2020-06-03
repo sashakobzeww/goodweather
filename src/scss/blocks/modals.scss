@@ -36,6 +36,9 @@
         background-color: #ffffff;
         clip-path: ellipse(100% 120% at 0 50%);
         position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
     }
 
     &__close {
@@ -48,4 +51,50 @@
 
 .modal-request {
 
+    &__form {
+        width: 50%;
+        min-width: 600px;
+        margin-left: calc( ( 100vw - 1592px ) / 2 );
+        transform: translateX(-100vw);
+        transition: 500ms;
+        @media (max-width: 1800px) {
+            margin-left: 10%;
+        }
+
+        &--active {
+            transform: translateX(0);
+            transition: 500ms;
+        }
+    }
+
+    &__fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 22px;
+        margin-top: 50px;
+
+        & > * {
+            margin: 0 !important;
+        }
+    }
+
+    &-thanks {
+        width: 300px;
+        display: grid;
+        grid-row-gap: 40px;
+        position: absolute;
+        left: calc( ( 100vw - 1592px ) / 2 );
+        transform: translateX(100vw);
+        transition: 500ms;
+
+        @media (max-width: 1800px) {
+            left: 10%;
+        }
+
+        &--active {
+            transform: translateX(0);
+            transition: 500ms;
+        }
+
+    }
 }
