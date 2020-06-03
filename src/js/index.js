@@ -14,5 +14,6 @@ import "./modules/sliders";
 import './includes/header';
 import './includes/footer';
 import './includes/pay';
+import './includes/report';
 
 // import './blocks/page';

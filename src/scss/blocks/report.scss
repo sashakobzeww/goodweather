@@ -1,4 +1,4 @@
-.pay {
+.report {
     margin-top: 130px;
 
     &__header {
@@ -13,7 +13,7 @@
         &-headers {
             position: relative;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-gap: 56px;
             padding: 0 calc(56px / 2);
             margin: 0 calc(-56px / 2);
@@ -23,7 +23,7 @@
         &-border {
             display: inline-block;
             position: absolute;
-            width: calc((100% / 3) - 56px);
+            width: calc((100% / 2) - 56px);
             height: 4px;
             background: #ffb52e;
             border-radius: 10px;
@@ -35,11 +35,6 @@
             }
 
             &--2 {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            &--3 {
                 transform: translateX(-100%);
                 left: calc(100% - 28px);
             }
@@ -62,8 +57,6 @@
     }
 
     &__tab {
-        grid-template-columns: 11fr 9fr;
-        grid-gap: 50px;
         visibility: hidden;
         position: absolute;
         right: 0;
@@ -114,10 +107,6 @@
                 bottom: auto;
             }
 
-        }
-
-        &--1 {
-            grid-template-columns: 3fr 3fr 4fr;
         }
 
         &-list {
