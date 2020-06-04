@@ -12,17 +12,22 @@ for (let i = 0; i < tabsHeadersLiter.length; i++) {
     tabsHeadersLiter[i].onclick = () => {
         for (let i = 0; i < tabs.length; i++)  {
             tabs[i].classList.remove('plan__tab--active-liter')
+            if (tabsHeadersLiter[i] !== undefined) {
+                tabsHeadersLiter[i].classList.remove('plans__tabs-header--active')
+            }
         }
 
         if (i === 0) {
-            for (let i = 0; i < tabsLiter1.length; i++) {
-                tabsLiter1[i].classList.add('plan__tab--active-liter')
+            for (let j = 0; j < tabsLiter1.length; j++) {
+                tabsLiter1[j].classList.add('plan__tab--active-liter')
+                tabsHeadersLiter[i].classList.add('plans__tabs-header--active')
             }
         }
 
         if (i === 1) {
-            for (let i = 0; i < tabsLiter2.length; i++) {
-                tabsLiter2[i].classList.add('plan__tab--active-liter')
+            for (let j = 0; j < tabsLiter2.length; j++) {
+                tabsLiter2[j].classList.add('plan__tab--active-liter')
+                tabsHeadersLiter[i].classList.add('plans__tabs-header--active')
             }
         }
 
@@ -34,23 +39,29 @@ for (let i = 0; i < tabsHeadersPorch.length; i++) {
     tabsHeadersPorch[i].onclick = () => {
         for (let i = 0; i < tabs.length; i++)  {
             tabs[i].classList.remove('plan__tab--active-porch')
+            if (tabsHeadersPorch[i] !== undefined) {
+                tabsHeadersPorch[i].classList.remove('plans__tabs-header--active')
+            }
         }
 
         if (i === 0) {
-            for (let i = 0; i < tabsPorch1.length; i++) {
-                tabsPorch1[i].classList.add('plan__tab--active-porch')
+            for (let j = 0; j < tabsPorch1.length; j++) {
+                tabsPorch1[j].classList.add('plan__tab--active-porch')
+                tabsHeadersPorch[i].classList.add('plans__tabs-header--active')
             }
         }
 
         if (i === 1) {
-            for (let i = 0; i < tabsPorch2.length; i++) {
-                tabsPorch2[i].classList.add('plan__tab--active-porch')
+            for (let j = 0; j < tabsPorch2.length; j++) {
+                tabsPorch2[j].classList.add('plan__tab--active-porch')
+                tabsHeadersPorch[i].classList.add('plans__tabs-header--active')
             }
         }
 
         if (i === 2) {
-            for (let i = 0; i < tabsPorch3.length; i++) {
-                tabsPorch3[i].classList.add('plan__tab--active-porch')
+            for (let j = 0; j < tabsPorch3.length; j++) {
+                tabsPorch3[j].classList.add('plan__tab--active-porch')
+                tabsHeadersPorch[i].classList.add('plans__tabs-header--active')
             }
         }
 

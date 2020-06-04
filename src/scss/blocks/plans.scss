@@ -7,9 +7,15 @@
 
     &__header {
         display: grid;
-        grid-template-columns: 600px 1fr;
+        grid-template-rows: auto auto;
         grid-gap: 50px;
         margin-bottom: 80px;
+
+        &-bottom {
+            display: grid;
+            grid-template-columns: 500px 1fr 1fr;
+            grid-gap: 50px;
+        }
     }
 
     &__tabs {
@@ -18,10 +24,12 @@
             position: relative;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 56px;
-            padding: 0 calc(56px / 2);
-            margin: 0 calc(-56px / 2);
-            margin-right: auto;
+            grid-gap: 10px;
+            margin: 0 auto;
+
+            &--porch {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         &-border {
@@ -45,17 +53,23 @@
         }
 
         &-header {
-            text-align: center;
-            font-weight: normal;
+            font-weight: 600;
             font-size: 19px;
             line-height: 27px;
-            color: #7C7781;
+            border-radius: 10px;
             cursor: pointer;
-            padding: 15px;
+            padding: 15px 30px;
+            transition: 300ms;
+            color: #413949;
+            box-shadow: 0 20px 60px #F0F0F0;
+            background: #FFFFFF;
+            text-align: center;
+            margin: auto;
 
             &--active {
-                font-weight: 600;
-                color: #413949;
+                color: #FFFFFF;
+                background: #FFB52E;
+                transition: 300ms;
             }
         }
     }
