@@ -35,3 +35,32 @@ function modalClose() {
         modalRequestThanks.classList.remove('modal-request-thanks--active');
     }, 500)
 }
+
+/*---------*/
+let modalPlan = document.querySelector(".modal-plan");
+let modalPlanBackground = document.querySelector('.modal-plan .modal__background');
+let modalPlanCloseIco = document.querySelector('.modal-plan .modal__close');
+let buttonsModalPlan = document.querySelectorAll(".plan__tab--active-liter.plan__tab--active-porch path");
+let modalPlanBack = document.querySelector('.modal-plan__back');
+
+modalPlanBack.onclick = () => {
+    modalPlanClose();
+};
+
+modalPlanCloseIco.onclick = () => {
+    modalPlanClose();
+};
+
+modalPlanBackground.onclick = () => {
+    modalPlanClose();
+};
+
+for (let i = 0; i < buttonsModalPlan.length; i++) {
+    buttonsModalPlan[i].onclick = () => {
+        modalPlan.classList.add('modal--active');
+    };
+}
+
+function modalPlanClose() {
+    modalPlan.classList.remove('modal--active');
+}
