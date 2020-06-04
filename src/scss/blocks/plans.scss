@@ -1,0 +1,83 @@
+.header {
+    display: none !important;
+}
+
+.plans {
+    margin-top: 130px;
+
+    &__header {
+        display: grid;
+        grid-template-columns: 600px 1fr;
+        grid-gap: 50px;
+        margin-bottom: 80px;
+    }
+
+    &__tabs {
+
+        &-headers {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 56px;
+            padding: 0 calc(56px / 2);
+            margin: 0 calc(-56px / 2);
+            margin-right: auto;
+        }
+
+        &-border {
+            display: inline-block;
+            position: absolute;
+            width: calc((100% / 2) - 56px);
+            height: 4px;
+            background: #ffb52e;
+            border-radius: 10px;
+            bottom: 0;
+            transition: 300ms;
+
+            &--1 {
+                left: calc(56px / 2);
+            }
+
+            &--2 {
+                transform: translateX(-100%);
+                left: calc(100% - 28px);
+            }
+        }
+
+        &-header {
+            text-align: center;
+            font-weight: normal;
+            font-size: 19px;
+            line-height: 27px;
+            color: #7C7781;
+            cursor: pointer;
+            padding: 15px;
+
+            &--active {
+                font-weight: 600;
+                color: #413949;
+            }
+        }
+    }
+
+    &__tab {
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+
+        &-list {
+            position: relative;
+        }
+    }
+}
+
+.plan__tab--active-liter.plan__tab--active-porch {
+    visibility: visible;
+    top: 0;
+    display: grid;
+    opacity: 1;
+    transition: 600ms;
+}

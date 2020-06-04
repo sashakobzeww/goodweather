@@ -16,5 +16,6 @@ import './includes/header';
 import './includes/footer';
 import './includes/pay';
 import './includes/report';
+import './includes/plans';
 
 // import './blocks/page';
