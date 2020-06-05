@@ -727,3 +727,36 @@ button, label {
 .overflow-hidden {
     overflow: hidden !important;
 }
+
+.spot {
+    position: absolute;
+
+    &--good {
+        bottom: -20px;
+    }
+
+    &--selection {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &--homeNeed-1 {
+        left: 0;
+        top: 0;
+        transform: translateY(-60%);
+    }
+
+    &--homeNeed-2 {
+        max-width: 30vw;
+        right: 0;
+        top: 0;
+    }
+
+    &--developer {
+        left: 0;
+        top: -10%;
+        z-index: -1;
+        height: 120%;
+    }
+}
