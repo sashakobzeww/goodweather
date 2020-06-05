@@ -166,13 +166,16 @@ $pfx: "header";
         margin: auto;
         border-radius: 50%;
         background-image: url(../img/header__center.jpg);
-        transition: 500ms;
+        transition: 600ms;
         opacity: 0;
+        transform: rotate(360deg);
 
         &--active {
+            transform: rotate(0);
+            transition: 600ms;
             width: clamp(200px, 35vw, 553px);
             height: clamp(200px, 35vw, 553px);
-            transition: 500ms;
+            //transition: 500ms;
             opacity: 1;
         }
     }
