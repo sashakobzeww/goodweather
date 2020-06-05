@@ -1,16 +1,24 @@
 .developer {
-    display: flex;
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+    }
 
     &__left {
         width: 30%;
-        background-image: url(../img/developer__left.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: left;
     }
 
     &__right {
         width: 57%;
+
+        & > * {
+            z-index: 1;
+        }
+
+        & .infographics {
+            background-color: transparent;
+        }
     }
 
     &__logo {

@@ -56,9 +56,16 @@
 }
 
 .good {
-    padding: 160px 0;
-    background: #61BDB5;
-    clip-path: ellipse(115% 50% at 50% 50%);
+    position: relative;
+    clip-path: ellipse(115% 52%);
+
+    &__wrapper {
+        padding: 160px 0;
+        background: #61BDB5;
+        clip-path: ellipse(115% 50% at 50% 50%);
+        position: relative;
+        z-index: 1;
+    }
 
     &__header {
         display: grid;
@@ -73,6 +80,12 @@
             height: 65%;
             margin-bottom: 20px;
         }
+    }
+
+    &__line {
+        position: absolute;
+        right: 10%;
+        top: 0;
     }
 }
 

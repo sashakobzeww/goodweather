@@ -1,5 +1,11 @@
 .selection {
     padding-top: 130px;
+    position: relative;
+
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+    }
 
     &__form {
         margin-top: 60px;
