@@ -730,6 +730,10 @@ button, label {
 
 .spot {
     position: absolute;
+    pointer-events: none;
+    transform: scale(0);
+    opacity: 0;
+    transition: 300ms;
 
     &--good {
         bottom: -20px;
