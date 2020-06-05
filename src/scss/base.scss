@@ -502,7 +502,7 @@ button, label {
         &:before {
             content: '';
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             width: 22px;
             height: 22px;
@@ -722,4 +722,8 @@ button, label {
         background-image: url(../img/geo.svg);
         margin-right: 10px;
     }
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
 }

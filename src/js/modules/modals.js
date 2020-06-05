@@ -26,9 +26,11 @@ modalBackground.onclick = () => {
 
 buttonModalRequest.onclick = (e) => {
     modalRequest.classList.add('modal--active');
+    document.body.classList.add('overflow-hidden')
 };
 
 function modalClose() {
+    document.body.classList.remove('overflow-hidden')
     modalRequest.classList.remove('modal--active');
     setTimeout(function () {
         modalRequestForm.classList.add('modal-request__form--active');
@@ -58,10 +60,12 @@ modalPlanBackground.onclick = () => {
 for (let i = 0; i < buttonsModalPlan.length; i++) {
     buttonsModalPlan[i].onclick = () => {
         modalPlan.classList.add('modal--active');
+        document.body.classList.add('overflow-hidden')
     };
 }
 
 function modalPlanClose() {
+    document.body.classList.remove('overflow-hidden')
     modalPlan.classList.remove('modal--active');
 }
 
@@ -87,9 +91,11 @@ modalThanksCloseBtn.onclick = () => {
 for (let i = 0; i < buttonsModalThanks.length; i++) {
     buttonsModalThanks[i].onclick = () => {
         modalThanks.classList.add('modal--active');
+        document.body.classList.add('overflow-hidden')
     };
 }
 
 function modalThanksClose() {
+    document.body.classList.remove('overflow-hidden')
     modalThanks.classList.remove('modal--active');
 }

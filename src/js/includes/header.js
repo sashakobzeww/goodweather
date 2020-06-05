@@ -16,6 +16,7 @@ menuButton.onclick = () => {
     headerRight.classList.remove("header__right-wrapper--active");
     headerTel.classList.remove("header__tel--active");
     headerQuiz.classList.remove("header-quiz--active");
+    document.body.classList.remove('overflow-hidden')
 };
 
 headerClose.onclick = () => {
@@ -25,6 +26,7 @@ headerClose.onclick = () => {
     headerRight.classList.add("header__right-wrapper--active");
     headerTel.classList.add("header__tel--active");
     headerQuiz.classList.remove("header-quiz--active");
+    document.body.classList.remove('overflow-hidden')
 };
 
 openQuiz.onclick = () => {
@@ -33,4 +35,5 @@ openQuiz.onclick = () => {
     headerRight.classList.remove("header__right-wrapper--active");
     headerTel.classList.remove("header__tel--active");
     headerQuiz.classList.add("header-quiz--active");
+    document.body.classList.add('overflow-hidden')
 };
