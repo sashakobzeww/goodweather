@@ -17,12 +17,36 @@
 
     &__right {
         height: 45vw;
+        width: 45%;
         position: absolute;
         right: 0;
-        top: -260px;
-        background-image: url(../img/price__right.png);
-        background-repeat: no-repeat;
-        background-position: right;
-        background-size: contain;
+        top: -340px;
+    }
+
+    &__img, &__spot--over, &__spot--under, &__line {
+        position: absolute;
+        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation-delay: calc( var(--animation-delay) * 0.6s + 1s );
+    }
+
+    &__img {
+        z-index: 3;
+        left: 10%;
+        width: calc( 100% + 15vw );
+    }
+    &__spot--over {
+        z-index: 4;
+        bottom: -30px;
+        right: 0;
+    }
+    &__spot--under {
+        z-index: 1;
+        top: 6vw;
+        left: -4vw;
+    }
+    &__line {
+        z-index: 2;
+        bottom: 0;
+        left: -10vw;
     }
 }
