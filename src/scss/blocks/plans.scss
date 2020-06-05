@@ -1,9 +1,7 @@
-.header {
-    display: none !important;
-}
-
 .plans {
-    margin-top: 130px;
+    padding: 130px 0 180px;
+    background: #F9FAFA;
+    clip-path: ellipse(115% 50% at 50% 50%);
 
     &__header {
         display: grid;

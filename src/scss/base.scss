@@ -18,7 +18,7 @@ body {
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji" !important;
     overflow-x: hidden; // fix: Некоторые блоки могут выходить за пределы по горизонтале
-    color: $bodyColor;
+    background-color: #fdfdfd;
     font-weight: 400;
     line-height: $lineHeight;
 }
