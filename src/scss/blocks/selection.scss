@@ -13,12 +13,37 @@
         background: #FFFFFF;
         box-shadow: 0 20px 60px #F0F0F0;
         border-radius: 46px;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: auto auto;
+        grid-gap: 48px;
+        grid-template-areas:
+            's__step s__right'
+            's__bottom s__right'
+    ;
+
     }
 
     &__step {
+        grid-area: s__step;
         display: grid;
-        grid-template-columns: 3fr 2fr;
-        grid-gap: 48px;
+        grid-template-rows: auto auto;
+        top: 0;
+        visibility: hidden;
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        transition: 300ms;
+        transform: translateY(-50px);
+
+        &--active {
+            visibility: visible;
+            opacity: 1;
+            position: relative;
+            pointer-events: auto;
+            transition: 300ms;
+            transform: translateY(0);
+        }
     }
 
     &__left {
@@ -50,9 +75,15 @@
     }
 
     &__right {
+        grid-area: s__right;
         background-image: url(../img/selection__right--1.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
     }
+
+    &__bottom {
+        grid-area: s__bottom;
+    }
+
 }
