@@ -1,7 +1,39 @@
-.scale-in-center {
+.scale-in-center-transform {
     transform: scale(1);
     opacity: 1;
     transition: 300ms;
+}
+
+.infographics {
+
+    &.animation {
+
+        .infographics__li--1,
+        .infographics__li--2,
+        .infographics__li--3,
+        .infographics__li--4 {
+            animation: scale-in-center $_animation;
+        }
+        .infographics__petal--1 {
+            animation: scale-in-center-petal--1 $_animation;
+        }
+        .infographics__petal--3 {
+            animation: scale-in-center-petal--3 $_animation;
+        }
+        .infographics__petal--4 {
+            animation: scale-in-center-petal--4 $_animation;
+        }
+
+        .infographics__li--1,
+        .infographics__li--2,
+        .infographics__li--3,
+        .infographics__li--4,
+        .infographics__petal--1,
+        .infographics__petal--3,
+        .infographics__petal--4 {
+            animation-delay: $_animationDelay;
+        }
+    }
 }
 
 @keyframes fade-in-bottom {

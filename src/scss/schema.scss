@@ -28,6 +28,7 @@ $_blueLight: #A4D2CC;
 $_blue: #61BDB5;
 $_blueDark: #79ADA0;
 $_animationDelay: calc( var(--animationOrder) * 0.6s + 1s );
+$_animation: 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
 /*
    * 2. Базовая настройка шаблона
