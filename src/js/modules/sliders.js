@@ -2,7 +2,6 @@ import Swiper from 'swiper';
 
 var slider1 = new Swiper('.swiper-container--1', {
     direction: 'horizontal',
-    loop: true,
     slidesPerView: 3,
     spaceBetween: 40,
     pagination: {
@@ -17,7 +16,6 @@ var slider1 = new Swiper('.swiper-container--1', {
 
 var slider2 = new Swiper('.swiper-container--2', {
     direction: 'horizontal',
-    loop: true,
     slidesPerView: 4,
     spaceBetween: 40,
     navigation: {
@@ -28,7 +26,6 @@ var slider2 = new Swiper('.swiper-container--2', {
 
 var slider3 = new Swiper('.swiper-container--3', {
     direction: 'horizontal',
-    loop: true,
     slidesPerView: 3,
     spaceBetween: 40,
     pagination: {
@@ -43,7 +40,6 @@ var slider3 = new Swiper('.swiper-container--3', {
 
 var slider41 = new Swiper('.swiper-container--4-1', {
     direction: 'horizontal',
-    loop: true,
     slidesPerView: 3,
     spaceBetween: 40,
     pagination: {
@@ -58,7 +54,6 @@ var slider41 = new Swiper('.swiper-container--4-1', {
 
 var slider42 = new Swiper('.swiper-container--4-2', {
     direction: 'horizontal',
-    loop: true,
     slidesPerView: 3,
     spaceBetween: 40,
     pagination: {

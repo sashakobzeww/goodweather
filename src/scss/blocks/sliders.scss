@@ -37,6 +37,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transform: translateX(calc( -5vw / 2 ));
+        @media (max-width: 1800px) {
+            transform: translateX(calc( -5vw / 2 ));
+        }
 
         &-bullet {
             width: 7px;
@@ -88,6 +92,40 @@
         top: 0;
         pointer-events: none;
     }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 30%;
+        border-radius: 50%;
+        width: 68px;
+        height: 68px;
+        background: #FFFFFF;
+
+        &:after {
+            transform: scale(0.4);
+            color: #43958D;
+            transition: 300ms;
+        }
+    }
+
+    .swiper-button-disabled {
+        background: #FFFFFF;
+        opacity: 1;
+
+        &:after {
+            color: #F3F3F3;
+        }
+    }
+
+    .swiper-button-prev:hover:after {
+        transform: scale(0.4) translateX(-7px);
+        transition: 300ms;
+    }
+    .swiper-button-next:hover:after {
+        transform: scale(0.4) translateX(7px);
+        transition: 300ms;
+    }
+
 }
 
 .actual {
@@ -110,6 +148,7 @@
 
     .swiper-button-prev,
     .swiper-button-next {
+        top: 30%;
         border-radius: 50%;
         width: 68px;
         height: 68px;
@@ -128,6 +167,7 @@
 
     .swiper-button-prev,
     .swiper-button-next {
+        top: calc( 480px * 100 * 0.65 / ( 480 + 150 ) * 2 );
         border-radius: 50%;
         width: 68px;
         height: 68px;
@@ -140,13 +180,17 @@
     }
 }
 
-
 .report {
     padding-top: 160px;
     background: #FDFDFD;
 
+    .swiper-container {
+        height: 605px;
+    }
+
     .swiper-button-prev,
     .swiper-button-next {
+        top: 35%;
         border-radius: 50%;
         width: 68px;
         height: 68px;
