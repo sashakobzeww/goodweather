@@ -4,24 +4,26 @@
     transition: 300ms;
 }
 
-.infographics {
+.animation {
 
-    &.animation {
-
+    &.infographics {
         .infographics__li--1,
         .infographics__li--2,
         .infographics__li--3,
         .infographics__li--4 {
-            animation: scale-in-center $_animation;
+            animation: scale-in-center $_animation1;
         }
+
         .infographics__petal--1 {
-            animation: scale-in-center-petal--1 $_animation;
+            animation: scale-in-center-petal--1 $_animation1;
         }
+
         .infographics__petal--3 {
-            animation: scale-in-center-petal--3 $_animation;
+            animation: scale-in-center-petal--3 $_animation1;
         }
+
         .infographics__petal--4 {
-            animation: scale-in-center-petal--4 $_animation;
+            animation: scale-in-center-petal--4 $_animation1;
         }
 
         .infographics__li--1,
@@ -34,46 +36,38 @@
             animation-delay: $_animationDelay;
         }
     }
-}
 
-.homeNeed {
-    &.animation {
-
+    &.homeNeed {
         .homeNeed__item {
-            animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-bottom $_animation2;
             animation-delay: $_animationDelay;
         }
     }
-}
 
-.pay {
-    &.animation {
-
+    &.pay {
         .pay__h3,
         .pay__p,
         .pay__bank,
         .pay__form,
         .pay__right--3 {
-            animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-bottom $_animation2;
             animation-delay: $_animationDelay;
         }
     }
-}
 
-.developer {
-
-    &.animation {
-
+    &.infographics--developer {
         .infographics__li--5,
         .infographics__li--6,
         .infographics__li--7 {
-            animation: scale-in-center $_animation;
+            animation: scale-in-center $_animation1;
         }
+
         .infographics__petal--6 {
-            animation: scale-in-center-petal--6 $_animation;
+            animation: scale-in-center-petal--6 $_animation1;
         }
+
         .infographics__petal--7 {
-            animation: scale-in-center-petal--7 $_animation;
+            animation: scale-in-center-petal--7 $_animation1;
         }
 
         .infographics__li--5,
@@ -84,33 +78,24 @@
             animation-delay: $_animationDelay;
         }
     }
-}
 
-.price {
-
-    &.animation {
-
+    &.price {
         .price__img,
         .price__spot--over,
         .price__spot--under,
         .price__line {
-            animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-bottom $_animation2;
             animation-delay: $_animationDelay;
         }
     }
-}
 
-.documents {
-
-    &.animation {
-
+    &.documents {
         .documents__li {
-            animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-bottom $_animation2;
             animation-delay: $_animationDelay;
         }
     }
 }
-
 
 @keyframes fade-in-bottom {
     0% {
