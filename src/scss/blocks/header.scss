@@ -196,14 +196,21 @@ $pfx: "header";
         }
 
         &__step {
+            top: 0;
+            visibility: hidden;
             position: absolute;
             opacity: 0;
             pointer-events: none;
+            transition: 300ms;
+            transform: translateY(-50px);
 
             &--active {
+                visibility: visible;
                 opacity: 1;
                 position: relative;
                 pointer-events: auto;
+                transition: 300ms;
+                transform: translateY(0);
             }
         }
 

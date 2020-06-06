@@ -454,6 +454,11 @@ button, label, input, textarea {
 
     &:disabled {
         opacity: 0.2;
+        &:hover {
+            border: 2px solid $neutralColor;
+            background-color: transparent;
+            color: $neutralColor;
+        }
     }
 
     & + .btn {

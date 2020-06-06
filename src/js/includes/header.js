@@ -62,28 +62,18 @@ function changeQuizStep(e) {
     let prevEl = headerQuizSteps[numberOfActiveQuizStep].previousElementSibling;
     let currentEl = headerQuizSteps[numberOfActiveQuizStep];
     let nextEl = headerQuizSteps[numberOfActiveQuizStep].nextElementSibling;
+    let currentStep = numberOfActiveQuizStep + e + 1;
 
-    if (currentEl) {
-        headerQuizSteps[numberOfActiveQuizStep].classList.remove('header-quiz__step--active');
-    }
-
-    let abc = numberOfActiveQuizStep + e + 1;
-
-    if (abc === 1) {
+    if (currentStep === 1) {
         headerQuizPrev.disabled = true;
-    }
-    if (abc === 2) {
+    } else if (currentStep > 1 && currentStep < headerQuizSteps.length) {
         headerQuizPrev.disabled = false;
-        headerQuizNext.disabled = false;
-    }
-    if (abc === 3) {
-        headerQuizPrev.disabled = false;
-        headerQuizNext.disabled = false;
-    }
-    if (abc === 4) {
-        headerQuizNext.disabled = true;
+        headerQuizNext.textContent = 'Дальше'
+    } else if (currentStep === headerQuizSteps.length) {
+        headerQuizNext.textContent = 'Отправить'
     }
 
+    currentEl.classList.remove('header-quiz__step--active');
     if (e > 0 && nextEl) {
         nextEl.classList.add('header-quiz__step--active');
     } else if (e < 0 && prevEl) {
