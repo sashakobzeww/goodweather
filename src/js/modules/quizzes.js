@@ -42,3 +42,45 @@ function changeQuizStep(e) {
 }
 
 
+/*Квиз второй*/
+let selectionQuizPrev = document.getElementById('secondQuizPrev');
+let selectionQuizNext = document.getElementById('secondQuizNext');
+let selectionQuizStep = document.querySelectorAll(".selection__step");
+
+selectionQuizPrev.addEventListener('click', function () {
+    changeQuizStep2(-1)
+})
+
+selectionQuizNext.addEventListener('click', function () {
+    changeQuizStep2(+1)
+})
+
+function changeQuizStep2(e) {
+    // Определяем номер активного шага
+    for (let i = 0; i < selectionQuizStep.length; i++) {
+        let has = selectionQuizStep[i].classList.contains('selection__step--active');
+        if (has) var numberOfActiveQuizStep = i;
+    }
+
+    let prevEl = selectionQuizStep[numberOfActiveQuizStep].previousElementSibling;
+    let currentEl = selectionQuizStep[numberOfActiveQuizStep];
+    let nextEl = selectionQuizStep[numberOfActiveQuizStep].nextElementSibling;
+    let currentStep = numberOfActiveQuizStep + e + 1;
+
+    if (currentStep === 1) {
+        selectionQuizPrev.disabled = true;
+    } else if (currentStep > 1 && currentStep < selectionQuizStep.length) {
+        selectionQuizPrev.disabled = false;
+        selectionQuizNext.textContent = 'Дальше'
+    } else if (currentStep === selectionQuizStep.length) {
+        selectionQuizNext.textContent = 'Отправить'
+    }
+
+    currentEl.classList.remove('selection__step--active');
+    if (e > 0 && nextEl) {
+        nextEl.classList.add('selection__step--active');
+    } else if (e < 0 && prevEl) {
+        prevEl.classList.add('selection__step--active');
+    }
+
+}

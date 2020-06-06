@@ -24,6 +24,10 @@
 
     }
 
+    &__steps {
+        position: relative;
+    }
+
     &__step {
         grid-area: s__step;
         display: grid;

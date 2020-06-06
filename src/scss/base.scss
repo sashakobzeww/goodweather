@@ -437,6 +437,15 @@ button, label, input, textarea {
         background: $_orange;
         color: $neutralColor;
     }
+
+    &:disabled {
+        opacity: 0.2;
+        &:hover {
+            border: 2px solid $_orange;
+            background-color: transparent;
+            color: $_dark;
+        }
+    }
 }
 
 // В модальном окне

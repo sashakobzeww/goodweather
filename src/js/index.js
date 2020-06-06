@@ -12,6 +12,7 @@ import "./modules/validate";
 import "./modules/sliders";
 import "./modules/modals";
 import "./modules/spots";
+import "./modules/quizzes";
 
 import './includes/header';
 import './includes/footer';
