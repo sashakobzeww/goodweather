@@ -736,31 +736,31 @@ button, label {
     transition: 300ms;
 
     &--good {
-        bottom: -20px;
+        bottom: -60%;
+        left: -30%;
     }
 
     &--selection {
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        right: -10%;
+        top: 10%;
     }
 
     &--homeNeed-1 {
-        left: 0;
-        top: 0;
-        transform: translateY(-60%);
+        left: -30%;
+        top: -60%;
     }
 
     &--homeNeed-2 {
-        max-width: 30vw;
-        right: 0;
+        max-width: 40vw;
+        right: -7vw;
         top: 0;
     }
 
     &--developer {
-        left: 0;
+        left: -10vw;
         top: -10%;
         z-index: -1;
+        max-width: 60vw;
         height: 120%;
     }
 }
