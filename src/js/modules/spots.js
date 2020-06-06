@@ -15,9 +15,9 @@ for (let i = 0; i < spotTriggers.length; i++) {
 
 /*----*/
 
-document.addEventListener("DOMContentLoaded", scrolling, false);
+document.addEventListener("scroll", scrolling, false);
 
-let listItems = document.querySelectorAll(".infographics");
+let listItems = document.querySelectorAll("[id^='animation-section-']");
 
 function scrolling(e) {
 
@@ -36,6 +36,7 @@ function isPartiallyVisible(el) {
     let top = elementBoundary.top;
     let bottom = elementBoundary.bottom;
     let height = elementBoundary.height;
+    let result = ((top + height >= 0) && (height + window.innerHeight >= bottom));
 
-    return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+    return result
 }
