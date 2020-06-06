@@ -234,8 +234,8 @@
     &__form,
     &__right,
     &__bank {
-        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation-delay: $_animationDelay;
+        transform: translateY(50px);
+        opacity: 0;
     }
 }
 

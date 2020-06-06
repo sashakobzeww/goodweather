@@ -36,6 +36,82 @@
     }
 }
 
+.homeNeed {
+    &.animation {
+
+        .homeNeed__item {
+            animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-delay: $_animationDelay;
+        }
+    }
+}
+
+.pay {
+    &.animation {
+
+        .pay__h3,
+        .pay__p,
+        .pay__bank,
+        .pay__form,
+        .pay__right--3 {
+            animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-delay: $_animationDelay;
+        }
+    }
+}
+
+.developer {
+
+    &.animation {
+
+        .infographics__li--5,
+        .infographics__li--6,
+        .infographics__li--7 {
+            animation: scale-in-center $_animation;
+        }
+        .infographics__petal--6 {
+            animation: scale-in-center-petal--6 $_animation;
+        }
+        .infographics__petal--7 {
+            animation: scale-in-center-petal--7 $_animation;
+        }
+
+        .infographics__li--5,
+        .infographics__li--6,
+        .infographics__li--7,
+        .infographics__petal--6,
+        .infographics__petal--7 {
+            animation-delay: $_animationDelay;
+        }
+    }
+}
+
+.price {
+
+    &.animation {
+
+        .price__img,
+        .price__spot--over,
+        .price__spot--under,
+        .price__line {
+            animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-delay: $_animationDelay;
+        }
+    }
+}
+
+.documents {
+
+    &.animation {
+
+        .documents__li {
+            animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-delay: $_animationDelay;
+        }
+    }
+}
+
+
 @keyframes fade-in-bottom {
     0% {
         transform: translateY(50px);

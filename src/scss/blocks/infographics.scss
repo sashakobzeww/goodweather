@@ -120,8 +120,6 @@
             left: 45px;
             height: 67px;
             width: 50px;
-            animation: scale-in-center-petal--6 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            animation-delay: $_animationDelay;
         }
 
         &--7 {
@@ -129,8 +127,6 @@
             height: 41px;
             top: 341px;
             left: 56px;
-            animation: scale-in-center-petal--7 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            animation-delay: $_animationDelay;
         }
     }
 
