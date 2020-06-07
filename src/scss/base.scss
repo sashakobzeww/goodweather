@@ -207,15 +207,15 @@ button, label, input, textarea {
 
 .infographics__number {
     font-weight: 600;
-    font-size: 120px;
-    line-height: 144px;
+    font-size:calc( 120 * 100vw / 1440);
+    line-height:calc( 144 * 100vw / 1440);
 }
 
 .infographics__text {
     font-weight: normal;
-    font-size: 19px;
-    line-height: 23px;
-    transform: translateY(-20px);
+    font-size:calc( 19 * 100vw / 1440);
+    line-height:calc( 23 * 100vw / 1440);
+    transform: translateY(calc( -20 * 100vw / 1440));
 }
 
 // Белый текст 1
