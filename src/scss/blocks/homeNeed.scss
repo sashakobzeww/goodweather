@@ -10,7 +10,7 @@
     &__wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-gap: 90px;
+        grid-gap: 6.25vw;
         margin-top: 85px;
     }
 
@@ -21,8 +21,8 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 162px;
-        grid-row-gap: 106px;
+        grid-column-gap: 11.25vw;
+        grid-row-gap: 7.5vw;
         margin-top: 145px;
     }
 

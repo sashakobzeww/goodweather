@@ -20,8 +20,8 @@
     &__ul {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-gap: 50px;
-        margin-top: 75px;
+        grid-gap: 3.5vw;
+        margin-top: 5vw;
     }
     &__li {
 
@@ -37,7 +37,7 @@
 
         &-li {
             width: calc(100% - 35px);
-            margin-left: 35px;
+            margin-left: 2vw;
             position: relative;
             &:before {
                 content: '';

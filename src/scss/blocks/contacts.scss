@@ -19,7 +19,7 @@
     }
 
     &__form {
-        margin-top: 90px;
+        margin-top: 6.25vw;
         width: 100%;
     }
 
@@ -33,7 +33,7 @@
         transform: translateX(28px);
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-        grid-gap: 90px;
+        grid-gap: 6.25vw;
     }
 
     &__address {

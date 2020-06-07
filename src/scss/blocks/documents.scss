@@ -16,9 +16,9 @@
 
     &__ul {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-row-gap: 40px;
-        grid-column-gap: 100px;
+        grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+        grid-row-gap: 3.5vw;
+        grid-column-gap: 6vw;
     }
 
     &__li {
