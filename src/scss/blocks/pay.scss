@@ -6,6 +6,9 @@
         grid-template-columns: 600px 1fr;
         grid-gap: 50px;
         margin-bottom: 80px;
+        @media (max-width: 1440px) {
+            grid-template: auto auto / 1fr;
+        }
     }
 
     &__tabs {
@@ -112,6 +115,9 @@
             &--1 {
                 top: 0;
                 bottom: auto;
+                @media (max-width: 1440px) {
+                    transform: translateX(-5vw) scale(0.9);
+                }
             }
 
         }
@@ -236,6 +242,10 @@
     &__bank {
         transform: translateY(50px);
         opacity: 0;
+    }
+    &__right--2 {
+        transform: none;
+        opacity: 1;
     }
 }
 
