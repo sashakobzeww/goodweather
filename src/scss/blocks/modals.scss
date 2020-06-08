@@ -212,6 +212,9 @@
 .modal-thanks {
 
     transform: translate(0vw, 100vw);
+    @media (max-width: 1024px) {
+        transform: translateY(120vw);
+    }
 
     &.modal--active {
         transform: translate(0);

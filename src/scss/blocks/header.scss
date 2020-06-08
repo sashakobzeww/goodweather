@@ -20,6 +20,10 @@ $pfx: "header";
     position: relative;
     display: flex;
     clip-path: ellipse(150% 100% at 50% 0%);
+    @media (max-width: 1024px) {
+        height: 100vh;
+        flex-direction: column;
+    }
 
     &__top {
         left: 50%;
@@ -31,6 +35,12 @@ $pfx: "header";
         background-color: transparent;
         position: absolute;
         z-index: 2;
+
+        &-p {
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
 
     }
 
@@ -53,6 +63,9 @@ $pfx: "header";
     &__tel {
         transform: translateX(50vw);
         transition: 500ms;
+        @media (max-width: 1024px) {
+            margin-left: -40px;
+        }
 
         &--active {
             transition: 500ms;
@@ -103,6 +116,11 @@ $pfx: "header";
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        @media (max-width: 1024px) {
+            width: 100%;
+            height: 30%;
+            background-position: top;
+        }
     }
 
     &__right {
@@ -114,6 +132,10 @@ $pfx: "header";
         padding-right: 6vw;
         position: relative;
         overflow: hidden;
+        @media (max-width: 1024px) {
+            width: 100%;
+            height: 70%;
+        }
 
         &:before, &:after {
             content: '';
@@ -137,6 +159,9 @@ $pfx: "header";
         &-wrapper {
             transform: translateX(-50vw);
             transition: 500ms;
+            @media (max-width: 1024px) {
+                transform: translateX(-80vw);
+            }
 
             &--active {
                 transition: 500ms;
@@ -169,10 +194,10 @@ $pfx: "header";
         background-image: url(../img/header__center.jpg);
         transition: 600ms;
         opacity: 0;
-        transform: rotate(360deg);
+        transform: translateY( 0 ) rotate(360deg);
 
-        &--active {
-            transform: rotate(0);
+    &--active {
+            transform: translateY( 0 ) rotate(0);
             transition: 600ms;
             min-width: 200px;
             width: 35vw;
@@ -181,6 +206,9 @@ $pfx: "header";
             height: 35vw;
             max-height: 550px;
             opacity: 1;
+            @media (max-width: 1024px) {
+                transform: translateY( calc( -20vh ) ) rotate(0);
+            }
         }
     }
 
@@ -193,10 +221,17 @@ $pfx: "header";
         transform: translateY(-50%);
         z-index: 5;
         transition: 500ms;
+        @media (max-width: 1024px) {
+            width: 90%;
+            left: 5%;
+        }
 
         &--active {
             top: 50%;
             transition: 500ms;
+            @media (max-width: 1024px) {
+                top: 61%;
+            }
         }
 
         &__step {
@@ -246,6 +281,10 @@ $pfx: "header";
         flex-direction: column;
         z-index: 5;
         transition: 500ms;
+        @media (max-width: 1024px) {
+            right: -75vw;
+            top: 60%;
+        }
 
         &__a {
             font-weight: 600;
