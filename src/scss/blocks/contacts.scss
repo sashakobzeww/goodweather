@@ -13,6 +13,10 @@
         @media (max-width: 1024px) {
             grid-gap: 5%;
         }
+        @media (max-width: 768px) {
+            grid-template: auto auto / 1fr;
+            margin-top: 10vw;
+        }
     }
 
     &__left {
@@ -30,6 +34,10 @@
         display: grid;
         grid-template-rows: auto 1fr;
         grid-gap: 50px;
+        @media (max-width: 768px) {
+            grid-template-rows: auto 60vh;
+            grid-gap: 7vw;
+        }
     }
 
     &__addresses {
