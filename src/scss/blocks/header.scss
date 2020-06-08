@@ -40,12 +40,18 @@ $pfx: "header";
             @media (max-width: 1024px) {
                 display: none;
             }
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
 
     }
 
     &__geo {
         margin-left: 4vw;
+        @media (max-width: 768px) {
+            display: none;
+        }
 
         &:before {
             content: '';
@@ -65,6 +71,9 @@ $pfx: "header";
         transition: 500ms;
         @media (max-width: 1024px) {
             margin-left: -40px;
+        }
+        @media (max-width: 768px) {
+            display: none;
         }
 
         &--active {
@@ -94,6 +103,9 @@ $pfx: "header";
         cursor: pointer;
         background-color: transparent;
         margin: auto;
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
 
         &:before {
             content: '';
@@ -121,6 +133,9 @@ $pfx: "header";
             height: 30%;
             background-position: top;
         }
+        @media (max-width: 768px) {
+            height: 0;
+        }
     }
 
     &__right {
@@ -135,6 +150,10 @@ $pfx: "header";
         @media (max-width: 1024px) {
             width: 100%;
             height: 70%;
+        }
+        @media (max-width: 768px) {
+            padding: 0 10vw;
+            height: 100%;
         }
 
         &:before, &:after {
@@ -161,6 +180,10 @@ $pfx: "header";
             transition: 500ms;
             @media (max-width: 1024px) {
                 transform: translateX(-80vw);
+            }
+            @media (max-width: 768px) {
+                margin-top: 20vw;
+                transform: translateX(-110vw);
             }
 
             &--active {
@@ -195,6 +218,9 @@ $pfx: "header";
         transition: 600ms;
         opacity: 0;
         transform: translateY( 0 ) rotate(360deg);
+        @media (max-width: 768px) {
+            display: none;
+        }
 
     &--active {
             transform: translateY( 0 ) rotate(0);
@@ -263,12 +289,19 @@ $pfx: "header";
             margin: 33px 0 57px 0;
             display: grid;
             grid-gap: 20px;
+            @media (max-width: 768px) {
+                margin: 25px 0 35px;
+                display: grid;
+                grid-gap: 10px;
+            }
         }
 
         &__li {
         }
 
         &__buttons {
+            max-width: 100%;
+            display: flex;
         }
     }
 
@@ -285,6 +318,9 @@ $pfx: "header";
             right: -75vw;
             top: 60%;
         }
+        @media (max-width: 768px) {
+            right: -185vw;
+        }
 
         &__a {
             font-weight: 600;
@@ -293,6 +329,10 @@ $pfx: "header";
             color: $neutralColor;
             margin-left: var(--i);
             transition: 500ms;
+            @media (max-width: 768px) {
+                font-size: 20px;
+                line-height: 38px;
+            }
 
             &:hover {
                 opacity: 0.5;
@@ -307,6 +347,19 @@ $pfx: "header";
                 margin-left: 0;
                 transition: 500ms;
                 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
+
+        &__mobile {
+            display: none;
+            grid-gap: 8px;
+            margin-top: 20px;
+            @media (max-width: 768px) {
+                display: grid;
+                & > * {
+                    display: block;
+                    margin: 0;
+                }
             }
         }
     }

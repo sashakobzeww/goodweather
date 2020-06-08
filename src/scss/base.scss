@@ -102,6 +102,10 @@ button, label, input, textarea {
     font-size: 54px;
     line-height: 58px;
     color: $neutralColor;
+    @media (max-width: 768px) {
+        font-size: 30px;
+        line-height: 1.2;
+    }
 }
 
 // Заголовок в шапке
@@ -454,6 +458,10 @@ button, label, input, textarea {
     background-color: transparent;
     color: $neutralColor;
     padding: 22px 47px;
+    @media (max-width: 768px) {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
 
     &:hover {
         border: 2px solid transparent;
@@ -481,6 +489,10 @@ button, label, input, textarea {
     background: $neutralColor;
     color: $_dark;
     padding: 24px 40px;
+    @media (max-width: 768px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 
     &:hover {
         color: rgba($_dark, 0.6);
@@ -512,6 +524,9 @@ button, label, input, textarea {
         grid-gap: 28px;
         grid-template-columns: auto 1fr;
         cursor: pointer;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
 
         &:before {
             content: '';

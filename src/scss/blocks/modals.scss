@@ -218,6 +218,9 @@
     @media (max-width: 1024px) {
         transform: translateY(120vw);
     }
+    @media (max-width: 768px) {
+        transform: translateY(190vw);
+    }
 
     &.modal--active {
         transform: translate(0);
