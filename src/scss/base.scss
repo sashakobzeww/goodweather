@@ -769,6 +769,12 @@ button, label, input, textarea {
         max-width: 40vw;
         right: -7vw;
         top: 0;
+        @media (max-width: 1024px) {
+            top: auto;
+            bottom: -160px;
+            max-width: 470px;
+            right: 20vw;
+        }
     }
 
     &--developer {

@@ -12,6 +12,9 @@
         grid-template-columns: 2fr 1fr;
         grid-gap: 6.25vw;
         margin-top: 85px;
+        @media (max-width: 1024px) {
+            grid-template: auto auto / 1fr;
+        }
     }
 
     &__wrapper-1 {
@@ -24,6 +27,9 @@
         grid-column-gap: 11.25vw;
         grid-row-gap: 7.5vw;
         margin-top: 145px;
+        @media (max-width: 1024px) {
+
+        }
     }
 
     &__item {
