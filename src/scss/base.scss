@@ -122,6 +122,10 @@ button, label, input, textarea {
     font-size: 52px;
     line-height: 56px;
     color: $neutralColor;
+    @media (max-width: 768px) {
+        font-size: 36px !important;
+        line-height: 50px !important;
+    }
 }
 
 // Тёмный заголовок
