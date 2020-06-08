@@ -73,6 +73,9 @@
         bottom: 0;
         left: 0;
         opacity: 0;
+        @media (max-width: 1024px) {
+            grid-template: 50vw 70vw / 1fr;
+        }
 
         &--active {
             visibility: visible;
@@ -107,6 +110,9 @@
             left: 0;
             margin: auto;
             position: absolute;
+            @media (max-width: 1024px) {
+                left: auto;
+            }
 
             &-p {
                 margin: 0 90px 30px 90px;
@@ -124,11 +130,17 @@
 
         &--1 {
             grid-template-columns: 3fr 3fr 4fr;
+            @media (max-width: 1024px) {
+                grid-template: auto 570px/1fr 1fr;
+            }
         }
 
         &-list {
             height: 750px;
             position: relative;
+            @media (max-width: 1024px) {
+                height: 1200px;
+            }
         }
     }
 
@@ -136,6 +148,9 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        @media (max-width: 1024px) {
+            background-position: left;
+        }
 
         &--2 {
             background-image: url(../img/pay__left--2.png);
@@ -148,105 +163,116 @@
 
     &__right {
         position: relative;
-    }
 
-    &__payment {
-    }
+        &--1 {
+            @media (max-width: 1024px) {
+                grid-area: 2 / 1 / 3 / 3;
+            }
+        }
 
-    &__banks {
-        margin-top: 60px;
-        display: grid;
-        grid-gap: 13px;
+        &--3 {
+            transform: translateY(0) !important;
+            opacity: 1 !important;
     }
+}
 
-    &__bank {
+&__payment {
+}
+
+&__banks {
+    margin-top: 60px;
+    display: grid;
+    grid-gap: 13px;
+}
+
+&__bank {
+    display: flex;
+    align-items: center;
+
+    &-a {
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 30px;
+        color: #413949;
+        width: 100%;
         display: flex;
         align-items: center;
 
-        &-a {
-            font-weight: normal;
+        &--spoiler {
+            font-weight: 600;
             font-size: 19px;
             line-height: 30px;
-            color: #413949;
-            width: 100%;
-            display: flex;
-            align-items: center;
+            color: #FFB52E;
+        }
 
-            &--spoiler {
-                font-weight: 600;
-                font-size: 19px;
-                line-height: 30px;
-                color: #FFB52E;
-            }
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 62px;
+            height: 62px;
+            background: #FFFFFF;
+            box-shadow: 0 20px 60px #F0F0F0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20px auto;
+            border-radius: 50%;
+            margin-right: 32px;
+        }
 
+        &--1 {
             &:before {
-                content: '';
-                display: inline-block;
-                width: 62px;
-                height: 62px;
-                background: #FFFFFF;
-                box-shadow: 0 20px 60px #F0F0F0;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 20px auto;
-                border-radius: 50%;
-                margin-right: 32px;
+                background-image: url(../img/pay__bank--1.svg);
             }
+        }
 
-            &--1 {
-                &:before {
-                    background-image: url(../img/pay__bank--1.svg);
-                }
+        &--2 {
+            &:before {
+                background-image: url(../img/pay__bank--2.svg);
             }
+        }
 
-            &--2 {
-                &:before {
-                    background-image: url(../img/pay__bank--2.svg);
-                }
+        &--3 {
+            &:before {
+                background-image: url(../img/pay__bank--3.svg);
             }
+        }
 
-            &--3 {
-                &:before {
-                    background-image: url(../img/pay__bank--3.svg);
-                }
+        &--4 {
+            &:before {
+                background-image: url(../img/pay__bank--4.svg);
             }
+        }
 
-            &--4 {
-                &:before {
-                    background-image: url(../img/pay__bank--4.svg);
-                }
-            }
-
-            &--spoiler {
-                &:before {
-                    background-image: url(../img/pay__bank--spoiler.svg);
-                }
+        &--spoiler {
+            &:before {
+                background-image: url(../img/pay__bank--spoiler.svg);
             }
         }
     }
+}
 
-    &__form {
-        display: grid;
-        grid-gap: 40px;
-        grid-template-rows: repeat(auto-fit, 110px);
+&__form {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-rows: repeat(auto-fit, 110px);
 
-        &-btn {
-            margin: auto auto auto 0;
-        }
+    &-btn {
+        margin: auto auto auto 0;
     }
+}
 
-    &__h3,
-    &__p,
-    &__form,
-    &__right,
-    &__bank {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    &__right--2 {
-        transform: none;
-        opacity: 1;
-    }
+&__h3,
+&__p,
+&__form,
+&__right,
+&__bank {
+    transform: translateY(50px);
+    opacity: 0;
+}
+&__right--2 {
+    transform: none;
+    opacity: 1;
+}
 }
 
 
