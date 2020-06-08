@@ -213,6 +213,10 @@ button, label, input, textarea {
     font-weight: 600;
     font-size:calc( 120 * 100vw / 1440);
     line-height:calc( 144 * 100vw / 1440);
+    @media (max-width: 768px) {
+        font-size:calc( 120 * 100vw / 768);
+        line-height:calc( 144 * 100vw / 768);
+    }
 }
 
 .infographics__text {
@@ -220,6 +224,11 @@ button, label, input, textarea {
     font-size:calc( 19 * 100vw / 1440);
     line-height:calc( 23 * 100vw / 1440);
     transform: translateY(calc( -20 * 100vw / 1440));
+    @media (max-width: 768px) {
+        font-size: 20px;
+        line-height: 1.2;
+        transform: translateY(calc( -20 * 100vw / 768));
+    }
 }
 
 // Белый текст 1
