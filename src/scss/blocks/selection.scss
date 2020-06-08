@@ -19,8 +19,15 @@
         grid-gap: 48px;
         grid-template-areas:
             's__step s__right'
-            's__bottom s__right'
-    ;
+            's__bottom s__right';
+        @media (max-width: 1024px) {
+            grid-template: 30vw auto auto / 1fr;
+            grid-template-areas:
+                's__right'
+                's__step'
+                's__bottom';
+
+        }
 
     }
 
