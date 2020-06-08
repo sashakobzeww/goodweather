@@ -7,6 +7,11 @@
         grid-template-columns: 600px 1fr;
         grid-gap: 50px;
         margin-bottom: 80px;
+        @media (max-width: 1024px) {
+            grid-template: auto / auto;
+            padding: 0;
+            margin-bottom: 0;
+        }
     }
 
     &__tabs {
@@ -113,6 +118,9 @@
         &-list {
             height: 45vw;
             position: relative;
+            @media (max-width: 1024px) {
+                height: 65vw;
+            }
         }
     }
 

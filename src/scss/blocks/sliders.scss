@@ -13,6 +13,9 @@
 
         &--1 {
             height: 40vw;
+            @media (max-width: 1024px) {
+                height: 45vw;
+            }
         }
 
         &--2 {
@@ -22,6 +25,9 @@
                 height: 21vw;
                 padding-bottom: 0;
             }
+            @media (max-width: 1024px) {
+                height: 35vw;
+            }
         }
 
         &--3 {
@@ -30,6 +36,9 @@
             @media (max-width: 1800px) {
                 height: 60vw;
                 padding: 0;
+            }
+            @media (max-width: 1024px) {
+                height: 600px;
             }
         }
     }
@@ -86,6 +95,10 @@
             grid-gap: 50px;
             padding-right: 0;
         }
+        @media (max-width: 1024px) {
+            grid-template: auto / auto;
+            padding: 0;
+        }
     }
 
     &-slider {
@@ -96,6 +109,9 @@
             object-fit: cover;
             object-position: center;
             border-radius: 30px 30px 30px 0;
+            @media (max-width: 1024px) {
+                height: 33vw;
+            }
         }
     }
 
@@ -194,6 +210,9 @@
         width: 68px;
         height: 68px;
         background: #FFB52E;
+        @media (max-width: 1024px) {
+            top: calc( 130px * 100 * 0.65 / 270 * 2 );
+        }
 
         &:after {
             transform: scale(0.4);
@@ -209,6 +228,9 @@
             object-fit: cover;
             object-position: center;
             border-radius: 30px 30px 30px 0;
+            @media (max-width: 1024px) {
+                height: 17vw;
+            }
         }
     }
 }
@@ -219,6 +241,9 @@
 
     .swiper-container {
         height: 35vw;
+        @media (max-width: 1024px) {
+            height: 50vw;
+        }
     }
 
     .swiper-button-prev,
@@ -228,6 +253,9 @@
         width: 68px;
         height: 68px;
         background: #FFB52E;
+        @media (max-width: 1024px) {
+            top: 15vw;
+        }
 
         &:after {
             transform: scale(0.4);
@@ -254,6 +282,9 @@
             box-shadow: 0px 20px 60px rgba(100, 100, 100, 0.18);
             border-radius: 16px;
             padding: 14px 32px;
+            @media (max-width: 1024px) {
+                top: 22vw;
+            }
         }
 
         &__bottom {
