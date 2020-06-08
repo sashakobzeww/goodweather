@@ -22,6 +22,9 @@
         grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
         grid-gap: 3.5vw;
         margin-top: 5vw;
+        @media (max-width: 768px) {
+            grid-gap: 12vw;
+        }
     }
     &__li {
 
@@ -32,6 +35,9 @@
     }
     &__h3 {
         margin: 40px 0 23px 0;
+        @media (max-width: 768px) {
+            margin: 20px 0 5px;
+        }
     }
     &__list {
 
@@ -42,15 +48,15 @@
             &:before {
                 content: '';
                 position: absolute;
-                left: -35px;
-                top: 10px;
+                left: -15px;
+                top: 7px;
                 display: inline-block;
                 width: 8px;
                 height: 11px;
                 background-image: url("../img/petal.svg");
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: cover;
+                background-size: contain;
                 transform: rotate(-90deg);
             }
         }

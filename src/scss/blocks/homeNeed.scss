@@ -23,7 +23,7 @@
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(256px, auto));
         grid-column-gap: 11.25vw;
         grid-row-gap: 7.5vw;
         margin-top: 145px;
@@ -51,6 +51,9 @@
             width: 125px;
             height: 115px;
             transform: translate(-35px, -49px);
+            @media (max-width: 768px) {
+                transform: translate(-15px,-20px);
+            }
         }
 
         &--3 {
