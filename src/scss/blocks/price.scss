@@ -2,6 +2,9 @@
     display: flex;
     margin: 260px auto 310px;
     position: relative;
+    @media (max-width: 1024px) {
+        margin: 100px auto 200px;
+    }
 
     &__left, &__right {
         width: 50%;
@@ -21,6 +24,9 @@
         position: absolute;
         right: 0;
         top: -340px;
+        @media (max-width: 1024px) {
+            top: 60px;
+        }
     }
 
     &__img, &__spot--over, &__spot--under, &__line {
@@ -38,15 +44,28 @@
         z-index: 4;
         bottom: -30px;
         right: 0;
+        @media (max-width: 1024px) {
+            bottom: -70px;
+            width: 20vw;
+        }
     }
     &__spot--under {
         z-index: 1;
         top: 6vw;
         left: -4vw;
+        @media (max-width: 1024px) {
+            top: -8vw;
+            left: -4vw;
+            width: 50vw;
+        }
     }
     &__line {
         z-index: 2;
         bottom: 0;
         left: -10vw;
+        @media (max-width: 1024px) {
+            left: -5vw;
+            width: 60vw;
+        }
     }
 }

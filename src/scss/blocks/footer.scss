@@ -25,6 +25,9 @@ $pfx: "footer";
 
     &__left {
         grid-gap: 50px;
+        @media (max-width: 1024px) {
+            grid-gap: 30px;
+        }
     }
 
     &__right {

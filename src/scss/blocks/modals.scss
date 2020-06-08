@@ -44,6 +44,9 @@
         display: flex;
         align-items: center;
         overflow: hidden;
+        @media (max-width: 1024px) {
+            width: 95%;
+        }
 
         &--thanks {
             overflow: visible;
