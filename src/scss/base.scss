@@ -826,3 +826,12 @@ button, label, input, textarea {
         height: 120%;
     }
 }
+
+picture {
+
+    source, img {
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

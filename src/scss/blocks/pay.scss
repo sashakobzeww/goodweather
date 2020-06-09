@@ -165,20 +165,10 @@
     }
 
     &__left {
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
         @media (max-width: 1024px) {
-            background-position: left;
+            object-position: left;
         }
 
-        &--2 {
-            background-image: url(../img/pay__left--2.png);
-        }
-
-        &--3 {
-            background-image: url(../img/pay__left--3.png);
-        }
     }
 
     &__right {
