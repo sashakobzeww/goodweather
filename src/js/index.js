@@ -13,6 +13,7 @@ import "./modules/sliders";
 import "./modules/modals";
 import "./modules/spots";
 import "./modules/quizzes";
+import "./modules/map";
 
 import './includes/header';
 import './includes/footer';
