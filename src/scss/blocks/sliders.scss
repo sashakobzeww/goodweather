@@ -3,12 +3,12 @@
     &-container {
         margin-top: 60px;
         margin-left: calc((100% - 1592px) / 2);
-        width: calc(100% - ((100% - 1592px) / 2));
+        width: calc(1592px * 1.5);
         height: min(40vw, 640px);
         overflow: visible;
         @media (max-width: 1800px) {
             margin-left: 5%;
-            width: 95%;
+            width: 110vw;
             height: 520px;
         }
         @media (max-width: 768px) {
@@ -16,7 +16,7 @@
         }
 
         &--1 {
-            height: 40vw;
+            height: min(40vw, 800px);
             @media (max-width: 1024px) {
                 height: 45vw;
             }
@@ -60,7 +60,7 @@
     }
 
     &-button-next {
-        transform: translateX(-5vw);
+        transform: translateX(-19vw);
     }
 
     &-pagination {
@@ -159,7 +159,7 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: 30%;
+        top: 12.5vw;
         border-radius: 50%;
         width: 68px;
         height: 68px;
@@ -230,7 +230,7 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: 12vw;
+        top: 13vw;
         border-radius: 50%;
         width: 68px;
         height: 68px;
@@ -256,7 +256,7 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: calc( 480px * 100 * 0.65 / ( 480 + 150 ) * 2 );
+        top: 34%;
         border-radius: 50%;
         width: 68px;
         height: 68px;
@@ -331,6 +331,10 @@
         }
     }
 
+    .swiper-button-next {
+        transform: translateX(-19vw);
+    }
+
     .swiper-pagination-bullet-active {
         background: #FFB52E;
         opacity: 1;
@@ -341,7 +345,7 @@
         &__h3 {
             position: absolute;
             left: 45px;
-            top: 45%;
+            top: 50%;
             font-weight: 600;
             font-size: 24px;
             line-height: 29px;
