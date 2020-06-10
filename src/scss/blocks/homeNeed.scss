@@ -9,7 +9,7 @@
 
     &__wrapper {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 23fr 10fr;
         grid-gap: 6.25vw;
         margin-top: 85px;
         @media (max-width: 1024px) {
@@ -24,8 +24,8 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(256px, auto));
-        grid-column-gap: 11.25vw;
-        grid-row-gap: 7.5vw;
+        grid-column-gap: 8vw;
+        grid-row-gap: 5.5vw;
         margin-top: 145px;
         @media (max-width: 1024px) {
 
@@ -59,12 +59,13 @@
         &--3 {
             width: 116px;
             height: 85px;
+            transform: translate(0, -20px);
         }
 
         &--4 {
             width: 125px;
             height: 112px;
-            transform: translate(-46px, 0);
+            transform: translate(-38px, -18px);
         }
     }
 

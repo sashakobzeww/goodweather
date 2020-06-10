@@ -1,20 +1,3 @@
-let spots = document.querySelectorAll('.spot');
-let spotTriggers = document.querySelectorAll('[id^="spot-trigger"]');
-
-for (let i = 0; i < spotTriggers.length; i++) {
-
-    spotTriggers[i].addEventListener('mouseover', function () {
-        spots[i].classList.add("scale-in-center-transform")
-    });
-
-    spotTriggers[i].addEventListener('mouseout', function () {
-        spots[i].classList.remove("scale-in-center-transform")
-    });
-
-}
-
-/*----*/
-
 document.addEventListener("scroll", scrolling, false);
 
 let listItems = document.querySelectorAll("[id^='animation-section-']");

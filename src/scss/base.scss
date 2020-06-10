@@ -816,6 +816,8 @@ button, label, input, textarea {
         max-width: 40vw;
         right: -7vw;
         top: 0;
+        transform: scale(1);
+        opacity: 1;
         @media (max-width: 1024px) {
             top: auto;
             bottom: -160px;
