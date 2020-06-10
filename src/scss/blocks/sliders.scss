@@ -357,8 +357,20 @@
 
         &__bottom {
             display: grid;
-            grid-template-columns: repeat(2, max-content);
-            grid-gap: 40px;
+            grid-template-columns: repeat(3, max-content);
+            grid-gap: 20px;
+            &:before {
+                content: '';
+                display: block;
+                background: #E3F0EE;
+                width: 1.5px;
+                height: 21px;
+                order: 1;
+                margin: auto;
+            }
+            & > p:nth-child(1) {
+                order: 1
+            }
         }
     }
 
