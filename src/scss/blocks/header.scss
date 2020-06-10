@@ -37,6 +37,7 @@ $pfx: "header";
         z-index: 2;
 
         &-p {
+            transform: translateY(-5px);
             @media (max-width: 1024px) {
                 display: none;
             }
@@ -103,8 +104,10 @@ $pfx: "header";
         cursor: pointer;
         background-color: transparent;
         margin: auto;
+        transform: translateX(48px);
         @media (max-width: 768px) {
             margin-right: 0;
+            transform: translateX(0);
         }
 
         &:before {

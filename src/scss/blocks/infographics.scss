@@ -7,7 +7,8 @@
     padding: calc( 90  * 100vw / var(--abc)) 0 calc( 110 * 100vw / var(--abc));
 
     &__ul {
-        width: calc( 1300 * 100vw / var(--abc));
+        transform: translateX(-2vw);
+        width: calc( 1000 * 100vw / var(--abc));
         height: calc( 383 * 100vw / var(--abc));
         margin: 0 auto;
         display: flex;
@@ -22,6 +23,9 @@
         &--developer {
             width: 100%;
             height: calc( 573 * 100vw / var(--abc));
+            @media (min-width: 1800px) {
+                transform: scale(0.8);
+            }
             @media (max-width: 768px) {
                 height: auto;
                 grid-template: 55vw 45vw 45vw/1fr;

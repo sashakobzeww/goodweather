@@ -17,7 +17,9 @@
 
     &__right {
         width: 57%;
+        transform: translateX(3vw);
         @media (max-width: 1024px) {
+            transform: translateX(0);
             width: 100%;
         }
 

@@ -243,7 +243,6 @@ button, label, input, textarea {
     }
 }
 
-// Белый текст 1
 .text__5 {
     font-weight: 600;
     font-size: 19px;
@@ -345,6 +344,13 @@ button, label, input, textarea {
         line-height: 1.4;
 
     }
+}
+
+.text__12 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 29px;
+    color: $neutralColor;
 }
 
 
