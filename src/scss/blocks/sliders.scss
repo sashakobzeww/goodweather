@@ -4,7 +4,8 @@
         margin-top: 60px;
         margin-left: calc((100% - 1592px) / 2);
         width: calc(100% - ((100% - 1592px) / 2));
-        height: 575px;
+        height: min(40vw, 640px);
+        overflow: visible;
         @media (max-width: 1800px) {
             margin-left: 5%;
             width: 95%;
@@ -93,6 +94,10 @@
                 background: #FFFFFF;
             }
         }
+    }
+
+    &-button-prev {
+        transform: translateX(-45px);
     }
 }
 
@@ -286,6 +291,7 @@
 
     .swiper-container {
         height: 35vw;
+        overflow: hidden;
         @media (max-width: 1024px) {
             height: 50vw;
         }
@@ -301,6 +307,7 @@
         width: 68px;
         height: 68px;
         background: #FFB52E;
+        transform: none;
         @media (max-width: 1024px) {
             top: 15vw;
         }
