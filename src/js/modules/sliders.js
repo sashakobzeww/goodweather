@@ -6,6 +6,9 @@ var slider1 = new Swiper('.swiper-container--1', {
         el: '.swiper-pagination',
         clickable: true,
     },
+    autoplay: {
+        delay: 5000,
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -33,6 +36,9 @@ var slider2 = new Swiper('.swiper-container--2', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    autoplay: {
+        delay: 5000,
+    },
     slidesPerView: 4,
     spaceBetween: 40,
     breakpoints: {
@@ -57,6 +63,9 @@ var slider3 = new Swiper('.swiper-container--3', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+    },
+    autoplay: {
+        delay: 4000,
     },
     navigation: {
         nextEl: '.swiper-button-next',
@@ -85,6 +94,9 @@ var slider41 = new Swiper('.swiper-container--4-1', {
         el: '.swiper-pagination',
         clickable: true,
     },
+    autoplay: {
+        delay: 5000,
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -109,6 +121,9 @@ var slider42 = new Swiper('.swiper-container--4-2', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+    },
+    autoplay: {
+        delay: 5000,
     },
     navigation: {
         nextEl: '.swiper-button-next',
