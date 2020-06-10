@@ -143,6 +143,10 @@
             @media (max-width: 768px) {
                 height: 70vw;
             }
+
+            & img {
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -206,13 +210,16 @@
 
     &-slider__img {
         height: 23vw;
-        margin-bottom: 20px;
         min-width: 100%;
         object-fit: cover;
         object-position: center;
         border-radius: 30px 30px 30px 0;
         @media (max-width: 768px) {
             height: 38vh;
+        }
+
+        & img {
+            margin-bottom: 20px;
         }
     }
 
@@ -270,7 +277,6 @@
     &-slider {
         &__img {
             height: 13vw;
-            margin-bottom: 20px;
             min-width: 100%;
             object-fit: cover;
             object-position: center;
@@ -280,6 +286,10 @@
             }
             @media (max-width: 768px) {
                 height: 30vh;
+            }
+
+            & img {
+                margin-bottom: 20px;
             }
         }
     }
