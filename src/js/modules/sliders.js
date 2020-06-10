@@ -63,6 +63,7 @@ var slider3 = new Swiper('.swiper-container--3', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+
     },
     autoplay: {
         delay: 4000,
