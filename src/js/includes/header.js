@@ -9,6 +9,8 @@ let headerCenter = document.querySelector(".header__center");
 let headerRight = document.querySelector(".header__right-wrapper");
 let headerTel = document.querySelector(".header__tel");
 let headerQuiz = document.querySelector('.header-quiz');
+let headerLogo = document.querySelector('.logo__link');
+let headerTop = document.querySelector('.header__top');
 
 /* Открыть меню */
 menuButton.onclick = () => {
@@ -21,6 +23,7 @@ menuButton.onclick = () => {
     document.body.classList.remove('overflow-hidden');
     if (window.innerWidth < 768) {
         menuButton.classList.remove("header__menu-button--active")
+        headerLogo.classList.remove("logo__link--active");
     }
 };
 
@@ -33,7 +36,9 @@ openQuiz.onclick = () => {
     headerQuiz.classList.add("header-quiz--active");
     document.body.classList.add('overflow-hidden');
     if (window.innerWidth < 768) {
-        menuButton.classList.remove("header__menu-button--active")
+        menuButton.classList.remove("header__menu-button--active");
+        headerLogo.classList.remove("logo__link--active");
+        headerTop.classList.add("header__top--active");
     }
 };
 
@@ -46,5 +51,6 @@ headerClose.onclick = () => {
     headerTel.classList.add("header__tel--active");
     headerQuiz.classList.remove("header-quiz--active");
     document.body.classList.remove('overflow-hidden');
-    menuButton.classList.add("header__menu-button--active")
+    menuButton.classList.add("header__menu-button--active");
+    headerLogo.classList.add("logo__link--active");
 };
