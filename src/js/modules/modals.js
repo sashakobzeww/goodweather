@@ -42,7 +42,7 @@ function modalClose() {
 let modalPlan = document.querySelector(".modal-plan");
 let modalPlanBackground = document.querySelector('.modal-plan .modal__background');
 let modalPlanCloseIco = document.querySelector('.modal-plan .modal__close');
-let buttonsModalPlan = document.querySelectorAll(".plan__tab--active-liter.plan__tab--active-porch path");
+let buttonsModalPlan = document.querySelectorAll(".plans__tab path");
 let modalPlanBack = document.querySelector('.modal-plan__back');
 
 modalPlanBack.onclick = () => {
