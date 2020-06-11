@@ -6,9 +6,8 @@ let headerQuizPrev = document.getElementById('headerQuizPrev');
 let headerQuizNext = document.getElementById('headerQuizNext');
 let headerQuizSteps = document.querySelectorAll(".header-quiz__step");
 
-headerQuizPrev.addEventListener('click', decrement)
-
-headerQuizNext.addEventListener('click', increment)
+headerQuizPrev.addEventListener('click', decrement);
+headerQuizNext.addEventListener('click', increment);
 
 function decrement() {
     changeQuizStep(-1)
@@ -59,13 +58,16 @@ let selectionQuizPrev = document.getElementById('secondQuizPrev');
 let selectionQuizNext = document.getElementById('secondQuizNext');
 let selectionQuizStep = document.querySelectorAll(".selection__step");
 
-selectionQuizPrev.addEventListener('click', function () {
-    changeQuizStep2(-1)
-})
+selectionQuizPrev.addEventListener('click', decrementSelection);
+selectionQuizNext.addEventListener('click', incrementSelection);
 
-selectionQuizNext.addEventListener('click', function () {
+function decrementSelection() {
+    changeQuizStep2(-1)
+}
+
+function incrementSelection() {
     changeQuizStep2(+1)
-})
+}
 
 function changeQuizStep2(e) {
     // Определяем номер активного шага
@@ -74,6 +76,7 @@ function changeQuizStep2(e) {
         if (has) var numberOfActiveQuizStep = i;
     }
 
+    let selectionForm = document.querySelector('.selection__form');
     let prevEl = selectionQuizStep[numberOfActiveQuizStep].previousElementSibling;
     let currentEl = selectionQuizStep[numberOfActiveQuizStep];
     let nextEl = selectionQuizStep[numberOfActiveQuizStep].nextElementSibling;
@@ -85,7 +88,12 @@ function changeQuizStep2(e) {
         selectionQuizPrev.disabled = false;
         selectionQuizNext.textContent = 'Дальше'
     } else if (currentStep === selectionQuizStep.length) {
-        selectionQuizNext.textContent = 'Отправить'
+        selectionQuizNext.textContent = 'Отправить';
+        selectionQuizNext.removeEventListener("click", increment);
+        selectionQuizNext.addEventListener("click", function () {
+            modalThanks.classList.add("modal--active");
+            selectionForm.classList.add('selection__form--send');
+        });
     }
 
     currentEl.classList.remove('selection__step--active');

@@ -32,6 +32,30 @@
             grid-gap: 4vw;
         }
 
+        &--send {
+            grid-template: 0 400px / 0;
+            grid-gap: 0;
+            align-items: center;
+            justify-content: center;
+
+            .selection__right {
+                width: 100%;
+                height: 100%;
+                margin: auto;
+            }
+
+            .selection__bottom {
+                visibility: hidden;
+            }
+
+            @media (max-width: 1024px) {
+                grid-template: 300px 0 0 / 1fr;
+                .selection__right {
+                    width: auto;
+                }
+            }
+        }
+
     }
 
     &__steps {
