@@ -89,6 +89,8 @@ $pfx: "header";
         opacity: 0;
         margin-left: 24px;
         transition: 500ms;
+        position: absolute;
+        right: 0;
 
         &--active {
             cursor: pointer;
@@ -107,7 +109,14 @@ $pfx: "header";
         transform: translateX(48px);
         @media (max-width: 768px) {
             margin-right: 0;
-            transform: translateX(0);
+            transform: translate(-50px, 0);
+            opacity: 0;
+            transition: 300ms;
+            &--active {
+                transition: 300ms;
+                opacity: 1;
+                transform: translate(0);
+            }
         }
 
         &:before {
