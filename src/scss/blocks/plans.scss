@@ -169,13 +169,13 @@
                 }
             }
         }
-    }
-}
 
-.plan__tab--active-liter.plan__tab--active-porch {
-    visibility: visible;
-    top: 0;
-    display: grid;
-    opacity: 1;
-    transition: 600ms;
+        &--active {
+            visibility: visible;
+            top: 0;
+            display: grid;
+            opacity: 1;
+            transition: 600ms;
+        }
+    }
 }

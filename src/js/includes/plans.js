@@ -1,12 +1,16 @@
 let tabsHeadersLiter = document.querySelectorAll('.plans__tabs-headers--liter .plans__tabs-header');
 let tabsHeadersPorch = document.querySelectorAll('.plans__tabs-headers--porch .plans__tabs-header');
-let tabsBorderLiter = document.querySelector('.plans__tabs-border');
 let tabs = document.querySelectorAll(".plans__tab");
-let tabsLiter1 = document.querySelectorAll(".plans__tab--liter-1");
-let tabsLiter2 = document.querySelectorAll(".plans__tab--liter-2");
-let tabsPorch1 = document.querySelectorAll(".plans__tab--porch-1");
-let tabsPorch2 = document.querySelectorAll(".plans__tab--porch-2");
-let tabsPorch3 = document.querySelectorAll(".plans__tab--porch-3");
+
+let tabs11 = document.querySelector(".plans__tab--1-1");
+let tabs12 = document.querySelector(".plans__tab--1-2");
+let tabs13 = document.querySelector(".plans__tab--1-3");
+let tabs21 = document.querySelector(".plans__tab--2-1");
+let tabs22 = document.querySelector(".plans__tab--2-2");
+let tabs23 = document.querySelector(".plans__tab--2-3");
+
+var a;
+var b;
 
 for (let i = 0; i < tabsHeadersLiter.length; i++) {
     tabsHeadersLiter[i].onclick = () => {
@@ -18,22 +22,19 @@ for (let i = 0; i < tabsHeadersLiter.length; i++) {
         }
 
         if (i === 0) {
-            for (let j = 0; j < tabsLiter1.length; j++) {
-                tabsLiter1[j].classList.add('plan__tab--active-liter')
-                tabsHeadersLiter[i].classList.add('plans__tabs-header--active')
-            }
+            tabsHeadersLiter[i].classList.add('plans__tabs-header--active');
+            a = i;
         }
 
         if (i === 1) {
-            for (let j = 0; j < tabsLiter2.length; j++) {
-                tabsLiter2[j].classList.add('plan__tab--active-liter')
-                tabsHeadersLiter[i].classList.add('plans__tabs-header--active')
-            }
+            tabsHeadersLiter[i].classList.add('plans__tabs-header--active');
+            a = i;
         }
+
+        changeTab(a, b);
 
     };
 }
-
 
 for (let i = 0; i < tabsHeadersPorch.length; i++) {
     tabsHeadersPorch[i].onclick = () => {
@@ -45,25 +46,58 @@ for (let i = 0; i < tabsHeadersPorch.length; i++) {
         }
 
         if (i === 0) {
-            for (let j = 0; j < tabsPorch1.length; j++) {
-                tabsPorch1[j].classList.add('plan__tab--active-porch')
-                tabsHeadersPorch[i].classList.add('plans__tabs-header--active')
-            }
+            tabsHeadersPorch[i].classList.add('plans__tabs-header--active');
+            b = i;
         }
 
         if (i === 1) {
-            for (let j = 0; j < tabsPorch2.length; j++) {
-                tabsPorch2[j].classList.add('plan__tab--active-porch')
-                tabsHeadersPorch[i].classList.add('plans__tabs-header--active')
-            }
+            tabsHeadersPorch[i].classList.add('plans__tabs-header--active');
+            b = i;
         }
 
         if (i === 2) {
-            for (let j = 0; j < tabsPorch3.length; j++) {
-                tabsPorch3[j].classList.add('plan__tab--active-porch')
-                tabsHeadersPorch[i].classList.add('plans__tabs-header--active')
-            }
+            tabsHeadersPorch[i].classList.add('plans__tabs-header--active');
+            b = i;
         }
 
+        changeTab(a, b);
     };
+}
+
+function changeTab (a, b) {
+    if (a === undefined) {
+        a = 0
+    }
+    if (b === undefined) {
+        b = 0
+    }
+    console.log({a, b});
+
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('plans__tab--active');
+    }
+
+    if (a === 0 && b === 0) {
+        tabs11.classList.add('plans__tab--active');
+    }
+
+    if (a === 1 && b === 1) {
+        tabs22.classList.add('plans__tab--active');
+    }
+
+    if (a === 2 && b === 0) {
+        tabs13.classList.add('plans__tab--active');
+    }
+
+    if (a === 0 && b === 1) {
+        tabs12.classList.add('plans__tab--active');
+    }
+
+    if (a === 1 && b === 0) {
+        tabs21.classList.add('plans__tab--active');
+    }
+
+    if (a === 2 && b === 1) {
+        tabs23.classList.add('plans__tab--active');
+    }
 }
