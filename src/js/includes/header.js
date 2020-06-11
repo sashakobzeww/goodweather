@@ -43,7 +43,9 @@ openQuiz.onclick = () => {
 };
 
 /* Закрыть меню или квиз */
-headerClose.onclick = () => {
+headerClose.onclick = () => close();
+
+export function close() {
     headerCenter.classList.add("header__center--active");
     headerClose.classList.remove("header__close--active");
     headerNav.classList.remove("header-nav--active");
@@ -53,4 +55,4 @@ headerClose.onclick = () => {
     document.body.classList.remove('overflow-hidden');
     menuButton.classList.add("header__menu-button--active");
     headerLogo.classList.add("logo__link--active");
-};
+}

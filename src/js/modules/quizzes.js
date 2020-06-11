@@ -1,15 +1,22 @@
+import {modalThanks} from '../modules/modals';
+import {close} from '../includes/header';
+
 /*Квиз в шапке*/
 let headerQuizPrev = document.getElementById('headerQuizPrev');
 let headerQuizNext = document.getElementById('headerQuizNext');
 let headerQuizSteps = document.querySelectorAll(".header-quiz__step");
 
-headerQuizPrev.addEventListener('click', function () {
-    changeQuizStep(-1)
-})
+headerQuizPrev.addEventListener('click', decrement)
 
-headerQuizNext.addEventListener('click', function () {
+headerQuizNext.addEventListener('click', increment)
+
+function decrement() {
+    changeQuizStep(-1)
+}
+
+function increment() {
     changeQuizStep(+1)
-})
+}
 
 function changeQuizStep(e) {
     // Определяем номер активного шага
@@ -29,7 +36,12 @@ function changeQuizStep(e) {
         headerQuizPrev.disabled = false;
         headerQuizNext.textContent = 'Дальше'
     } else if (currentStep === headerQuizSteps.length) {
-        headerQuizNext.textContent = 'Отправить'
+        headerQuizNext.textContent = 'Отправить';
+        headerQuizNext.removeEventListener("click", increment);
+        headerQuizNext.addEventListener("click", function () {
+            modalThanks.classList.add("modal--active");
+            close();
+        });
     }
 
     currentEl.classList.remove('header-quiz__step--active');

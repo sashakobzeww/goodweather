@@ -70,7 +70,7 @@ function modalPlanClose() {
 }
 
 /*---------*/
-let modalThanks = document.querySelector(".modal-thanks");
+export let modalThanks = document.querySelector(".modal-thanks");
 let modalThanksBackground = document.querySelector('.modal-thanks .modal__background');
 let modalThanksCloseIco = document.querySelector('.modal-thanks .modal__close');
 let modalThanksCloseBtn = document.querySelector('.modal-thanks .btn');
