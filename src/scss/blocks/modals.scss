@@ -69,6 +69,7 @@
             align-items: center;
             justify-content: center;
             transition: 300ms;
+            clip-path: circle(50%);
             @media (max-width: 768px) {
                 width: 80vw;
                 height: 80vw;
