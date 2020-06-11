@@ -153,6 +153,9 @@
             @media (max-width: 1200px) {
                 grid-template-columns: calc( 95%  / 3 - 30px ) 1fr;
             }
+            @media (max-width: 1024px) {
+                grid-template: auto / auto;
+            }
         }
     }
 
