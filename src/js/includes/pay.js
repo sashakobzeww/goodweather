@@ -1,18 +1,19 @@
 import noUiSlider from "nouislider";
 import wNumb from "wnumb";
 
+
 // Стоимость квартиры
 
 let payCost = document.getElementById('pay-cost');
 let payCostInput = document.getElementById('pay-cost-input');
 
 noUiSlider.create(payCost, {
-    start: [1000000],
+    start: [2500000],
     step: 1000,
     connect: 'lower',
     range: {
         'min': [1000000],
-        'max': [10000000]
+        'max': [5000000]
     },
     format: wNumb({
         decimals: 0,
@@ -22,19 +23,71 @@ noUiSlider.create(payCost, {
 });
 
 payCost.noUiSlider.on('update', function (values, handle) {
-    console.log("\n");
-    console.log("values: ", values);
-    console.log("handle: ", handle);
-    console.log("payCostInput: ", payCostInput);
-    console.log("payCostInput.value: ", payCostInput.value);
     payCostInput.value = values[handle];
 });
 
 payCostInput.addEventListener('change', function () {
-    console.log(this.value);
     payCost.noUiSlider.set(this.value);
 });
 
+
+// Стоимость квартиры
+
+let payContribution = document.getElementById('pay-contribution');
+let payContributionInput = document.getElementById('pay-contribution-input');
+
+noUiSlider.create(payContribution, {
+    start: [1500000],
+    step: 1000,
+    connect: 'lower',
+    range: {
+        'min': [1000000],
+        'max': [5000000]
+    },
+    format: wNumb({
+        decimals: 0,
+        thousand: ' ',
+        suffix: ' ₽'
+    })
+});
+
+payContribution.noUiSlider.on('update', function (values, handle) {
+    payContributionInput.value = values[handle];
+});
+
+payContributionInput.addEventListener('change', function () {
+    payContribution.noUiSlider.set(this.value);
+});
+
+
+// Стоимость квартиры
+
+let payYear = document.getElementById('pay-year');
+let payYearInput = document.getElementById('pay-year-input');
+
+noUiSlider.create(payYear, {
+    start: [5],
+    step: 1,
+    connect: 'lower',
+    range: {
+        'min': [1],
+        'max': [10]
+    },
+    format: wNumb({
+        decimals: 0
+    })
+});
+
+payYear.noUiSlider.on('update', function (values, handle) {
+    payYearInput.value = values[handle];
+});
+
+payYearInput.addEventListener('change', function () {
+    payYear.noUiSlider.set(this.value);
+});
+
+
+// Вкладки
 
 let tabsHeaders = document.querySelectorAll('.pay__tabs-header');
 let tabsBorder = document.querySelector('.pay__tabs-border');
