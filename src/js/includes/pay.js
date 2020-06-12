@@ -3,28 +3,36 @@ import wNumb from "wnumb";
 
 // Стоимость квартиры
 
-let price = document.getElementById('calc-price');
+let payCost = document.getElementById('pay-cost');
+let payCostInput = document.getElementById('pay-cost-input');
 
-noUiSlider.create(price, {
-    start: [0],
+noUiSlider.create(payCost, {
+    start: [1000000],
     step: 1000,
     connect: 'lower',
     range: {
-        'min': [0],
+        'min': [1000000],
         'max': [10000000]
     },
     format: wNumb({
         decimals: 0,
-        thousand: ' '
+        thousand: ' ',
+        suffix: ' ₽'
     })
 });
 
-let priceValueElement = document.getElementById('calc-price-value');
-let priceInput = document.getElementById('price-input');
+payCost.noUiSlider.on('update', function (values, handle) {
+    console.log("\n");
+    console.log("values: ", values);
+    console.log("handle: ", handle);
+    console.log("payCostInput: ", payCostInput);
+    console.log("payCostInput.value: ", payCostInput.value);
+    payCostInput.value = values[handle];
+});
 
-price.noUiSlider.on('update', function (values, handle) {
-    priceValueElement.innerHTML = values[handle];
-    priceInput.value = values[handle];
+payCostInput.addEventListener('change', function () {
+    console.log(this.value);
+    payCost.noUiSlider.set(this.value);
 });
 
 
