@@ -1,3 +1,33 @@
+import noUiSlider from "nouislider";
+import wNumb from "wnumb";
+
+// Стоимость квартиры
+
+let price = document.getElementById('calc-price');
+
+noUiSlider.create(price, {
+    start: [0],
+    step: 1000,
+    connect: 'lower',
+    range: {
+        'min': [0],
+        'max': [10000000]
+    },
+    format: wNumb({
+        decimals: 0,
+        thousand: ' '
+    })
+});
+
+let priceValueElement = document.getElementById('calc-price-value');
+let priceInput = document.getElementById('price-input');
+
+price.noUiSlider.on('update', function (values, handle) {
+    priceValueElement.innerHTML = values[handle];
+    priceInput.value = values[handle];
+});
+
+
 let tabsHeaders = document.querySelectorAll('.pay__tabs-header');
 let tabsBorder = document.querySelector('.pay__tabs-border');
 let tabs = document.querySelectorAll('.pay__tab');
@@ -31,4 +61,3 @@ for (let i = 0; i < tabsHeaders.length; i++) {
 
     }
 }
-

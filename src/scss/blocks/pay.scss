@@ -288,5 +288,63 @@
 }
 }
 
+$gradientLinear: linear-gradient(77.83deg, #35b34a 0%, #c2d222 100%);
 
-
+.noUi-horizontal {
+    height: 4px;
+    background: $gray-100;
+    position: relative;
+    .noUi-base, .noUi-connects {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    .noUi-origin {
+        will-change: transform;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        -ms-transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        -webkit-transform-style: preserve-3d;
+        transform-origin: 0 0;
+        transform-style: flat;
+        width: 10%;
+        height: 0;
+    }
+    .noUi-handle {
+        width: 20px;
+        height: 20px;
+        right: -10px;
+        top: -9px;
+        position: absolute;
+        border-radius: 100%;
+        background: $gradientLinear;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .noUi-touch-area {
+        height: 8px;
+        width: 8px;
+        background: $white;
+        border-radius: 100%;
+    }
+    .noUi-connect {
+        will-change: transform;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        -ms-transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        -webkit-transform-style: preserve-3d;
+        transform-origin: 0 0;
+        transform-style: flat;
+        background: $gradientLinear;
+        height: 100%;
+        width: 100%;
+    }
+}

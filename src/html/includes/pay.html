@@ -41,23 +41,19 @@
 
             <form class="pay__form" style="--animationOrder:7">
 
-                <div class="f-range" data-unit="₽">
-                    <h4 class="text__9">Стоимость квартиры</h4>
-                    <input type="number" class="f-range__text">
-                    <input type="range" class="f-range__range">
+                <input type="text" hidden id="price-input">
+                <input type="text" hidden id="initial-input">
+                <input type="text" hidden id="year-input">
+
+                <div class="pay-calc__range">
+                    <div class="pay-calc__range__wrap">
+                        <span class="pay-calc__range__wrap-title">Стоимость квартиры, руб.</span>
+                        <span class="pay-calc__range__wrap-value" id="calc-price-value"></span>
+                    </div>
+                    <div id="calc-price"></div>
                 </div>
 
-                <div class="f-range" data-unit="₽">
-                    <h4 class="text__9">Первоначальный взнос</h4>
-                    <input type="number" class="f-range__text">
-                    <input type="range" class="f-range__range">
-                </div>
 
-                <div class="f-range" data-unit="лет">
-                    <h4 class="text__9">Срок кредита</h4>
-                    <input type="number" class="f-range__text">
-                    <input type="range" class="f-range__range">
-                </div>
 
                 <button class="pay__form-btn btn btn-orange-1">Рассчитать ипотеку</button>
 
