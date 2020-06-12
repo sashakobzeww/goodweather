@@ -146,3 +146,7 @@ var slider42 = new Swiper('.swiper-container--4-2', {
         }
     }
 })
+
+slider1.on('slideNextTransitionStart', () => {
+    console.log(789);
+})
