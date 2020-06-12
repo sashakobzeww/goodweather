@@ -186,6 +186,11 @@
     }
 }
 
+    &__range {
+        width: 96%;
+        margin-left: 2%;
+    }
+
 &__payment {
 }
 
@@ -288,14 +293,16 @@
 }
 }
 
-$gradientLinear: linear-gradient(77.83deg, #35b34a 0%, #c2d222 100%);
-
 .noUi-horizontal {
-    height: 4px;
+    width: calc( 100% - 10px );
+    margin-left: 5px;
+    height: 3px;
     background: $gray-100;
     position: relative;
+    transform: translateY(-4px);
+    border: none;
+
     .noUi-base, .noUi-connects {
-        width: 100%;
         height: 100%;
         position: relative;
         z-index: 1;
@@ -315,22 +322,27 @@ $gradientLinear: linear-gradient(77.83deg, #35b34a 0%, #c2d222 100%);
         height: 0;
     }
     .noUi-handle {
-        width: 20px;
-        height: 20px;
-        right: -10px;
-        top: -9px;
+        width: 30px;
+        height: 30px;
+        right: -15px;
+        top: -14px;
         position: absolute;
         border-radius: 100%;
-        background: $gradientLinear;
         display: flex;
         align-items: center;
         justify-content: center;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 25px #E8E5E3;
+        &:before, &:after {
+            display: none;
+        }
     }
     .noUi-touch-area {
-        height: 8px;
-        width: 8px;
-        background: $white;
+        height: 14px;
+        width: 14px;
         border-radius: 100%;
+        background: #FFB52E;
+        box-shadow: 0px 10px 25px #EEEEEE;
     }
     .noUi-connect {
         will-change: transform;
@@ -343,8 +355,8 @@ $gradientLinear: linear-gradient(77.83deg, #35b34a 0%, #c2d222 100%);
         -webkit-transform-style: preserve-3d;
         transform-origin: 0 0;
         transform-style: flat;
-        background: $gradientLinear;
         height: 100%;
         width: 100%;
+        background: #FFB52E;
     }
 }
