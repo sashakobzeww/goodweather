@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 var slider1 = new Swiper('.swiper-container--1', {
     direction: 'horizontal',
     pagination: {
-        el: '.swiper-pagination',
+        el: '#swiper-pagination--1',
         clickable: true,
     },
     autoplay: {
@@ -145,8 +145,4 @@ var slider42 = new Swiper('.swiper-container--4-2', {
             spaceBetween: 40
         }
     }
-})
-
-slider1.on('slideNextTransitionStart', () => {
-    console.log(789);
 })

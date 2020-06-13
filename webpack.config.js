@@ -39,7 +39,7 @@ const config = {
     watchContentBase: true,
     compress: true,
     open: true,
-    port: 8081
+    port: 8082
   },
   devtool: "source-map",
   mode: "production",
