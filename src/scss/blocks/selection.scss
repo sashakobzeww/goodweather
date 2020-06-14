@@ -20,14 +20,14 @@
         grid-template-areas:
             's__step s__right'
             's__bottom s__right';
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             grid-template: 30vw auto auto / 1fr;
             grid-template-areas:
                 's__right'
                 's__step'
                 's__bottom';
         }
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             grid-template: 50vw auto auto / 1fr;
             grid-gap: 4vw;
         }
@@ -48,7 +48,7 @@
                 visibility: hidden;
             }
 
-            @media (max-width: 1024px) {
+            @media (max-width: $media_1024) {
                 grid-template: 300px 0 0 / 1fr;
                 .selection__right {
                     width: auto;
@@ -92,7 +92,7 @@
         &-p {
             margin-top: 10px;
             width: 70%;
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 width: 100%;
             }
         }
@@ -106,7 +106,7 @@
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
         margin: 37px 0 57px;
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             grid-template: auto / 1fr;
             margin: 3vw 0 3vw;
         }
@@ -117,7 +117,7 @@
         grid-template-columns: repeat(2, 155px);
         grid-gap: 30px;
         margin-bottom: 35px;
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             grid-template: 1fr 1fr / 1fr;
             grid-gap: 3vw;
         }

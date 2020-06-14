@@ -2,10 +2,10 @@
     display: flex;
     margin: 260px auto 310px;
     position: relative;
-    @media (max-width: 1024px) {
+    @media (max-width: $media_1024) {
         margin: 100px auto 200px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: $media_768) {
         display: grid;
         grid-template: auto auto / 1fr;
         grid-gap: 10vw;
@@ -14,7 +14,7 @@
     &__left, &__right {
         width: 50%;
         height: 100%;
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             width: 100%;
         }
     }
@@ -32,10 +32,10 @@
         position: absolute;
         right: 0;
         top: -340px;
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             top: 60px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             position: relative;
             top: auto;
             right: auto;
@@ -60,7 +60,7 @@
         z-index: 4;
         bottom: -30px;
         right: 0;
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             bottom: -70px;
             width: 20vw;
         }
@@ -69,12 +69,12 @@
         z-index: 1;
         top: 6vw;
         left: -4vw;
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             top: -8vw;
             left: -4vw;
             width: 50vw;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             top: -28vw;
         }
     }
@@ -83,11 +83,11 @@
         bottom: 0;
         left: -10vw;
         pointer-events: none;
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             left: -5vw;
             width: 60vw;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             left: 25vw;
             width: 40vw;
         }

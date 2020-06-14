@@ -1,6 +1,6 @@
 .developer {
     position: relative;
-    @media (max-width: 768px) {
+    @media (max-width: $media_768) {
         margin-top: 460px;
     }
 
@@ -10,7 +10,7 @@
 
     &__left {
         width: 30%;
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             width: 0;
         }
     }
@@ -18,7 +18,7 @@
     &__right {
         width: 57%;
         transform: translateX(3vw);
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             transform: translateX(0);
             width: 100%;
         }

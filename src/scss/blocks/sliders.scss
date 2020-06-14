@@ -6,35 +6,35 @@
         width: calc(1592px * 1.5);
         height: auto !important;
         overflow: visible;
-        @media (max-width: 1800px) {
+        @media (max-width: $media_1800) {
             margin-left: 5%;
             width: 110vw;
         }
-        @media (max-width: 1200px) {
+        @media (max-width: $media_1200) {
             width: 95%;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             width: 90%;
         }
 
         &--2 {
             height: 480px;
             padding-bottom: 150px;
-            @media (max-width: 1800px) {
+            @media (max-width: $media_1800) {
                 height: 21vw;
                 padding-bottom: 0;
             }
-            @media (max-width: 1024px) {
+            @media (max-width: $media_1024) {
                 height: 35vw;
             }
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 height: 46vh;
             }
         }
 
         &--4-1, &--4-2 {
             height: min(40vw, 640px);
-            @media (max-width: 1800px) {
+            @media (max-width: $media_1800) {
                 height: 520px;
             }
         }
@@ -42,7 +42,7 @@
 
     &-button-next {
         transform: translateX(-19vw);
-        @media (max-width: 1200px) {
+        @media (max-width: $media_1200) {
             transform: translateX(-2vw);
         }
     }
@@ -109,17 +109,17 @@
         grid-gap: 30px;
         padding-right: calc(100vw / 12);
         align-items: center;
-        @media (max-width: 1800px) {
+        @media (max-width: $media_1800) {
             grid-template-columns: calc( 110vw  / 3 - 20px ) 1fr;
         }
-        @media (max-width: 1200px) {
+        @media (max-width: $media_1200) {
             grid-template-columns: calc( 95%  / 3 - 30px ) 1fr;
         }
-        @media (max-width: 1440px) {
+        @media (max-width: $media_1440) {
             grid-gap: 50px;
             padding-right: 0;
         }
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             grid-template: auto / auto;
             padding: 0;
         }
@@ -127,13 +127,13 @@
         &--near {
             grid-template-columns: 560px 1fr;
             grid-gap: 40px;
-            @media (max-width: 1800px) {
+            @media (max-width: $media_1800) {
                 grid-template-columns: calc( 110vw  / 3 - 20px ) 1fr;
             }
-            @media (max-width: 1200px) {
+            @media (max-width: $media_1200) {
                 grid-template-columns: calc( 95%  / 3 - 30px ) 1fr;
             }
-            @media (max-width: 1024px) {
+            @media (max-width: $media_1024) {
                 grid-template: auto / auto;
             }
         }
@@ -147,10 +147,10 @@
             object-fit: cover;
             object-position: center;
             border-radius: 30px 30px 30px 0;
-            @media (max-width: 1024px) {
+            @media (max-width: $media_1024) {
                 height: 33vw;
             }
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 height: 70vw;
             }
 
@@ -174,10 +174,10 @@
         width: 68px;
         height: 68px;
         background: #FFFFFF;
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             top: 34%;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             display: none;
         }
 
@@ -227,7 +227,7 @@
         object-fit: cover;
         object-position: center;
         border-radius: 30px 30px 30px 0;
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             height: 38vh;
         }
 
@@ -248,10 +248,10 @@
         width: 68px;
         height: 68px;
         background: #FFB52E;
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             top: 25%;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             display: none;
         }
 
@@ -265,7 +265,7 @@
 .near {
     padding: 160px 0;
     background: #FDFDFD;
-    @media (max-width: 768px) {
+    @media (max-width: $media_768) {
         padding: 70px 0;
     }
 
@@ -277,10 +277,10 @@
         width: 68px;
         height: 68px;
         background: #FFB52E;
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             top: calc( 130px * 100 * 0.65 / 270 * 2 );
         }
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             display: none;
         }
 
@@ -297,10 +297,10 @@
             object-fit: cover;
             object-position: center;
             border-radius: 30px 30px 30px 0;
-            @media (max-width: 1024px) {
+            @media (max-width: $media_1024) {
                 height: 17vw;
             }
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 height: 30vh;
             }
 
@@ -318,10 +318,10 @@
     .swiper-container {
         height: 35vw;
         overflow: hidden;
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             height: 50vw;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             height: 60vh;
         }
     }
@@ -334,10 +334,10 @@
         height: 68px;
         background: #FFB52E;
         transform: none;
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             top: 15vw;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             display: none;
         }
 
@@ -349,7 +349,7 @@
 
     .swiper-button-next {
         transform: translateX(-19vw);
-        @media (max-width: 1200px) {
+        @media (max-width: $media_1200) {
             transform: translateX(-2vw);
         }
     }
@@ -373,10 +373,10 @@
             box-shadow: 0px 20px 60px rgba(100, 100, 100, 0.18);
             border-radius: 16px;
             padding: 14px 32px;
-            @media (max-width: 1200px) {
+            @media (max-width: $media_1200) {
                 top: 40%;
             }
-            @media (max-width: 1024px) {
+            @media (max-width: $media_1024) {
                 top: 22vw;
             }
         }
@@ -407,7 +407,7 @@
 
 .slide--empty {
 
-    @media (max-width: 768px) {
+    @media (max-width: $media_768) {
         display: none;
     }
 }

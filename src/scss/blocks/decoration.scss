@@ -22,7 +22,7 @@
         grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
         grid-gap: 2.6vw;
         margin-top: 5vw;
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             grid-gap: 12vw;
         }
     }
@@ -38,7 +38,7 @@
     }
     &__h3 {
         margin: 40px 0 23px 0;
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             margin: 20px 0 5px;
         }
     }
@@ -61,7 +61,7 @@
                 background-repeat: no-repeat;
                 background-size: contain;
                 transform: rotate(-90deg);
-                @media (max-width: 768px) {
+                @media (max-width: $media_768) {
                     left: -15px;
                     top: 7px;
                 }

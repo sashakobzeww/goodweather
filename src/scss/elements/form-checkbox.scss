@@ -37,7 +37,7 @@
   background-color: #d6082e;
 }
 
-@media (max-width: 767px) {
+@media (max-width: $media_767) {
   .checkbox__toggle {
     width: 18px;
     height: 18px;
@@ -51,7 +51,7 @@
   width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: $media_767) {
   .checkbox__content {
     justify-content: center;
     text-align: left;
@@ -69,7 +69,7 @@
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: $media_479) {
   .checkbox__text {
     font-size: 11px;
   }

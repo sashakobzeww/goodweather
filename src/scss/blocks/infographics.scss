@@ -13,7 +13,7 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             height: calc( 2 * 383 * 100vw / 768);
             display: grid;
             grid-template: repeat(2, 45vw) / 1fr 1fr;
@@ -23,10 +23,10 @@
         &--developer {
             width: 100%;
             height: calc( 573 * 100vw / var(--abc));
-            @media (min-width: 1800px) {
+            @media (min-width: $media_1800) {
                 transform: scale(0.8);
             }
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 height: auto;
                 grid-template: 55vw 45vw 45vw/1fr;
             }
@@ -84,7 +84,7 @@
             background-image: url("../img/infographics__bubble--5.svg");
             top: calc( 140 * 100vw / var(--abc));
             right: calc( 120 * 100vw / var(--abc));
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 width: 30vw;
                 height: 30vw;
             }
@@ -96,7 +96,7 @@
             background-image: url("../img/infographics__bubble--6.svg");
             bottom: calc( 70 * 100vw / var(--abc));
             left: calc( 0 * 100vw / var(--abc));
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 width: 30vw;
                 height: 30vw;
             }
@@ -108,13 +108,13 @@
             background-image: url("../img/infographics__bubble--7.svg");
             top: calc( 150 * 100vw / var(--abc));
             left: calc( 40 * 100vw / var(--abc));
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 width: 30vw;
                 height: 30vw;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             --abc: 768;
         }
 
@@ -164,7 +164,7 @@
             left: calc( 56 * 100vw / var(--abc));
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             --abc: 768;
         }
     }
@@ -175,7 +175,7 @@
 
         &--1 {
             top: calc( 75 * 100vw / var(--abc));
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 top: 10vw;
             }
         }
@@ -186,7 +186,7 @@
 
         &--3 {
             top: calc( 70 * 100vw / var(--abc));
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 top: -7vw;
             }
         }
@@ -194,7 +194,7 @@
         &--4 {
             bottom: calc( 90 * 100vw / var(--abc));
             transform: translateX(calc( 30 * 100vw / var(--abc)));
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 bottom: -6vw;
             }
         }
@@ -206,7 +206,7 @@
 
         &--6 {
             bottom: calc( 180 * 100vw / var(--abc));
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 bottom: 10vw;
             }
         }
@@ -216,7 +216,7 @@
             transform: translateX(calc( 30 * 100vw / var(--abc)));
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: $media_768) {
             --abc: 768;
         }
     }

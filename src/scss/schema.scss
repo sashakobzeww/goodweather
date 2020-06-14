@@ -31,6 +31,15 @@ $_animationDelay: calc( var(--animationOrder) * 0.2s + 1s );
 $_animation1: 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 $_animation2: 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
+$media_479: 479px;
+$media_768: 768px;
+$media_767: 767px;
+$media_1024: 1024px;
+$media_1200: 1200px;
+$media_1300: 1300px;
+$media_1440: 1440px;
+$media_1800: 1800px;
+
 /*
    * 2. Базовая настройка шаблона
    */

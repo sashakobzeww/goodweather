@@ -7,7 +7,7 @@
         grid-template-columns: 600px 1fr;
         grid-gap: 50px;
         margin-bottom: 80px;
-        @media (max-width: 1024px) {
+        @media (max-width: $media_1024) {
             grid-template: auto / auto;
             padding: 0;
             margin-bottom: 0;
@@ -118,10 +118,10 @@
         &-list {
             height: 45vw;
             position: relative;
-            @media (max-width: 1200px) {
+            @media (max-width: $media_1200) {
                 height: 65vw;
             }
-            @media (max-width: 768px) {
+            @media (max-width: $media_768) {
                 height: 60vh !important;
             }
         }
