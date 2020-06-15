@@ -91,7 +91,7 @@
     }
 
     &__left {
-        margin-left: calc( ( 100vw - 1592px ) / 2 );
+        margin-left: calc( ( 100vw - var(--container) ) / 2 );
         @media (max-width: $_media_mobile) {
             margin: 0!important;
         }
@@ -135,7 +135,7 @@
     &__form {
         width: 50%;
         min-width: 600px;
-        margin-left: calc( ( 100vw - 1592px ) / 2 );
+        margin-left: calc( ( 100vw - var(--container) ) / 2 );
         transform: translateX(-100vw);
         transition: 500ms;
         @media (max-width: $_media_4K) {
@@ -150,6 +150,7 @@
         &--active {
             transform: translateX(0);
             transition: 500ms;
+            margin-left: 10%;
         }
     }
 
@@ -173,7 +174,7 @@
         display: grid;
         grid-row-gap: 40px;
         position: absolute;
-        left: calc( ( 100vw - 1592px ) / 2 );
+        left: calc( ( 100vw - var(--container) ) / 2 );
         transform: translateX(100vw);
         transition: 500ms;
 
@@ -217,7 +218,7 @@
     }
 
     .modal__left {
-        margin-left: calc( ( 100vw - 1592px ) / 2 );
+        margin-left: calc( ( 100vw - var(--container) ) / 2 );
         @media (max-width: $_media_4K) {
             margin-left: 10%;
         }

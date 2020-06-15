@@ -33,11 +33,8 @@ ul {
 
 .container {
     margin: 0 auto;
-    max-width: 1270px;
-    width: 100%;
-    @media (max-width: $_media_laptop_3) {
-        padding: 0 1rem;
-    }
+    max-width: 90% !important;
+    width: var(--container);
 }
 
 svg.inlineIcon {
@@ -835,6 +832,9 @@ button, label, input, textarea {
         pointer-events: auto;
         transform: scale(1);
         opacity: 1;
+        @media (max-width: $_media_laptop) {
+            display: none;
+        }
     }
 }
 

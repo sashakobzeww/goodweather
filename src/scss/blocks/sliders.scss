@@ -2,8 +2,8 @@
 
     &-container {
         margin-top: 60px;
-        margin-left: calc((100% - 1592px) / 2);
-        width: calc(1592px * 1.5);
+        margin-left: calc((100% - var(--container)) / 2);
+        width: calc(var(--container) * 1.5);
         height: auto !important;
         overflow: visible;
         @media (max-width: $_media_4K) {
@@ -105,7 +105,7 @@
 
     &__header {
         display: grid;
-        grid-template-columns: calc( 1592px / 2 ) 1fr;
+        grid-template-columns: calc( var(--container) / 2 ) 1fr;
         grid-gap: 30px;
         padding-right: calc(100vw / 12);
         align-items: center;

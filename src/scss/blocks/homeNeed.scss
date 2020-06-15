@@ -88,8 +88,8 @@
     &__right {
         margin-top: -220px;
         padding-top: 220px;
-        padding-right: calc((100vw - 1592px) / 2);
-        margin-right: calc((1592px - 100vw) / 2);
+        padding-right: calc(( 100vw - var(--container) ) / 2);
+        margin-right: calc((var(--container) - 100vw) / 2);
         z-index: 1;
 
         @media (max-width: $_media_4K) {
