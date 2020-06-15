@@ -1,3 +1,29 @@
+
+$_orange: #FFB52E;
+$_orange2: #F1A416;
+$_light: #F3F3F3;
+$_light2: #F9FAFA;
+$_gray: #7C7781;
+$_dark: #413949;
+$_blueLight: #A4D2CC;
+$_blue: #61BDB5;
+$_blueDark: #79ADA0;
+
+$_animationDelay: calc( var(--animationOrder) * 0.2s + 1s );
+$_animation1: 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+$_animation2: 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+$_media_479: 479px;
+$_media_mobile: 768px;
+$_media_767: 767px;
+$_media_laptop: 1024px;
+$_media_laptop_2: 1200px;
+$_media_laptop_3: 1300px;
+$_media_laptop_4: 1440px;
+$_media_4K: 1800px;
+
+
+
 /*
    * 1. Палитра основных цветов
    */
@@ -17,28 +43,6 @@ $gray-dark: #343a40;
 $gray-100: #ececec;
 $gray-200: #a6aab0;
 $gray-600: #737373;
-
-$_orange: #FFB52E;
-$_orange2: #F1A416;
-$_light: #F3F3F3;
-$_light2: #F9FAFA;
-$_gray: #7C7781;
-$_dark: #413949;
-$_blueLight: #A4D2CC;
-$_blue: #61BDB5;
-$_blueDark: #79ADA0;
-$_animationDelay: calc( var(--animationOrder) * 0.2s + 1s );
-$_animation1: 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-$_animation2: 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-
-$media_479: 479px;
-$media_768: 768px;
-$media_767: 767px;
-$media_1024: 1024px;
-$media_1200: 1200px;
-$media_1300: 1300px;
-$media_1440: 1440px;
-$media_1800: 1800px;
 
 /*
    * 2. Базовая настройка шаблона

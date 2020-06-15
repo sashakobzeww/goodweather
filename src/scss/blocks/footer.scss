@@ -14,7 +14,7 @@ $pfx: "footer";
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @media (max-width: $media_768) {
+        @media (max-width: $_media_mobile) {
             display: grid;
             grid-gap: 5vw;
             justify-content: center;
@@ -30,10 +30,10 @@ $pfx: "footer";
 
     &__left {
         grid-gap: 50px;
-        @media (max-width: $media_1024) {
+        @media (max-width: $_media_laptop) {
             grid-gap: 30px;
         }
-        @media (max-width: $media_768) {
+        @media (max-width: $_media_mobile) {
             display: grid;
             grid-template: auto auto / 1fr;
             grid-gap: 5vw;
