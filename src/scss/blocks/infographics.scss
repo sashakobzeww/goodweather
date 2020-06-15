@@ -3,7 +3,7 @@
 }
 
 .infographics {
-    background-color: #FDFDFD;
+    background-color: $_light3;
     padding: calc( 90  * 100vw / var(--abc)) 0 calc( 110 * 100vw / var(--abc));
 
     &__ul {

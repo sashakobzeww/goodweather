@@ -10,12 +10,12 @@
     font-weight: 600;
     font-size: 52px;
     line-height: 58px;
-    color: #413949;
+    color: $_dark;
 }
 
 .decoration {
     padding-bottom: 166px;
-    background-color: #FDFDFD;
+    background-color: $_light3;
 
     &__ul {
         display: grid;

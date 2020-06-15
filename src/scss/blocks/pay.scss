@@ -33,7 +33,7 @@
             position: absolute;
             width: calc((100% / 3) - 56px);
             height: 4px;
-            background: #ffb52e;
+            background: $_orange;
             border-radius: 10px;
             bottom: 0;
             transition: 300ms;
@@ -58,7 +58,7 @@
             font-weight: normal;
             font-size: 19px;
             line-height: 27px;
-            color: #7C7781;
+            color: $_gray;
             cursor: pointer;
             padding: 15px;
             @media (max-width: $_media_mobile) {
@@ -68,7 +68,7 @@
 
             &--active {
                 font-weight: 600;
-                color: #413949;
+                color: $_dark;
             }
         }
     }
@@ -208,7 +208,7 @@
         font-weight: normal;
         font-size: 19px;
         line-height: 30px;
-        color: #413949;
+        color: $_dark;
         width: 100%;
         display: flex;
         align-items: center;
@@ -217,7 +217,7 @@
             font-weight: 600;
             font-size: 19px;
             line-height: 30px;
-            color: #FFB52E;
+            color: $_orange;
         }
 
         &:before {
@@ -225,8 +225,8 @@
             display: inline-block;
             width: 62px;
             height: 62px;
-            background: #FFFFFF;
-            box-shadow: 0 20px 60px #F0F0F0;
+            background: $bodyBackground;
+            box-shadow: 0 20px 60px $_grayLight;
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20px auto;
@@ -331,7 +331,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #FFFFFF;
+        background: $bodyBackground;
         box-shadow: 0px 8px 25px #E8E5E3;
         &:before, &:after {
             display: none;
@@ -341,7 +341,7 @@
         height: 14px;
         width: 14px;
         border-radius: 100%;
-        background: #FFB52E;
+        background: $_orange;
         box-shadow: 0px 10px 25px #EEEEEE;
     }
     .noUi-connect {
@@ -357,6 +357,6 @@
         transform-style: flat;
         height: 100%;
         width: 100%;
-        background: #FFB52E;
+        background: $_orange;
     }
 }

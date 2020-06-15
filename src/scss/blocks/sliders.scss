@@ -75,7 +75,7 @@
                 min-height: 14px;
                 max-width: 14px;
                 max-height: 14px;
-                background: #FFFFFF;
+                background: $bodyBackground;
             }
         }
 
@@ -97,7 +97,7 @@
 
     &__wrapper {
         padding: 160px 0;
-        background: #61BDB5;
+        background: $_blue;
         clip-path: ellipse(115% 50% at 50% 50%);
         position: relative;
         z-index: 1;
@@ -173,7 +173,7 @@
         border-radius: 50%;
         width: 68px;
         height: 68px;
-        background: #FFFFFF;
+        background: $bodyBackground;
         @media (max-width: $_media_laptop) {
             top: 34%;
         }
@@ -189,11 +189,11 @@
     }
 
     .swiper-button-disabled {
-        background: #FFFFFF;
+        background: $bodyBackground;
         opacity: 1;
 
         &:after {
-            color: #F3F3F3;
+            color: $_light;
         }
     }
 
@@ -210,7 +210,7 @@
 
 .actual {
     padding: 160px 0;
-    background: #F9FAFA;
+    background: $_light2;
     clip-path: ellipse(115% 50% at 50% 50%);
 
     &__title-h3 {
@@ -237,7 +237,7 @@
     }
 
     .swiper-pagination-bullet-active {
-        background: #FFB52E;
+        background: $_orange;
         opacity: 1;
     }
 
@@ -247,7 +247,7 @@
         border-radius: 50%;
         width: 68px;
         height: 68px;
-        background: #FFB52E;
+        background: $_orange;
         @media (max-width: $_media_laptop) {
             top: 25%;
         }
@@ -257,14 +257,14 @@
 
         &:after {
             transform: scale(0.4);
-            color: #ffffff;
+            color: $bodyBackground;
         }
     }
 }
 
 .near {
     padding: 160px 0;
-    background: #FDFDFD;
+    background: $_light3;
     @media (max-width: $_media_mobile) {
         padding: 70px 0;
     }
@@ -276,7 +276,7 @@
         border-radius: 50%;
         width: 68px;
         height: 68px;
-        background: #FFB52E;
+        background: $_orange;
         @media (max-width: $_media_laptop) {
             top: calc( 130px * 100 * 0.65 / 270 * 2 );
         }
@@ -286,7 +286,7 @@
 
         &:after {
             transform: scale(0.4);
-            color: #ffffff;
+            color: $bodyBackground;
         }
     }
 
@@ -313,7 +313,7 @@
 
 .report {
     padding-top: 160px;
-    background: #FDFDFD;
+    background: $_light3;
 
     .swiper-container {
         height: 35vw;
@@ -332,7 +332,7 @@
         border-radius: 50%;
         width: 68px;
         height: 68px;
-        background: #FFB52E;
+        background: $_orange;
         transform: none;
         @media (max-width: $_media_laptop) {
             top: 15vw;
@@ -343,7 +343,7 @@
 
         &:after {
             transform: scale(0.4);
-            color: #ffffff;
+            color: $bodyBackground;
         }
     }
 
@@ -355,7 +355,7 @@
     }
 
     .swiper-pagination-bullet-active {
-        background: #FFB52E;
+        background: $_orange;
         opacity: 1;
     }
 
@@ -368,8 +368,8 @@
             font-weight: 600;
             font-size: 24px;
             line-height: 29px;
-            color: #413949;
-            background: #FFFFFF;
+            color: $_dark;
+            background: $bodyBackground;
             box-shadow: 0px 20px 60px rgba(100, 100, 100, 0.18);
             border-radius: 16px;
             padding: 14px 32px;

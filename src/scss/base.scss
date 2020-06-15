@@ -18,7 +18,7 @@ body {
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji" !important;
     overflow-x: hidden; // fix: Некоторые блоки могут выходить за пределы по горизонтале
-    background-color: #fdfdfd;
+    background-color: $_light3;
     font-weight: 400;
     line-height: $lineHeight;
 }
@@ -161,7 +161,7 @@ button, label, input, textarea {
     font-weight: 600;
     font-size: 30px;
     line-height: 40px;
-    color: #413949;
+    color: $_dark;
     margin-bottom: 15px;
 
 }
@@ -186,14 +186,14 @@ button, label, input, textarea {
     font-size: 19px;
     line-height: 56px;
     opacity: 0.5;
-    color: #7C7781;
+    color: $_gray;
 
     &--light {
         color: $neutralColor;
     }
 
     &--dark {
-        color: #7C7781;
+        color: $_gray;
     }
 }
 
@@ -217,7 +217,7 @@ button, label, input, textarea {
 }
 
 .infographics__number, .infographics__text {
-    color: #413949;
+    color: $_dark;
     text-align: center;
 }
 
@@ -321,7 +321,7 @@ button, label, input, textarea {
 
     &--light {
         text-align: center;
-        color: #ffffff;
+        color: $bodyBackground;
     }
 }
 
@@ -498,7 +498,7 @@ button, label, input, textarea {
     &:hover {
         border: 2px solid transparent;
         background-color: $neutralColor;
-        color: #413949;
+        color: $_dark;
     }
 
     &:disabled {
@@ -551,7 +551,7 @@ button, label, input, textarea {
         font-weight: normal;
         font-size: 19px;
         line-height: 23px;
-        color: #413949;
+        color: $_dark;
         display: grid;
         grid-gap: 28px;
         grid-template-columns: auto 1fr;
@@ -599,11 +599,11 @@ button, label, input, textarea {
     font-weight: normal;
     font-size: 18px;
     line-height: 28px;
-    color: #7C7781;
+    color: $_gray;
 
     &-number {
         font-weight: bold;
-        color: #413949;
+        color: $_dark;
     }
 }
 
@@ -614,7 +614,7 @@ button, label, input, textarea {
         font-weight: normal;
         font-size: 17px;
         line-height: 20px;
-        color: #7C7781;
+        color: $_gray;
         margin-bottom: 10px;
     }
 
@@ -635,7 +635,7 @@ button, label, input, textarea {
         }
 
         &:focus {
-            border: 1px solid #FFB52E;
+            border: 1px solid $_orange;
         }
     }
 
@@ -664,7 +664,7 @@ button, label, input, textarea {
         font-weight: 600;
         font-size: 24px;
         line-height: 29px;
-        color: #413949;
+        color: $_dark;
         padding: 20px 28px 25px 28px;
         width: 100%;
         margin-top: 7px;
@@ -688,7 +688,7 @@ button, label, input, textarea {
         right: 35px;
         bottom: 24px;
         font-size: 19px;
-        color: #7C7781;
+        color: $_gray;
         pointer-events: none;
     }
 }
@@ -733,7 +733,7 @@ button, label, input, textarea {
         font-weight: normal;
         font-size: 17px;
         line-height: 20px;
-        color: #7C7781;
+        color: $_gray;
 
     }
 
@@ -750,7 +750,7 @@ button, label, input, textarea {
         font-weight: 600;
         font-size: 30px;
         line-height: 36px;
-        color: #413949;
+        color: $_dark;
     }
 
     &--icon {
@@ -772,7 +772,7 @@ button, label, input, textarea {
     font-weight: 600;
     font-size: 19px;
     line-height: 27px;
-    color: #FFB52E;
+    color: $_orange;
 
     &:before {
         content: '';

@@ -10,8 +10,8 @@
     &__form {
         margin-top: 60px;
         padding: 5.5vw 10% 7vw;
-        background: #FFFFFF;
-        box-shadow: 0 20px 60px #F0F0F0;
+        background: $bodyBackground;
+        box-shadow: 0 20px 60px $_grayLight;
         border-radius: 46px;
         display: grid;
         grid-template-columns: 3fr 2fr;
