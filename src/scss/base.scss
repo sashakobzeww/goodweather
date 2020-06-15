@@ -832,6 +832,9 @@ button, label, input, textarea {
         z-index: -1;
         max-width: 60vw;
         height: 120%;
+        pointer-events: auto;
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
