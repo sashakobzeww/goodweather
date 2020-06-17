@@ -1,8 +1,5 @@
 .developer {
     position: relative;
-    @media (max-width: $_media_mobile) {
-        margin-top: 460px;
-    }
 
     &__wrapper {
         display: flex;
