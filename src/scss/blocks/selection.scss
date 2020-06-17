@@ -131,6 +131,10 @@
                 display: flex;
                 justify-content: center;
             }
+
+            & picture img, & picture source {
+                object-fit: contain;
+            }
         }
     }
 

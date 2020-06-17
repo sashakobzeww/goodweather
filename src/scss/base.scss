@@ -851,3 +851,15 @@ picture {
         max-height: 100%;
     }
 }
+
+.only-desktop {
+    @media (max-width: $_media_mobile - 1) {
+        display: none !important;
+    }
+}
+
+.only-mobile {
+    @media (min-width: $_media_mobile) {
+        display: none !important;
+    }
+}

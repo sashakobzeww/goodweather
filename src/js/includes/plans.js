@@ -1,4 +1,5 @@
 let tabsHeadersPorch = document.querySelectorAll('.plans__tabs-headers--porch .plans__tabs-header');
+let tabsHeadersPorchP = document.querySelectorAll('.plans__tabs-headers--porch .plans__tabs-header-p');
 let tabsHeadersLiter = document.querySelectorAll('.plans__tabs-headers--liter .plans__tabs-header');
 let tabs = document.querySelectorAll(".plans__tab");
 
@@ -30,19 +31,31 @@ for (let i = 0; i < tabsHeadersLiter.length; i++) {
 }
 
 for (let i = 0; i < tabsHeadersPorch.length; i++) {
-    tabsHeadersPorch[i].onclick = () => {
-        for (let i = 0; i < tabs.length; i++)  {
-            tabs[i].classList.remove('plan__tab--active-porch');
-            if (tabsHeadersPorch[i] !== undefined) {
-                tabsHeadersPorch[i].classList.remove('plans__tabs-header--active')
-            }
+    tabsHeadersPorch[i].onclick = () => clickTab(i);
+    if (tabsHeadersPorchP[i] !== undefined) {
+        tabsHeadersPorchP[i].onclick = () => clickTab(i);
+    }
+}
+
+function clickTab(i) {
+    for (let i = 0; i < tabs.length; i++)  {
+        tabs[i].classList.remove('plan__tab--active-porch');
+        if (tabsHeadersPorch[i] !== undefined) {
+            tabsHeadersPorch[i].classList.remove('plans__tabs-header--active')
         }
+        if (tabsHeadersPorchP[i] !== undefined) {
+            tabsHeadersPorchP[i].classList.remove('plans__tabs-header-p--active')
+        }
+    }
 
-        tabsHeadersPorch[i].classList.add('plans__tabs-header--active');
-        currentTabLitter = i + 1;
+    tabsHeadersPorch[i].classList.add('plans__tabs-header--active');
+    if (tabsHeadersPorchP[i] !== undefined) {
+        tabsHeadersPorchP[i].classList.add('plans__tabs-header-p--active');
+    }
+    currentTabLitter = i + 1;
 
-        changeTab(currentTabPorch, currentTabLitter);
-    };
+    changeTab(currentTabPorch, currentTabLitter);
+
 }
 
 function changeTab (currentTabPorch, currentTabLitter) {

@@ -1,5 +1,5 @@
 .plans {
-    padding: 130px 0 180px;
+    padding: 130px 0 100px;
     background: $_light2;
     clip-path: ellipse(115% 50% at 50% 50%);
 
@@ -60,7 +60,7 @@
                     display: grid;
                     justify-content: center;
                     grid-template: auto auto / repeat(auto-fill, minmax(0, 173px));
-                    margin: 0;
+                    margin: 0 auto;
                 }
 
                 & .plans__tabs-header {
@@ -68,6 +68,10 @@
                     background: transparent;
                     box-shadow: none;
                     width: auto;
+                }
+
+                & path {
+                    cursor: pointer;
                 }
             }
         }
@@ -107,11 +111,26 @@
             background: $bodyBackground;
             text-align: center;
             margin: auto;
+            &.only-desktop {
+                stroke: $_light;
+            }
+
+            &-p {
+                fill: #413949;
+                &--active {
+                    fill: white
+                }
+            }
+
+            & text {
+                fill: #413949;
+            }
 
             &--active {
                 color: $bodyBackground;
                 background: $_orange;
                 transition: 300ms;
+                fill: $_orange;
                 & path {
                     fill: $_orange;
                 }
@@ -140,7 +159,7 @@
 
         &-list {
             position: relative;
-            height: min(700px, 50vw);
+            height: min(600px, 50vw);
             margin-top: 75px;
         }
 
