@@ -12,8 +12,8 @@ $_blue: #61BDB5;
 $_blueDark: #79ADA0;
 
 $_animationDelay: calc( var(--animationOrder) * 0.2s + 1s );
-$_animation1: 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-$_animation2: 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+$_animation1: 0.2s ease-out both;
+$_animation2: 0.2s ease-out both;
 
 $_media_479: 479px;
 $_media_mobile: 768px;
@@ -23,12 +23,6 @@ $_media_laptop_2: 1200px;
 $_media_laptop_3: 1300px;
 $_media_laptop_4: 1440px;
 $_media_4K: 1800px;
-
-// Почему не scss-переменная?
-// Чтобы не было ошибок при рассчётах в calc()
-root {
-    --container: 1592px;
-}
 
 
 /*

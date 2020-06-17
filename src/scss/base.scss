@@ -623,6 +623,7 @@ button, label, input, textarea {
         border-radius: 10px;
         padding: 21px 27px;
         transition: 200ms;
+        color: #D7D7D7;
 
         &::placeholder {
             font-weight: normal;
@@ -633,6 +634,7 @@ button, label, input, textarea {
 
         &:focus {
             border: 1px solid $_orange;
+            color: #413949;
         }
     }
 

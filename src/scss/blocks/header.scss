@@ -233,6 +233,11 @@ $pfx: "header";
 
         &-p {
             margin: 20px 0 50px 0;
+            & sup {
+                font-size: initial;
+                vertical-align: text-top;
+                font-weight: bold;
+            }
         }
     }
 

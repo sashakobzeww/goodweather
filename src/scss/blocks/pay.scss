@@ -294,18 +294,19 @@
 }
 
 .noUi-horizontal {
-    width: calc( 100% - 10px );
-    margin-left: 5px;
+    width: calc( 100% - 16px );
+    margin-left: 8px;
     height: 3px;
     background: $gray-100;
     position: relative;
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     border: none;
 
     .noUi-base, .noUi-connects {
         height: 100%;
         position: relative;
         z-index: 1;
+        background: #d3d3d3;
     }
     .noUi-origin {
         will-change: transform;

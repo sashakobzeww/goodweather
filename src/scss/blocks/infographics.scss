@@ -25,6 +25,7 @@
             height: calc( 573 * 100vw / var(--abc));
             @media (min-width: $_media_4K) {
                 transform: scale(0.8);
+                transform-origin: top;
             }
             @media (max-width: $_media_mobile) {
                 height: auto;

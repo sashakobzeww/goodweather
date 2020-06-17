@@ -8,8 +8,8 @@
     &__content {
         margin-top: 90px;
         display: grid;
-        grid-template-columns: 500px 1fr;
-        grid-gap: 10%;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5%;
         @media (max-width: $_media_laptop_3) {
             grid-template-columns: 400px 1fr;
         }
