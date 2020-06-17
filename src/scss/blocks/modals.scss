@@ -13,9 +13,8 @@
         transition: 500ms;
 
         .modal__background {
-            transition: 500ms;
             opacity: 0.8;
-            box-shadow: 20px 0 40vw 40vw $_blue;
+            animation: modal-bg 500ms;
         }
 
         .modal__wrapper {
@@ -31,8 +30,7 @@
         background: $_blue;
         opacity: 0;
         cursor: pointer;
-        transition: 500ms;
-        box-shadow: 20px 0 20px 20px $_blue;
+        animation: modal-bg--reverse 500ms;
     }
 
     &__content {
@@ -82,7 +80,7 @@
     &__close {
         position: absolute;
         top: 50px;
-        right: 150px;
+        right: 10vw;
         cursor: pointer;
         @media (max-width: $_media_mobile) {
             top: 20px;
@@ -91,7 +89,7 @@
     }
 
     &__left {
-        margin-left: calc( ( 100vw - var(--container) ) / 2 );
+        margin-left: calc( ( 100vw - 1592px ) / 2 );
         @media (max-width: $_media_mobile) {
             margin: 0!important;
         }
@@ -135,7 +133,7 @@
     &__form {
         width: 50%;
         min-width: 600px;
-        margin-left: calc( ( 100vw - var(--container) ) / 2 );
+        margin-left: calc( ( 100vw - 1592px ) / 2 );
         transform: translateX(-100vw);
         transition: 500ms;
         @media (max-width: $_media_4K) {
@@ -151,6 +149,9 @@
             transform: translateX(0);
             transition: 500ms;
             margin-left: 10%;
+           @media (max-width: $_media_mobile) {
+               margin-left: 0;
+           }
         }
     }
 
@@ -174,7 +175,7 @@
         display: grid;
         grid-row-gap: 40px;
         position: absolute;
-        left: calc( ( 100vw - var(--container) ) / 2 );
+        left: calc( ( 100vw - 1592px ) / 2 );
         transform: translateX(100vw);
         transition: 500ms;
 
@@ -218,7 +219,7 @@
     }
 
     .modal__left {
-        margin-left: calc( ( 100vw - var(--container) ) / 2 );
+        margin-left: calc( ( 100vw - 1592px ) / 2 );
         @media (max-width: $_media_4K) {
             margin-left: 10%;
         }
@@ -243,6 +244,11 @@
 
     &__indicators {
         font-weight: bold;
+        & sup {
+            font-size: initial;
+            vertical-align: text-bottom;
+            font-weight: bold;
+        }
     }
 
     &__back {

@@ -34,7 +34,7 @@ ul {
 .container {
     margin: 0 auto;
     max-width: 90% !important;
-    width: var(--container);
+    width: 1592px;
 }
 
 svg.inlineIcon {
@@ -811,15 +811,18 @@ button, label, input, textarea {
 
     &--homeNeed-2 {
         max-width: 40vw;
-        right: -7vw;
+        right: 0;
         top: 0;
         transform: scale(1);
         opacity: 1;
+        @media (max-width: $_media_4K) {
+            right: -200px;
+        }
         @media (max-width: $_media_laptop) {
             top: auto;
             bottom: -160px;
             max-width: 470px;
-            right: 20vw;
+            left: 20vw;
         }
     }
 
