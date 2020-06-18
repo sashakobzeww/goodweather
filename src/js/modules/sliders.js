@@ -10,8 +10,8 @@ var slider1 = new Swiper('.swiper-container--1', {
         delay: 5000,
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next--1',
+        prevEl: '.swiper-button-prev--1',
     },
     slidesPerView: 3,
     spaceBetween: 40,
@@ -37,8 +37,8 @@ var slider1 = new Swiper('.swiper-container--1', {
 var slider2 = new Swiper('.swiper-container--2', {
     direction: 'horizontal',
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next--2',
+        prevEl: '.swiper-button-prev--2',
     },
     autoplay: {
         delay: 5000,
@@ -77,8 +77,8 @@ var slider3 = new Swiper('.swiper-container--3', {
         delay: 4000,
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next--3',
+        prevEl: '.swiper-button-prev--3',
     },
     breakpoints: {
         320: {
@@ -111,8 +111,8 @@ var slider41 = new Swiper('.swiper-container--4-1', {
         delay: 5000,
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next--4-1',
+        prevEl: '.swiper-button-prev--4-1',
     },
     breakpoints: {
         320: {
@@ -143,8 +143,8 @@ var slider42 = new Swiper('.swiper-container--4-2', {
         delay: 5000,
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next--4-2',
+        prevEl: '.swiper-button-prev--4-2',
     },
     slidesPerView: 3,
     spaceBetween: 40,
