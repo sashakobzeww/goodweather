@@ -20,5 +20,6 @@ import './includes/footer';
 import './includes/pay';
 import './includes/report';
 import './includes/plans';
+import './includes/near';
 
 // import './blocks/page';
