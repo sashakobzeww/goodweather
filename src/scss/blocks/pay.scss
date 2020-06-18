@@ -74,7 +74,7 @@
     }
 
     &__tab {
-        grid-template-columns: 11fr 9fr;
+        grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
         grid-gap: 50px;
         @media (max-width: $_media_laptop) {
             grid-template: 50vw auto / 1fr;
@@ -175,6 +175,10 @@
                 transform: translateX(80%);
                 width: 25vw;
             }
+        }
+
+        &--img {
+            max-width: 100%;
         }
     }
 

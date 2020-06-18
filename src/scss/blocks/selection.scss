@@ -14,7 +14,7 @@
         box-shadow: 0 20px 60px $_grayLight;
         border-radius: 46px;
         display: grid;
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
         grid-template-rows: auto auto;
         grid-column-gap: 48px;
         grid-template-areas:
@@ -125,6 +125,15 @@
 
     &__right {
         grid-area: s__right;
+
+        &-img {
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-position: center;
+            object-fit: contain;
+        }
 
         @media (max-width: $_media_laptop) {
             &, & > * {
