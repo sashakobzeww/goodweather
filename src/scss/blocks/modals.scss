@@ -7,10 +7,12 @@
     transition: 500ms;
     transform: translateX(-100%);
     z-index: 100;
+    pointer-events: none;
 
     &--active {
         transform: translateX(0);
         transition: 500ms;
+        pointer-events: initial;
 
         .modal__background {
             opacity: 0.8;
