@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 var slider1 = new Swiper('.swiper-container--1', {
     direction: 'horizontal',
     pagination: {
-        el: '#swiper-pagination--1',
+        el: '.swiper-pagination--1',
         clickable: true,
     },
     autoplay: {
@@ -61,7 +61,7 @@ var slider3 = new Swiper('.swiper-container--3', {
     slidesPerView: 3,
     spaceBetween: 40,
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination--3',
         clickable: true,
 
     },
