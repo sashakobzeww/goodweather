@@ -181,7 +181,7 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: 12.5vw;
+        top: 11.5vw;
         border-radius: 50%;
         width: 68px;
         height: 68px;
@@ -265,14 +265,11 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: 13vw;
+        top: calc( 11.5vw - 14px );
         border-radius: 50%;
         width: 68px;
         height: 68px;
         background: $_orange;
-        @media (max-width: $_media_laptop) {
-            top: 25%;
-        }
         @media (max-width: $_media_mobile) {
             display: none;
         }
@@ -328,13 +325,13 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: 34%;
+        top: calc( 6.5vw - 14px);
         border-radius: 50%;
         width: 68px;
         height: 68px;
         background: $_orange;
         @media (max-width: $_media_laptop) {
-            top: calc( 130px * 100 * 0.65 / 270 * 2 );
+            top: calc( 8.5vw - 14px);
         }
         @media (max-width: $_media_mobile) {
             display: none;
