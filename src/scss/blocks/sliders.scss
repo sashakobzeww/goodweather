@@ -488,5 +488,11 @@
     @media (max-width: $_media_mobile) {
         display: none;
     }
+
+    &--more-1800 {
+        @media (max-width: $_media_4K) {
+            display: none;
+        }
+    }
 }
 

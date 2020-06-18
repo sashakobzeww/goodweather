@@ -26,6 +26,10 @@ var slider1 = new Swiper('.swiper-container--1', {
         1200: {
             slidesPerView: 3,
             spaceBetween: 40
+        },
+        1801: {
+            slidesPerView: 4,
+            spaceBetween: 40
         }
     }
 })
@@ -51,6 +55,10 @@ var slider2 = new Swiper('.swiper-container--2', {
         },
         1200: {
             slidesPerView: 4,
+            spaceBetween: 40
+        },
+        1801: {
+            slidesPerView: 5,
             spaceBetween: 40
         }
     }
@@ -83,6 +91,10 @@ var slider3 = new Swiper('.swiper-container--3', {
         1200: {
             slidesPerView: 3,
             spaceBetween: 40
+        },
+        1801: {
+            slidesPerView: 4,
+            spaceBetween: 40
         }
     }
 })
@@ -113,6 +125,10 @@ var slider41 = new Swiper('.swiper-container--4-1', {
         1200: {
             slidesPerView: 3,
             spaceBetween: 40
+        },
+        1801: {
+            slidesPerView: 4,
+            spaceBetween: 40
         }
     }
 })
@@ -142,6 +158,10 @@ var slider42 = new Swiper('.swiper-container--4-2', {
         },
         1200: {
             slidesPerView: 3,
+            spaceBetween: 40
+        },
+        1801: {
+            slidesPerView: 4,
             spaceBetween: 40
         }
     }
