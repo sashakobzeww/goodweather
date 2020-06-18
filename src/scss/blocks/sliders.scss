@@ -35,6 +35,7 @@
 
         &--4-1, &--4-2 {
             height: min(40vw, 640px);
+            margin-left: 0 !important;
             @media (max-width: $_media_4K) {
                 height: 520px;
             }
