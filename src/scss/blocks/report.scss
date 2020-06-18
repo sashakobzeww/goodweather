@@ -1,12 +1,12 @@
 .report {
     margin-top: 130px;
+    margin-bottom: 50px;
     padding: 0;
 
     &__header {
         display: grid;
         grid-template-columns: 600px 1fr;
         grid-gap: 50px;
-        margin-bottom: 80px;
         @media (max-width: $_media_laptop) {
             grid-template: auto / auto;
             padding: 0;
@@ -116,13 +116,24 @@
         }
 
         &-list {
-            height: 45vw;
+            height: calc( 23vw + 250px );
             position: relative;
+
+            @media (max-width: $_media_4K) {
+                height: calc( 35vw + 50px );
+            }
+            @media (max-width: $_media_laptop_3) {
+                height: calc( 35vw + 80px );
+            }
             @media (max-width: $_media_laptop_2) {
-                height: 65vw;
+                height: calc( 46vw + 100px );
             }
             @media (max-width: $_media_mobile) {
-                height: 60vh !important;
+                height: calc( 90vw + 100px ) !important;
+            }
+            @media (max-width: $_media_479) {
+                height: calc( 90vw + 150px ) !important;
+
             }
         }
     }

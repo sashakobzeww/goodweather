@@ -92,7 +92,7 @@ var slider41 = new Swiper('.swiper-container--4-1', {
     slidesPerView: 3,
     spaceBetween: 40,
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination--4-1',
         clickable: true,
     },
     autoplay: {
@@ -120,7 +120,7 @@ var slider41 = new Swiper('.swiper-container--4-1', {
 var slider42 = new Swiper('.swiper-container--4-2', {
     direction: 'horizontal',
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination--4-2',
         clickable: true,
     },
     autoplay: {
