@@ -111,23 +111,22 @@
 
     &__header {
         display: grid;
-        grid-template-columns: auto 1fr;
-        grid-gap: 60px;
+        grid-template-columns: 567px 1fr;
+        grid-gap: 40px;
         padding-right: calc(100vw / 12);
         align-items: center;
         @media (max-width: $_media_4K) {
             grid-template-columns: calc( 110vw  / 3 - 20px ) 1fr;
-            grid-gap: 30px;
         }
         @media (max-width: $_media_laptop_2) {
             grid-template-columns: 50% 1fr;
         }
         @media (max-width: $_media_laptop_4) {
-            grid-gap: 50px;
             padding-right: 0;
         }
         @media (max-width: $_media_laptop) {
             grid-template: auto / auto;
+            grid-gap: 50px;
             padding: 0;
         }
 
@@ -236,11 +235,11 @@
     clip-path: ellipse(115% 50% at 50% 50%);
 
     &__title-h3 {
-        margin-bottom: 0;
+        margin: 30px 0 15px 0;
     }
 
     &__text {
-        margin: 15px 0 32px;
+        margin-bottom: 32px;
     }
 
     &-slider__img {

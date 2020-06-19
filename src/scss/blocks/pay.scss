@@ -77,15 +77,17 @@
         grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
         grid-gap: 50px;
         @media (max-width: $_media_laptop) {
-            grid-template: 50vw auto / 1fr;
+            grid-template: max(40vw, 460px) auto/1fr;
         }
 
         &--active {
             display: grid;
             transition: 600ms;
             &.pay__tab--1 {
-                display: flex;
                 margin-bottom: 130px;
+                @media (max-width: $_media_mobile) {
+                    display: flex;
+                }
             }
         }
 
@@ -356,6 +358,7 @@
         justify-content: center;
         background: $bodyBackground;
         box-shadow: 0px 8px 25px #E8E5E3;
+        cursor: pointer;a
         &:before, &:after {
             display: none;
         }
@@ -390,7 +393,9 @@
     &--active {
         display: grid;
         &.pay__tab--1 {
-            display: flex;
+            @media (max-width: $_media_mobile) {
+                display: flex;
+            }
         }
     }
 }
