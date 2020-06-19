@@ -15,8 +15,30 @@
         pointer-events: initial;
 
         .modal__background {
+            animation: modal-bg--open 500ms;
             opacity: 0.8;
-            animation: modal-bg 500ms;
+        }
+
+        .modal__wrapper {
+            clip-path: circle(100%);
+            transition: 300ms;
+        }
+    }
+
+    &--un-active {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 500ms;
+        transform: translateX(-100%);
+        z-index: 100;
+        pointer-events: none;
+
+        .modal__background {
+            opacity: 0.8;
+            animation: modal-bg--close 500ms;
         }
 
         .modal__wrapper {
@@ -32,7 +54,6 @@
         background: $_blue;
         opacity: 0;
         cursor: pointer;
-        animation: modal-bg--reverse 500ms;
     }
 
     &__content {
@@ -292,6 +313,17 @@
 
     &.modal--active {
         transform: translate(0);
+
+        & .modal__background {
+            animation: modal-bg-thanks--open 500ms;
+        }
+    }
+
+    &.modal--un-active {
+        & .modal__background {
+            height: 100%;
+            animation: modal-bg-thanks--close 500ms;
+        }
     }
 
     & .modal__close {

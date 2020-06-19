@@ -39,6 +39,7 @@ function changeQuizStep(e) {
         headerQuizNext.removeEventListener("click", increment);
         headerQuizNext.addEventListener("click", function () {
             modalThanks.classList.add("modal--active");
+            modalThanks.classList.remove("modal--un-active");
             close();
         });
     }
@@ -92,6 +93,7 @@ function changeQuizStep2(e) {
         selectionQuizNext.removeEventListener("click", increment);
         selectionQuizNext.addEventListener("click", function () {
             modalThanks.classList.add("modal--active");
+            modalThanks.classList.remove("modal--un-active");
             selectionForm.classList.add('selection__form--send');
         });
     }

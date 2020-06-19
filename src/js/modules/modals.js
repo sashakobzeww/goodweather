@@ -25,13 +25,15 @@ modalBackground.onclick = () => {
 };
 
 buttonModalRequest.onclick = (e) => {
+    document.body.classList.add('overflow-hidden');
     modalRequest.classList.add('modal--active');
-    document.body.classList.add('overflow-hidden')
+    modalRequest.classList.remove('modal--un-active');
 };
 
 function modalClose() {
-    document.body.classList.remove('overflow-hidden')
+    document.body.classList.remove('overflow-hidden');
     modalRequest.classList.remove('modal--active');
+    modalRequest.classList.add('modal--un-active');
     setTimeout(function () {
         modalRequestForm.classList.add('modal-request__form--active');
         modalRequestThanks.classList.remove('modal-request-thanks--active');
@@ -59,14 +61,16 @@ modalPlanBackground.onclick = () => {
 
 for (let i = 0; i < buttonsModalPlan.length; i++) {
     buttonsModalPlan[i].onclick = () => {
-        modalPlan.classList.add('modal--active');
         document.body.classList.add('overflow-hidden')
+        modalPlan.classList.add('modal--active');
+        modalPlan.classList.remove('modal--un-active');
     };
 }
 
 function modalPlanClose() {
-    document.body.classList.remove('overflow-hidden')
+    document.body.classList.remove('overflow-hidden');
     modalPlan.classList.remove('modal--active');
+    modalPlan.classList.add('modal--un-active');
 }
 
 /*---------*/
@@ -90,12 +94,14 @@ modalThanksCloseBtn.onclick = () => {
 
 for (let i = 0; i < buttonsModalThanks.length; i++) {
     buttonsModalThanks[i].onclick = () => {
-        modalThanks.classList.add('modal--active');
         document.body.classList.add('overflow-hidden')
+        modalThanks.classList.add('modal--active');
+        modalThanks.classList.remove('modal--un-active');
     };
 }
 
 function modalThanksClose() {
     document.body.classList.remove('overflow-hidden')
     modalThanks.classList.remove('modal--active');
+    modalThanks.classList.add('modal--un-active');
 }
