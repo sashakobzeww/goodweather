@@ -20,13 +20,83 @@ function initMap() {
 
     myMap.geoObjects.add(
         new ymaps.Placemark(
-            [45.087191, 39.016463], {
+            [45.082179, 39.008773], {
                 balloonContent: '',
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: './img/map__1.png',
-                iconImageSize: [200, 200],
-                iconImageOffset: [-100,-150],
+                iconImageHref: './img/near__ico--1.svg',
+                iconImageSize: [242, 158],
+                iconImageOffset: [-121,-80],
+                zIndex: 2
+            }
+        )
+    );
+
+    myMap.geoObjects.add(
+        new ymaps.Placemark(
+            [45.089612, 38.996889], {
+                balloonContent: '',
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/near__ico--2.svg',
+                iconImageSize: [216, 158],
+                iconImageOffset: [-108,-79],
+                zIndex: 2
+            }
+        )
+    );
+
+    myMap.geoObjects.add(
+        new ymaps.Placemark(
+            [45.093402, 39.035691], {
+                balloonContent: '',
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/near__ico--3.svg',
+                iconImageSize: [317, 158],
+                iconImageOffset: [-158,-79],
+                zIndex: 2
+            }
+        )
+    );
+
+    myMap.geoObjects.add(
+        new ymaps.Placemark(
+            [45.083121, 38.994254], {
+                balloonContent: '',
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/near__ico--4.svg',
+                iconImageSize: [282, 158],
+                iconImageOffset: [-141,-79],
+                zIndex: 2
+            }
+        )
+    );
+
+    myMap.geoObjects.add(
+        new ymaps.Placemark(
+            [45.087724, 39.016496], {
+                balloonContent: '',
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/near__ico--5.svg',
+                iconImageSize: [275, 158],
+                iconImageOffset: [-137,-79],
+                zIndex: 2
+            }
+        )
+    );
+
+    myMap.geoObjects.add(
+        new ymaps.Placemark(
+            [45.083086, 39.034671], {
+                balloonContent: '',
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/near__ico--6.svg',
+                iconImageSize: [266, 158],
+                iconImageOffset: [-133,-79],
                 zIndex: 2
             }
         )
@@ -38,9 +108,9 @@ function initMap() {
                 balloonContent: '',
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: './img/map__2.svg',
-                iconImageSize: [200, 200],
-                iconImageOffset: [-100,-150],
+                iconImageHref: './img/near__ico--pointer.svg',
+                iconImageSize: [250, 208],
+                iconImageOffset: [-125,-200],
                 zIndex: 2
             }
         )

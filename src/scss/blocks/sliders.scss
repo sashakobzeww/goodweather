@@ -303,7 +303,7 @@
     }
 
     &__map {
-        height: 730px;
+        height: min( 730px, 90vh );
         transition: 300ms;
         z-index: -10;
         visibility: hidden;
