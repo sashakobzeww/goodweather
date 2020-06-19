@@ -2,7 +2,13 @@ let button = document.querySelector('.look-map');
 let map = document.querySelector('.near__map');
 
 button.addEventListener("click", () => {
-    map.classList.toggle('near__map--active')
+    if (!map.classList.contains('near__map--active')) {
+        map.classList.add('near__map--active');
+        map.classList.remove('near__map--un-active');
+    } else {
+        map.classList.add('near__map--un-active');
+        map.classList.remove('near__map--active');
+    }
 });
 
 ymaps.ready(initMap);
