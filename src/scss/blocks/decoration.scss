@@ -16,6 +16,9 @@
 .decoration {
     padding-bottom: 166px;
     background-color: $_light3;
+    @media (max-width: $_media_mobile) {
+        padding-bottom: 80px;
+    }
 
     &__ul {
         display: grid;

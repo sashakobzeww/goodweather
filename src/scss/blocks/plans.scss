@@ -164,6 +164,9 @@
             position: relative;
             height: min(600px, 50vw);
             margin-top: 75px;
+            @media (max-width: $_media_mobile) {
+                height: min(600px, 50vmax);
+            }
         }
 
         &-img {
