@@ -161,11 +161,6 @@ $pfx: "header";
         width: 50%;
         height: 100%;
         @media (max-width: $_media_laptop) {
-            width: 100%;
-            height: 30%;
-            background-position: top;
-        }
-        @media (max-width: $_media_mobile) {
             height: 0;
         }
         &-img {
@@ -188,11 +183,8 @@ $pfx: "header";
         overflow: hidden;
         @media (max-width: $_media_laptop) {
             width: 100%;
-            height: 70%;
-        }
-        @media (max-width: $_media_mobile) {
-            padding: 0 5vw;
             height: 100%;
+            padding: 0 5vw;
         }
 
         &:before, &:after {
@@ -262,7 +254,7 @@ $pfx: "header";
         transition: 600ms;
         opacity: 0;
         transform: translateY( 0 ) rotate(360deg);
-        @media (max-width: $_media_mobile) {
+        @media (max-width: $_media_laptop) {
             display: none;
         }
 

@@ -198,8 +198,11 @@
         width: 68px;
         height: 68px;
         background: $bodyBackground;
+        @media (max-width: $_media_laptop_2) {
+            top: calc( ( 23vw - 10px) / 2);
+        }
         @media (max-width: $_media_laptop) {
-            top: 34%;
+            top: calc( ( 32vw - 10px) / 2);
         }
         @media (max-width: $_media_mobile) {
             display: none;
@@ -424,6 +427,12 @@
         width: 68px;
         height: 68px;
         background: $_orange;
+        @media (max-width: $_media_laptop_2) {
+            top: calc( 90px + 30vw / 2 );
+        }
+        @media (max-width: $_media_laptop) {
+            top: calc( 90px + 33vw / 2 );
+        }
         @media (max-width: $_media_mobile) {
             display: none;
         }
@@ -450,6 +459,10 @@
         @media (max-width: $_media_4K) {
             transform: translateY(-50%);
             left: 90vw;
+        }
+        @media (max-width: $_media_laptop_2) {
+            transform: translateY(-50%) translateX(-50%);
+            left: 95vw;
         }
     }
 
