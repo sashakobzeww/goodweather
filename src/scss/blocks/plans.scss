@@ -11,6 +11,9 @@
         grid-template-rows: auto auto;
         grid-gap: 50px;
         margin-bottom: 80px;
+        @media (max-width: $_media_mobile) {
+            margin-bottom: 20px;
+        }
 
         &-bottom {
             display: grid;
@@ -165,6 +168,7 @@
             height: min(600px, 50vw);
             margin-top: 75px;
             @media (max-width: $_media_mobile) {
+                margin-top: 0;
                 height: min(600px, 50vmax);
             }
         }
