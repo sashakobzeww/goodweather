@@ -39,6 +39,9 @@ $pfx: "header";
         height: 100vh;
         flex-direction: column;
     }
+    @media (max-width: $_media_mobile) {
+        clip-path: ellipse(200% 100% at 50% 0);
+    }
 
     &__top {
         left: 50%;

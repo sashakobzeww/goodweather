@@ -598,6 +598,9 @@ button, label, input, textarea {
     font-size: 18px;
     line-height: 28px;
     color: $_gray;
+    @media (max-width: $_media_mobile) {
+        margin-bottom: 20px;
+    }
 
     &-number {
         font-weight: bold;

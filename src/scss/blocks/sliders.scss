@@ -107,6 +107,9 @@
         clip-path: ellipse(115% 50% at 50% 50%);
         position: relative;
         z-index: 1;
+        @media (max-width: $_media_mobile) {
+            clip-path: ellipse(145% 50% at 50% 50%);
+        }
     }
 
     &__header {
@@ -233,6 +236,10 @@
     padding: 160px 0;
     background: $_light2;
     clip-path: ellipse(115% 50% at 50% 50%);
+
+    @media (max-width: $_media_mobile) {
+        clip-path: ellipse(145% 50% at 50% 50%);
+    }
 
     &__title-h3 {
         margin: 30px 0 15px 0;

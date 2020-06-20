@@ -2,6 +2,9 @@
     padding: 130px 0 100px;
     background: $_light2;
     clip-path: ellipse(115% 50% at 50% 50%);
+    @media (max-width: $_media_mobile) {
+        clip-path: ellipse(145% 50% at 50% 50%);
+    }
 
     &__header {
         display: grid;
