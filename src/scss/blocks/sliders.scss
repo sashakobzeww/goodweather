@@ -39,6 +39,9 @@
             @media (max-width: $_media_4K) {
                 height: 520px;
             }
+            @media (max-width: $_media_mobile) {
+                width: 95%!important;
+            }
         }
     }
 
@@ -57,6 +60,9 @@
         padding-top: 90px;
         left: 50%;
         transform: translateX(-50%);
+        @media (max-width: $_media_mobile) {
+            padding-top: 50px;
+        }
 
         &-bullet {
             width: 7px;
@@ -69,6 +75,9 @@
             opacity: 0.5;
             margin: 0 22px !important;
             cursor: pointer;
+            @media (max-width: $_media_mobile) {
+                margin: 0 17px !important;
+            }
 
             &-active {
                 width: 14px;

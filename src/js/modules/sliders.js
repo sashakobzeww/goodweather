@@ -1,5 +1,7 @@
 import Swiper from 'swiper';
 
+/* slider 1 */
+
 var slider1 = new Swiper('.swiper-container--1', {
     direction: 'horizontal',
     pagination: {
@@ -47,6 +49,8 @@ slider1.on('slideChangeTransitionStart', () => {
     }
 })
 
+/* slider 2 */
+
 var slider2 = new Swiper('.swiper-container--2', {
     direction: 'horizontal',
     navigation: {
@@ -89,6 +93,8 @@ slider1.on('slideChangeTransitionStart', () => {
         }, 1000)
     }
 })
+
+/* slider 3 */
 
 var slider3 = new Swiper('.swiper-container--3', {
     direction: 'horizontal',
@@ -138,6 +144,8 @@ slider1.on('slideChangeTransitionStart', () => {
     }
 })
 
+/* slider 4-1 */
+
 var slider41 = new Swiper('.swiper-container--4-1', {
     direction: 'horizontal',
     slidesPerView: 3,
@@ -184,6 +192,8 @@ slider1.on('slideChangeTransitionStart', () => {
         }, 1000)
     }
 })
+
+/* slider 4-2 */
 
 var slider42 = new Swiper('.swiper-container--4-2', {
     direction: 'horizontal',
