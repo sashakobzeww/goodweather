@@ -91,13 +91,24 @@
         &--active {
             display: grid;
             transition: 600ms;
-            animation: pay-animation 500ms;
             &.pay__tab--1 {
                 margin-bottom: 130px;
                 @media (max-width: $_media_mobile) {
                     display: flex;
                     margin-bottom: 0;
                 }
+            }
+        }
+
+        &--animate {
+            animation: pay-animation 500ms;
+        }
+
+        &.was-animated {
+            &, & * {
+                animation: pay-animation 0ms !important;
+                opacity: 1;
+                transform: none;
             }
         }
 

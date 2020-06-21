@@ -97,13 +97,23 @@ let payTabList = document.querySelector('.pay__tab-list');
 for (let i = 0; i < tabsHeaders.length; i++) {
     tabsHeaders[i].onclick = () => {
 
+        for (let j = 0; j < tabs.length; j++) {
+            if (tabs[j].classList.contains('pay__tab--active')) {
+                tabs[j].classList.add('was-animated')
+            }
+        }
+
         for (let i = 0; i < tabsHeaders.length; i++) {
             tabsHeaders[i].classList.remove('pay__tabs-header--active')
             tabs[i].classList.remove('pay__tab--active')
+            tabs[i].classList.remove('pay__tab--animate');
         }
 
         tabsHeaders[i].classList.add('pay__tabs-header--active');
-        tabs[i].classList.add('pay__tab--active')
+        if (!tabs[i].classList.contains('was-animated')) {
+            tabs[i].classList.add('pay__tab--animate');
+        }
+        tabs[i].classList.add('pay__tab--active');
 
         if (i === 0) {
             tabsBorder.classList.remove('pay__tabs-border--2')
