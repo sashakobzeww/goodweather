@@ -17,12 +17,20 @@ function increment() {
     changeQuizStep(+1)
 }
 
-function changeQuizStep(e) {
+export function activeQuizStep() {
     // Определяем номер активного шага
     for (let i = 0; i < headerQuizSteps.length; i++) {
         let has = headerQuizSteps[i].classList.contains('header-quiz__step--active');
-        if (has) var numberOfActiveQuizStep = i;
+        if (has) {
+            let numberOfActiveQuizStep = i;
+            return numberOfActiveQuizStep;
+        }
     }
+}
+
+function changeQuizStep(e) {
+
+    let numberOfActiveQuizStep = activeQuizStep();
 
     let prevEl = headerQuizSteps[numberOfActiveQuizStep].previousElementSibling;
     let currentEl = headerQuizSteps[numberOfActiveQuizStep];
@@ -53,6 +61,19 @@ function changeQuizStep(e) {
 
 }
 
+
+let checkboxes = document.querySelectorAll('.header-quiz__step [type="checkbox"]');
+
+for (let i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].addEventListener('click', () => {
+        let name = checkboxes[i].name;
+        let checkboxesOfStep = document.querySelectorAll(`[name=${name}]`);
+        console.log(checkboxesOfStep);
+
+        // Включён хотя бы один чекбокс?
+
+    })
+}
 
 /*Квиз второй*/
 let selectionQuizPrev = document.getElementById('secondQuizPrev');
