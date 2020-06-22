@@ -41,9 +41,11 @@ function changeQuizStep(e) {
         headerQuizPrev.disabled = true;
     } else if (currentStep > 1 && currentStep < headerQuizSteps.length) {
         headerQuizPrev.disabled = false;
-        headerQuizNext.textContent = 'Дальше'
+        headerQuizNext.textContent = 'Дальше';
+        headerQuizNext.disabled = true;
     } else if (currentStep === headerQuizSteps.length) {
         headerQuizNext.textContent = 'Отправить';
+        headerQuizNext.disabled = true;
         headerQuizNext.removeEventListener("click", increment);
         headerQuizNext.addEventListener("click", function () {
             modalThanks.classList.add("modal--active");
@@ -59,6 +61,10 @@ function changeQuizStep(e) {
         prevEl.classList.add('header-quiz__step--active');
     }
 
+    if (e < 0) {
+        headerQuizNext.disabled = false;
+    }
+
 }
 
 
@@ -68,11 +74,26 @@ for (let i = 0; i < checkboxes.length; i++) {
     checkboxes[i].addEventListener('click', () => {
         let name = checkboxes[i].name;
         let checkboxesOfStep = document.querySelectorAll(`[name=${name}]`);
-        console.log(checkboxesOfStep);
+        let headerQuizNext = document.getElementById('headerQuizNext');
 
         // Включён хотя бы один чекбокс?
-
+        let checkOne = checkedOne(checkboxesOfStep);
+        console.log(checkOne);
+        if (checkOne) {
+            headerQuizNext.disabled = false;
+        } else {
+            headerQuizNext.disabled = true;
+        }
     })
+}
+
+function checkedOne(checkboxesOfStep) {
+    for (let j = 0; j < checkboxesOfStep.length; j++) {
+        if (checkboxesOfStep[j].checked) {
+            return true
+        }
+    }
+
 }
 
 /*Квиз второй*/
