@@ -28,7 +28,8 @@
                 's__bottom';
         }
         @media (max-width: $_media_mobile) {
-            grid-template: 50vw auto auto / 1fr;
+            grid-template-rows: 50vw auto auto;
+            grid-template-columns: 1fr;
             grid-gap: 4vw;
         }
 

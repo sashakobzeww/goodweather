@@ -17,8 +17,7 @@ noUiSlider.create(payCost, {
     },
     format: wNumb({
         decimals: 0,
-        thousand: ' ',
-        suffix: ' ₽'
+        thousand: ' '
     })
 });
 
@@ -46,8 +45,7 @@ noUiSlider.create(payContribution, {
     },
     format: wNumb({
         decimals: 0,
-        thousand: ' ',
-        suffix: ' ₽'
+        thousand: ' '
     })
 });
 
