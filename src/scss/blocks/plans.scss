@@ -65,8 +65,8 @@
                     grid-area: 3 / 1 / 4 / 3;
                     display: grid;
                     justify-content: center;
-                    grid-template: auto auto / repeat(auto-fill, minmax(0, 173px));
                     margin: 0 auto;
+                    max-width: 100%;
                 }
 
                 & .plans__tabs-header {
@@ -74,6 +74,11 @@
                     background: transparent;
                     box-shadow: none;
                     width: auto;
+                    max-width: 100%;
+                }
+                @media (max-width: $_media_479) {
+                    height: 19vw;
+                    min-width: 100%;
                 }
 
                 & path {
@@ -121,10 +126,36 @@
                 stroke: $_light;
             }
 
+
+            &--1 {
+                transform: translateX(4%);
+            }
+            &--2 {
+                transform: translateY(-1px);
+            }
+            &--3 {
+                transform: translateX(-6%);
+            }
+
             &-p {
                 fill: #413949;
                 &--active {
                     fill: white
+                }
+
+                @media (max-width: $_media_479) {
+                    &--1 {
+                        transform: scale(1.2);
+                        transform-origin: 80% 40%;
+                    }
+                    &--2 {
+                        transform: scale(1.2);
+                        transform-origin: 50% 40%;
+                    }
+                    &--3 {
+                        transform: scale(1.2);
+                        transform-origin: 20% 40%;
+                    }
                 }
             }
 
