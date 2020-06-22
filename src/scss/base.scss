@@ -436,7 +436,7 @@ button, label, input, textarea {
         background: $_orange2;
     }
 
-    &--disabled {
+    &--disabled, &:disabled {
         color: rgba($neutralColor, 0.3);
         &:hover {
             background: $_orange;

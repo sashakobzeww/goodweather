@@ -112,12 +112,20 @@ function incrementSelection() {
     changeQuizStep2(+1)
 }
 
-function changeQuizStep2(e) {
+function activeQuizStep2() {
     // Определяем номер активного шага
     for (let i = 0; i < selectionQuizStep.length; i++) {
         let has = selectionQuizStep[i].classList.contains('selection__step--active');
-        if (has) var numberOfActiveQuizStep = i;
+        if (has) {
+            let numberOfActiveQuizStep = i;
+            return numberOfActiveQuizStep;
+        }
     }
+}
+
+function changeQuizStep2(e) {
+
+    let numberOfActiveQuizStep = activeQuizStep2();
 
     let selectionForm = document.querySelector('.selection__form');
     let prevEl = selectionQuizStep[numberOfActiveQuizStep].previousElementSibling;
@@ -129,9 +137,11 @@ function changeQuizStep2(e) {
         selectionQuizPrev.disabled = true;
     } else if (currentStep > 1 && currentStep < selectionQuizStep.length) {
         selectionQuizPrev.disabled = false;
-        selectionQuizNext.textContent = 'Дальше'
+        selectionQuizNext.textContent = 'Дальше';
+        selectionQuizNext.disabled = true;
     } else if (currentStep === selectionQuizStep.length) {
         selectionQuizNext.textContent = 'Отправить';
+        selectionQuizNext.disabled = true;
         selectionQuizNext.removeEventListener("click", increment);
         selectionQuizNext.addEventListener("click", function () {
             modalThanks.classList.add("modal--active");
@@ -147,4 +157,27 @@ function changeQuizStep2(e) {
         prevEl.classList.add('selection__step--active');
     }
 
+    if (e < 0) {
+        selectionQuizNext.disabled = false;
+    }
+
+}
+
+let checkboxesSelect = document.querySelectorAll('.selection__step [type="checkbox"]');
+
+for (let i = 0; i < checkboxesSelect.length; i++) {
+    checkboxesSelect[i].addEventListener('click', () => {
+        let name = checkboxesSelect[i].name;
+        let checkboxesSelectOfStep = document.querySelectorAll(`[name=${name}]`);
+        let secondQuizNext = document.getElementById('secondQuizNext');
+
+        // Включён хотя бы один чекбокс?
+        let checkOne = checkedOne(checkboxesSelectOfStep);
+        console.log(checkOne);
+        if (checkOne) {
+            secondQuizNext.disabled = false;
+        } else {
+            secondQuizNext.disabled = true;
+        }
+    })
 }
