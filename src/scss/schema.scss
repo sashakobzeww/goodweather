@@ -11,9 +11,9 @@ $_blueLight: #A4D2CC;
 $_blue: #61BDB5;
 $_blueDark: #79ADA0;
 
-$_animationDelay: calc( var(--animationOrder) * 0.2s + 1s );
-$_animation1: 0.2s ease-out both;
-$_animation2: 0.2s ease-out both;
+$_animationDelay: calc( var(--animationOrder) * 0.2s );
+$_animation1: 0.6s ease-out both;
+$_animation2: 0.6s ease-out both;
 
 $_media_479: 479px;
 $_media_mobile: 768px;
