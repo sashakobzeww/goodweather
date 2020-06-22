@@ -3,9 +3,12 @@ let modalBackground = document.querySelector('.modal-request .modal__background'
 let modalCloseIco = document.querySelector('.modal-request .modal__close');
 let modalRequestForm = document.querySelector(".modal-request__form");
 let modalRequestThanks = document.querySelector(".modal-request-thanks");
-let buttonModalRequest = document.querySelector(".homeNeed__get");
+let buttonModalRequest = document.querySelectorAll(".btn-modal");
 let modalSend = document.querySelector('.modal-request__form .btn');
 let modalCloseBtn = document.querySelector('.modal-request-thanks .btn');
+let modalTitle = document.getElementById('modal-title');
+let modalBtn = document.getElementById('modal-btn');
+let modalText = document.getElementById('modal-text');
 
 modalSend.onclick = () => {
     modalRequestForm.classList.remove('modal-request__form--active');
@@ -24,11 +27,16 @@ modalBackground.onclick = () => {
     modalClose();
 };
 
-buttonModalRequest.onclick = (e) => {
-    document.body.classList.add('overflow-hidden');
-    modalRequest.classList.add('modal--active');
-    modalRequest.classList.remove('modal--un-active');
-};
+for (let i = 0; i < buttonModalRequest.length; i++) {
+    buttonModalRequest[i].onclick = (e) => {
+        document.body.classList.add('overflow-hidden');
+        modalRequest.classList.add('modal--active');
+        modalRequest.classList.remove('modal--un-active');
+        modalTitle.textContent = buttonModalRequest[i].dataset.title;
+        modalBtn.textContent = buttonModalRequest[i].dataset.btn;
+        modalText.textContent = buttonModalRequest[i].dataset.text;
+    };
+}
 
 function modalClose() {
     document.body.classList.remove('overflow-hidden');
