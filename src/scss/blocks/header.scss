@@ -52,7 +52,7 @@ $pfx: "header";
         align-items: center;
         background-color: transparent;
         position: absolute;
-        z-index: 2;
+        z-index: 7;
         @media (max-width: $_media_mobile) {
             padding: 5vw 0 0 0;
         }
@@ -160,6 +160,8 @@ $pfx: "header";
     &__left {
         width: 50%;
         height: 100%;
+        z-index: 6;
+        overflow: hidden;
         @media (max-width: $_media_laptop) {
             height: 0;
         }
@@ -254,6 +256,7 @@ $pfx: "header";
         transition: 600ms;
         opacity: 0;
         transform: translateY( 0 ) rotate(360deg);
+        z-index: 10;
         @media (max-width: $_media_laptop) {
             display: none;
         }
@@ -299,8 +302,8 @@ $pfx: "header";
             position: absolute;
             opacity: 0;
             pointer-events: none;
-            transition: 300ms;
-            transform: translateY(-50px);
+            transition: 600ms;
+            transform: translateX(100vw);
 
             &--active {
                 visibility: visible;
@@ -308,7 +311,17 @@ $pfx: "header";
                 position: relative;
                 pointer-events: auto;
                 transition: 300ms;
-                transform: translateY(0);
+                transform: translateX(0);
+            }
+
+            &--un-active {
+                top: 0;
+                visibility: hidden;
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+                transition: 600ms;
+                transform: translateX(-100vw);
             }
         }
 

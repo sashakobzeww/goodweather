@@ -55,10 +55,13 @@ function changeQuizStep(e) {
     }
 
     currentEl.classList.remove('header-quiz__step--active');
+    currentEl.classList.add('header-quiz__step--un-active');
     if (e > 0 && nextEl) {
         nextEl.classList.add('header-quiz__step--active');
     } else if (e < 0 && prevEl) {
         prevEl.classList.add('header-quiz__step--active');
+        prevEl.classList.remove('header-quiz__step--un-active');
+        currentEl.classList.remove('header-quiz__step--un-active');
     }
 
     if (e < 0) {
@@ -151,10 +154,13 @@ function changeQuizStep2(e) {
     }
 
     currentEl.classList.remove('selection__step--active');
+    currentEl.classList.add('selection__step--un-active');
     if (e > 0 && nextEl) {
         nextEl.classList.add('selection__step--active');
     } else if (e < 0 && prevEl) {
         prevEl.classList.add('selection__step--active');
+        prevEl.classList.remove('selection__step--un-active');
+        currentEl.classList.remove('selection__step--un-active');
     }
 
     if (e < 0) {

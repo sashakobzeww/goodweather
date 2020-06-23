@@ -61,6 +61,7 @@
 
     &__steps {
         position: relative;
+        overflow: hidden;
     }
 
     &__step {
@@ -72,8 +73,8 @@
         position: absolute;
         opacity: 0;
         pointer-events: none;
-        transition: 300ms;
-        transform: translateY(-50px);
+        transition: 600ms;
+        transform: translateX(100vw);
 
         &--active {
             visibility: visible;
@@ -81,7 +82,16 @@
             position: relative;
             pointer-events: auto;
             transition: 300ms;
-            transform: translateY(0);
+            transform: translateX(0);
+        }
+
+        &--un-active {
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: 600ms;
+            transform: translateX(-100vw);
+            position: absolute;
         }
     }
 
