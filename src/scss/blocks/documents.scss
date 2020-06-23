@@ -32,6 +32,7 @@
         }
         @media (max-width: $_media_mobile) {
             grid-template-columns: repeat(auto-fill,minmax(256px, 1fr));
+            grid-gap: 6vw;
         }
     }
 
@@ -48,6 +49,9 @@
         align-items: center;
         grid-template-columns: min-content;
         transition: 300ms;
+        @media (max-width: $_media_mobile) {
+            grid-gap: 10px;
+        }
 
         &:hover {
             & .documents__download {
@@ -65,8 +69,15 @@
         border-radius: 50%;
         background-color: $_orange;
         transition: 300ms;
+        @media (max-width: $_media_mobile) {
+            transform: scale(0.8);
+            transform-origin: left;
+        }
     }
 
     &__span {
+        @media (max-width: $_media_mobile) {
+            line-height: 1.2;
+        }
     }
 }

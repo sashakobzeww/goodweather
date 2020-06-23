@@ -27,6 +27,7 @@
         margin-top: 50px;
         @media (max-width: $_media_mobile) {
             grid-gap: 12vw;
+            grid-column-gap: 5vw;
         }
     }
     &__li {
@@ -39,15 +40,22 @@
     &__h3 {
         margin: 40px 0 23px 0;
         @media (max-width: $_media_mobile) {
-            margin: 20px 0 5px;
+            margin: 20px 0 8px;
         }
     }
     &__list {
+        @media (max-width: $_media_mobile) {
+            display: grid;
+            grid-gap: 5px;
+        }
 
         &-li {
             width: calc(100% - 35px);
-            margin-left: 2vw;
+            margin-left: 31px;
             position: relative;
+            @media (max-width: $_media_mobile) {
+                margin-left: 16px;
+            }
             &:before {
                 content: '';
                 position: absolute;
