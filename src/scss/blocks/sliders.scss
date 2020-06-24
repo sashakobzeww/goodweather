@@ -485,6 +485,7 @@
     &-slide {
 
         &__h3 {
+            pointer-events: none;
             position: absolute;
             left: 45px;
             bottom: 45px;
@@ -523,14 +524,8 @@
     }
 
     &-slider {
-        &__img {
+        &__a {
             height: 23vw;
-            min-width: 100%;
-            max-width: 100%;
-            min-height: 100%;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 30px 30px 30px 0;
             @media (max-width: $_media_laptop_2) {
                 height: 30vw;
             }
@@ -540,6 +535,14 @@
             @media (max-width: $_media_mobile) {
                 height: 70vw;
             }
+        }
+        &__img {
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 30px 30px 30px 0;
 
             & img {
                 margin-bottom: 20px;
