@@ -20,10 +20,8 @@
 
         &--2 {
             height: 480px;
-            padding-bottom: 150px;
             @media (max-width: $_media_4K) {
                 height: 21vw;
-                padding-bottom: 0;
             }
             @media (max-width: $_media_laptop) {
                 height: 35vw;
@@ -53,6 +51,7 @@
     }
 
     &-pagination {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -90,8 +89,16 @@
             }
         }
 
+        &--1 {
+            padding-top: 65px;
+        }
+
+        &--3 {
+            padding-top: 83px;
+        }
+
         &--4-1, &--4-2 {
-            padding: 0 0 50px 0;
+            padding: 0;
             position: absolute;
             bottom: 0;
             left: 50vw;
@@ -245,7 +252,7 @@
 }
 
 .actual {
-    padding: 160px 0;
+    padding: 160px 0 177px;
     background: $_light2;
     clip-path: ellipse(115% 50% at 50% 50%);
 
@@ -421,7 +428,7 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: calc( 50% - 25px );
+        top: calc( 50% - 5px );
         transform: translateY(-50%);
         border-radius: 50%;
         width: 68px;

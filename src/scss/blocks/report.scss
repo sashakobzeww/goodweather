@@ -1,6 +1,6 @@
 .report {
     margin-top: 130px;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
     padding: 0;
     @media (max-width: $_media_mobile) {
         margin-bottom: 0;
@@ -123,7 +123,7 @@
         }
 
         &-list {
-            height: calc( 23vw + 250px );
+            height: calc( 23vw + 190px );
             position: relative;
 
             @media (max-width: $_media_4K) {
