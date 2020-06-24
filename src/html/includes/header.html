@@ -16,169 +16,172 @@
 <body>
 <header class="header">
 
-    <div class="header__top container">
+    <div class="header__wrapper">
 
-        <a href="#" class="logo__link logo__link--active">
-            <img src="../dist/img/logo.svg" alt="" class="logo__img">
-        </a>
+        <div class="header__top container">
 
-        <p class="text__3 header__top-p">Хороший дом на Первого мая</p>
+            <a href="#" class="logo__link logo__link--active">
+                <img src="../dist/img/logo.svg" alt="" class="logo__img">
+            </a>
 
-        <p class="header__geo text__4">Краснодар</p>
-
-        <button class="header__menu-button header__menu-button--active text__4">Меню</button>
-
-        <a href="tel:80000000000" class="link__1 header__tel header__tel--active">
-            8 (000) 000 00 00
-        </a>
-
-        <img src="../dist/img/close--white.svg" alt="" class="header__close">
-
-    </div>
-
-    <div class="header__left">
-        <img class="header__left-img" src="../dist/img/header__left.jpg">
-    </div>
-
-    <div class="header__right">
-        <div class="header__right-wrapper header__right-wrapper--active">
-
-            <h1 class="title__3">Дом на радость!</h1>
-            <p class="header__right-p text__12">Квартиры от 42 000 ₽/м<sup>2</sup></p>
-            <button class="btn btn-white" id="openQuiz">Подобрать квартиру</button>
-
-        </div>
-    </div>
-
-    <img src="../dist/img/header__center.jpg" alt="" class="header__center header__center--active">
-
-    <nav class="header-nav">
-        <a href="#" class="header-nav__a" style="--i: 0px">Пункт меню 1</a>
-        <a href="#" class="header-nav__a" style="--i: 80px">Пункт меню 2</a>
-        <a href="#" class="header-nav__a" style="--i: 160px">Пункт меню 3</a>
-        <a href="#" class="header-nav__a" style="--i: 240px">Пункт меню 4</a>
-        <a href="#" class="header-nav__a" style="--i: 320px">Пункт меню 5</a>
-        <a href="#" class="header-nav__a" style="--i: 400px">Пункт меню 6</a>
-
-        <div class="header-nav__mobile">
             <p class="text__3 header__top-p">Хороший дом на Первого мая</p>
+
             <p class="header__geo text__4">Краснодар</p>
+
+            <button class="header__menu-button header__menu-button--active text__4">Меню</button>
+
             <a href="tel:80000000000" class="link__1 header__tel header__tel--active">
                 8 (000) 000 00 00
             </a>
+
+            <img src="../dist/img/close--white.svg" alt="" class="header__close">
+
         </div>
-    </nav>
 
-
-    <form class="header-quiz">
-
-        <ul class="header-quiz__steps">
-            <li class="header-quiz__step header-quiz__step--active">
-                <div class="header-quiz__top">
-                    <p class="text__step text__step--light">01 / 04</p>
-                    <h3 class="title__2">Сколько комнат Вам нужно?</h3>
-                </div>
-                <div class="header-quiz__content">
-                    <ul class="header-quiz__labels">
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--1" id="header-quiz__1" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__1">Студии</label>
-                        </li>
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--1" id="header-quiz__2" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__2">1-комнатные квартиры</label>
-                        </li>
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--1" id="header-quiz__3" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__3">2-комнатные квартиры</label>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="header-quiz__step">
-                <div class="header-quiz__top">
-                    <p class="text__step text__step--light">02 / 04</p>
-                    <h3 class="title__2">Сколько комнат Вам не нужно?</h3>
-                </div>
-                <div class="header-quiz__content">
-                    <ul class="header-quiz__labels">
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--2" id="header-quiz__4" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__4">Студии</label>
-                        </li>
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--2" id="header-quiz__5" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__5">1-комнатные квартиры</label>
-                        </li>
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--2" id="header-quiz__6" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__6">2-комнатные квартиры</label>
-                        </li>
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--2" id="header-quiz__61" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__61">3-комнатные квартиры</label>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="header-quiz__step">
-                <div class="header-quiz__top">
-                    <p class="text__step text__step--light">03 / 04</p>
-                    <h3 class="title__2">Сколько комнат Вам нужно? Сколько комнат Вам нужно?</h3>
-                </div>
-                <div class="header-quiz__content">
-                    <ul class="header-quiz__labels">
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--3" id="header-quiz__7" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__7">Студии</label>
-                        </li>
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--3" id="header-quiz__8" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__8">1-комнатные квартиры</label>
-                        </li>
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--3" id="header-quiz__9" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__9">2-комнатные квартиры</label>
-                        </li>
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--3" id="header-quiz__81" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__81">1-комнатные квартиры</label>
-                        </li>
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--3" id="header-quiz__91" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__91">2-комнатные квартиры</label>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="header-quiz__step">
-                <div class="header-quiz__top">
-                    <p class="text__step text__step--light">04 / 04</p>
-                    <h3 class="title__2">Сколько комнат Вам нужно?</h3>
-                </div>
-                <div class="header-quiz__content">
-                    <ul class="header-quiz__labels">
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--4" id="header-quiz__10" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__10">Студии</label>
-                        </li>
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--4" id="header-quiz__11" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__11">1-комнатные квартиры</label>
-                        </li>
-                        <li class="header-quiz__li">
-                            <input type="checkbox" name="header-quiz--4" id="header-quiz__12" class="f-checkbox__input">
-                            <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__12">2-комнатные квартиры</label>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-
-        <div class="header-quiz__buttons">
-            <button class="btn btn-transparent" id="headerQuizPrev" disabled>Назад</button>
-            <button class="btn btn-white" id="headerQuizNext" disabled>Дальше</button>
+        <div class="header__left">
+            <img class="header__left-img" src="../dist/img/header__left.jpg">
         </div>
-    </form>
+
+        <div class="header__right">
+            <div class="header__right-wrapper header__right-wrapper--active">
+
+                <h1 class="title__3">Дом на радость!</h1>
+                <p class="header__right-p text__12">Квартиры от 42 000 ₽/м<sup>2</sup></p>
+                <button class="btn btn-white" id="openQuiz">Подобрать квартиру</button>
+
+            </div>
+        </div>
+
+        <img src="../dist/img/header__center.jpg" alt="" class="header__center header__center--active">
+
+        <nav class="header-nav">
+            <a href="#" class="header-nav__a" style="--i: 0px">Пункт меню 1</a>
+            <a href="#" class="header-nav__a" style="--i: 80px">Пункт меню 2</a>
+            <a href="#" class="header-nav__a" style="--i: 160px">Пункт меню 3</a>
+            <a href="#" class="header-nav__a" style="--i: 240px">Пункт меню 4</a>
+            <a href="#" class="header-nav__a" style="--i: 320px">Пункт меню 5</a>
+            <a href="#" class="header-nav__a" style="--i: 400px">Пункт меню 6</a>
+
+            <div class="header-nav__mobile">
+                <p class="text__3 header__top-p">Хороший дом на Первого мая</p>
+                <p class="header__geo text__4">Краснодар</p>
+                <a href="tel:80000000000" class="link__1 header__tel header__tel--active">
+                    8 (000) 000 00 00
+                </a>
+            </div>
+        </nav>
+
+        <form class="header-quiz">
+
+            <ul class="header-quiz__steps">
+                <li class="header-quiz__step header-quiz__step--active">
+                    <div class="header-quiz__top">
+                        <p class="text__step text__step--light">01 / 04</p>
+                        <h3 class="title__2">Сколько комнат Вам нужно?</h3>
+                    </div>
+                    <div class="header-quiz__content">
+                        <ul class="header-quiz__labels">
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--1" id="header-quiz__1" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__1">Студии</label>
+                            </li>
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--1" id="header-quiz__2" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__2">1-комнатные квартиры</label>
+                            </li>
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--1" id="header-quiz__3" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__3">2-комнатные квартиры</label>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header-quiz__step">
+                    <div class="header-quiz__top">
+                        <p class="text__step text__step--light">02 / 04</p>
+                        <h3 class="title__2">Сколько комнат Вам не нужно?</h3>
+                    </div>
+                    <div class="header-quiz__content">
+                        <ul class="header-quiz__labels">
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--2" id="header-quiz__4" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__4">Студии</label>
+                            </li>
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--2" id="header-quiz__5" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__5">1-комнатные квартиры</label>
+                            </li>
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--2" id="header-quiz__6" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__6">2-комнатные квартиры</label>
+                            </li>
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--2" id="header-quiz__61" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__61">3-комнатные квартиры</label>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header-quiz__step">
+                    <div class="header-quiz__top">
+                        <p class="text__step text__step--light">03 / 04</p>
+                        <h3 class="title__2">Сколько комнат Вам нужно? Сколько комнат Вам нужно?</h3>
+                    </div>
+                    <div class="header-quiz__content">
+                        <ul class="header-quiz__labels">
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--3" id="header-quiz__7" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__7">Студии</label>
+                            </li>
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--3" id="header-quiz__8" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__8">1-комнатные квартиры</label>
+                            </li>
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--3" id="header-quiz__9" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__9">2-комнатные квартиры</label>
+                            </li>
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--3" id="header-quiz__81" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__81">1-комнатные квартиры</label>
+                            </li>
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--3" id="header-quiz__91" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__91">2-комнатные квартиры</label>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header-quiz__step">
+                    <div class="header-quiz__top">
+                        <p class="text__step text__step--light">04 / 04</p>
+                        <h3 class="title__2">Сколько комнат Вам нужно?</h3>
+                    </div>
+                    <div class="header-quiz__content">
+                        <ul class="header-quiz__labels">
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--4" id="header-quiz__10" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__10">Студии</label>
+                            </li>
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--4" id="header-quiz__11" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__11">1-комнатные квартиры</label>
+                            </li>
+                            <li class="header-quiz__li">
+                                <input type="checkbox" name="header-quiz--4" id="header-quiz__12" class="f-checkbox__input">
+                                <label class="f-checkbox__label f-checkbox__label--light" for="header-quiz__12">2-комнатные квартиры</label>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="header-quiz__buttons">
+                <button class="btn btn-transparent" id="headerQuizPrev" disabled>Назад</button>
+                <button class="btn btn-white" id="headerQuizNext" disabled>Дальше</button>
+            </div>
+        </form>
+
+    </div>
 
 </header>

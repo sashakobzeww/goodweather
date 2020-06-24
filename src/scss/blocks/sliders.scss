@@ -116,6 +116,7 @@
 .good {
     position: relative;
     clip-path: ellipse(115% 52%);
+    overflow-x: hidden;
 
     &__wrapper {
         padding: 160px 0;
@@ -255,6 +256,7 @@
     padding: 160px 0 177px;
     background: $_light2;
     clip-path: ellipse(115% 50% at 50% 50%);
+    overflow-x: hidden;
 
     @media (max-width: $_media_mobile) {
         clip-path: ellipse(145% 50% at 50% 50%);
@@ -319,6 +321,7 @@
 .near {
     padding: 140px 0 100px 0;
     background: $_light3;
+    overflow-x: hidden;
     @media (max-width: $_media_mobile) {
         padding: 70px 0;
     }
@@ -414,6 +417,7 @@
 .report {
     padding-top: 160px;
     background: $_light3;
+    overflow-x: hidden;
 
     .swiper-container {
         height: 35vw;

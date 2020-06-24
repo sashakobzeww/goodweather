@@ -24,7 +24,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
         grid-gap: 2.6vw;
-        margin-top: 50px;
+        margin-top: 85px;
         @media (max-width: $_media_mobile) {
             grid-gap: 12vw;
             grid-column-gap: 5vw;

@@ -23,6 +23,10 @@ body {
     line-height: $lineHeight;
 }
 
+main {
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
 }
