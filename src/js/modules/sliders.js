@@ -8,7 +8,6 @@ var slider1 = new Swiper('.swiper-container--1', {
         el: '.swiper-pagination--1',
         clickable: true,
     },
-    speed: 0,
     autoplay: {
         delay: 5000,
     },
@@ -37,17 +36,6 @@ var slider1 = new Swiper('.swiper-container--1', {
     }
 })
 
-slider1.on('slideChangeTransitionStart', () => {
-    let slides = document.querySelectorAll('.swiper-container--1 li');
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.add('scale-in-left');
-
-        setTimeout(() => {
-            slides[i].classList.remove('scale-in-left');
-        }, 1000)
-    }
-})
 
 /* slider 2 */
 
@@ -57,7 +45,6 @@ var slider2 = new Swiper('.swiper-container--2', {
         nextEl: '.swiper-button-next--2',
         prevEl: '.swiper-button-prev--2',
     },
-    speed: 0,
     autoplay: {
         delay: 5000,
     },
@@ -82,17 +69,6 @@ var slider2 = new Swiper('.swiper-container--2', {
     }
 })
 
-slider1.on('slideChangeTransitionStart', () => {
-    let slides = document.querySelectorAll('.swiper-container--2 li');
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.add('scale-in-left');
-
-        setTimeout(() => {
-            slides[i].classList.remove('scale-in-left');
-        }, 1000)
-    }
-})
 
 /* slider 3 */
 
@@ -105,7 +81,6 @@ var slider3 = new Swiper('.swiper-container--3', {
         clickable: true,
 
     },
-    speed: 0,
     autoplay: {
         delay: 4000,
     },
@@ -132,17 +107,6 @@ var slider3 = new Swiper('.swiper-container--3', {
     }
 })
 
-slider1.on('slideChangeTransitionStart', () => {
-    let slides = document.querySelectorAll('.swiper-container--3 li');
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.add('scale-in-left');
-
-        setTimeout(() => {
-            slides[i].classList.remove('scale-in-left');
-        }, 1000)
-    }
-})
 
 /* slider 4-1 */
 
@@ -154,7 +118,6 @@ var slider41 = new Swiper('.swiper-container--4-1', {
         el: '.swiper-pagination--4-1',
         clickable: true,
     },
-    speed: 0,
     autoplay: {
         delay: 5000,
     },
@@ -181,17 +144,6 @@ var slider41 = new Swiper('.swiper-container--4-1', {
     }
 })
 
-slider1.on('slideChangeTransitionStart', () => {
-    let slides = document.querySelectorAll('.swiper-container--4-1 li');
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.add('scale-in-left');
-
-        setTimeout(() => {
-            slides[i].classList.remove('scale-in-left');
-        }, 1000)
-    }
-})
 
 /* slider 4-2 */
 
@@ -201,7 +153,6 @@ var slider42 = new Swiper('.swiper-container--4-2', {
         el: '.swiper-pagination--4-2',
         clickable: true,
     },
-    speed: 0,
     autoplay: {
         delay: 5000,
     },
@@ -230,14 +181,3 @@ var slider42 = new Swiper('.swiper-container--4-2', {
     }
 })
 
-slider1.on('slideChangeTransitionStart', () => {
-    let slides = document.querySelectorAll('.swiper-container--4-2 li');
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.add('scale-in-left');
-
-        setTimeout(() => {
-            slides[i].classList.remove('scale-in-left');
-        }, 1000)
-    }
-})
