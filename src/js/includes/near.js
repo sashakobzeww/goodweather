@@ -121,4 +121,8 @@ function initMap() {
             }
         )
     );
+
+    if (window.innerWidth <= 768) {
+        myMap.behaviors.disable('drag')
+    }
 };
