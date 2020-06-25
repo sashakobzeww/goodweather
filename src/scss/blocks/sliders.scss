@@ -120,7 +120,7 @@
 .good {
     position: relative;
     clip-path: ellipse(115% 52%);
-    overflow-x: hidden;
+    overflow: hidden;
 
     &__wrapper {
         padding: 160px 0;
