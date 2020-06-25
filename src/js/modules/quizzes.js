@@ -43,15 +43,13 @@ function changeQuizStep(e) {
         headerQuizPrev.disabled = false;
         headerQuizNext.textContent = 'Дальше';
         headerQuizNext.disabled = true;
+        headerQuizNext.addEventListener("click", increment);
+        headerQuizNext.removeEventListener("click", quizSend);
     } else if (currentStep === headerQuizSteps.length) {
         headerQuizNext.textContent = 'Отправить';
         headerQuizNext.disabled = true;
         headerQuizNext.removeEventListener("click", increment);
-        headerQuizNext.addEventListener("click", function () {
-            modalThanks.classList.add("modal--active");
-            modalThanks.classList.remove("modal--un-active");
-            close();
-        });
+        headerQuizNext.addEventListener("click", quizSend);
     }
 
     currentEl.classList.remove('header-quiz__step--active');
@@ -70,6 +68,13 @@ function changeQuizStep(e) {
 
 }
 
+function quizSend() {
+    modalThanks.classList.add("modal--active");
+    modalThanks.classList.remove("modal--un-active");
+    close();
+
+}
+
 
 let checkboxes = document.querySelectorAll('.header-quiz__step [type="checkbox"]');
 
@@ -79,9 +84,7 @@ for (let i = 0; i < checkboxes.length; i++) {
         let checkboxesOfStep = document.querySelectorAll(`[name=${name}]`);
         let headerQuizNext = document.getElementById('headerQuizNext');
 
-        // Включён хотя бы один чекбокс?
         let checkOne = checkedOne(checkboxesOfStep);
-        console.log(checkOne);
         if (checkOne) {
             headerQuizNext.disabled = false;
         } else {
@@ -90,6 +93,7 @@ for (let i = 0; i < checkboxes.length; i++) {
     })
 }
 
+// Включён хотя бы один чекбокс?
 function checkedOne(checkboxesOfStep) {
     for (let j = 0; j < checkboxesOfStep.length; j++) {
         if (checkboxesOfStep[j].checked) {
@@ -129,8 +133,8 @@ function activeQuizStep2() {
 }
 
 function changeQuizStep2(e) {
-
     let numberOfActiveQuizStep = activeQuizStep2();
+debugger
 
     let selectionForm = document.querySelector('.selection__form');
     let prevEl = selectionQuizStep[numberOfActiveQuizStep].previousElementSibling;
@@ -144,15 +148,13 @@ function changeQuizStep2(e) {
         selectionQuizPrev.disabled = false;
         selectionQuizNext.textContent = 'Дальше';
         selectionQuizNext.disabled = true;
+        selectionQuizNext.addEventListener("click", increment);
+        selectionQuizNext.removeEventListener("click", quizSendSecond);
     } else if (currentStep === selectionQuizStep.length) {
         selectionQuizNext.textContent = 'Отправить';
         selectionQuizNext.disabled = true;
         selectionQuizNext.removeEventListener("click", increment);
-        selectionQuizNext.addEventListener("click", function () {
-            selectionQuizThanks.classList.add('selection__thanks--active');
-            selectionQuizList.classList.add('selection__steps--thanks');
-            selectionForm.classList.add('selection__form--send');
-        });
+        selectionQuizNext.addEventListener("click", quizSendSecond);
     }
 
     currentEl.classList.remove('selection__step--active');
@@ -169,6 +171,14 @@ function changeQuizStep2(e) {
         selectionQuizNext.disabled = false;
     }
 
+    function quizSendSecond() {
+        if (!selectionQuizNext.disabled) {
+            selectionQuizThanks.classList.add('selection__thanks--active');
+            selectionQuizList.classList.add('selection__steps--thanks');
+            selectionForm.classList.add('selection__form--send');
+        }
+    }
+
 }
 
 let checkboxesSelect = document.querySelectorAll('.selection__step [type="checkbox"]');
@@ -181,7 +191,6 @@ for (let i = 0; i < checkboxesSelect.length; i++) {
 
         // Включён хотя бы один чекбокс?
         let checkOne = checkedOne(checkboxesSelectOfStep);
-        console.log(checkOne);
         if (checkOne) {
             secondQuizNext.disabled = false;
         } else {
