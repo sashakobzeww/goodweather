@@ -450,16 +450,16 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: calc( 50% - 5px );
+        top: calc( 115px + 220px - 34px );
         transform: translateY(-50%);
         border-radius: 50%;
         width: 68px;
         height: 68px;
         background: $_orange;
-        @media (max-width: $_media_laptop_2) {
-            top: calc( 90px + 30vw / 2 );
+        @media (max-width: $_media_4K) {
+            top: calc( 50% - 5px );
         }
-        @media (max-width: $_media_laptop) {
+        @media (max-width: $_media_laptop_2) {
             top: calc( 90px + 33vw / 2 );
         }
         @media (max-width: $_media_mobile) {
@@ -543,9 +543,9 @@
 
     &-slider {
         &__a {
-            height: 23vw;
-            @media (max-width: $_media_laptop_2) {
-                height: 30vw;
+            height: 440px;
+            @media (max-width: $_media_4K) {
+                height: 23vw;
             }
             @media (max-width: $_media_laptop) {
                 height: 33vw;

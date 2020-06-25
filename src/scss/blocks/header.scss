@@ -34,8 +34,8 @@ $pfx: "header";
     height: 960px;
     position: relative;
     clip-path: ellipse(150% 100% at 50% 0%);
+    overflow: hidden;
     @media (max-width: $_media_laptop) {
-        overflow: hidden;
         height: 100vh;
     }
     @media (max-width: $_media_mobile) {
