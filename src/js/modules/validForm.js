@@ -8,7 +8,7 @@ for (let i = 0; i < forms.length; i++) {
 
     for (let j = 0; j < inputs.length; j++) {
         inputs[j].addEventListener('keyup', () => {
-            let valid = validTextInputs(inputs);
+            let valid = validTextInputs(inputs, personalData);
             if (valid) {
                 send.disabled = false;
             } else {
@@ -18,7 +18,7 @@ for (let i = 0; i < forms.length; i++) {
 
     }
     personalData.addEventListener('change', () => {
-        let valid = validPersonalData(personalData);
+        let valid = validPersonalData(inputs, personalData);
         if (valid) {
             send.disabled = false;
         } else {
@@ -28,7 +28,7 @@ for (let i = 0; i < forms.length; i++) {
 
 }
 
-function validTextInputs(inputs) {
+function validTextInputs(inputs, personalData) {
 
     for (let j = 0; j < inputs.length; j++) {
         let input = inputs[j];
@@ -47,11 +47,33 @@ function validTextInputs(inputs) {
         }
     }
 
+    if (validPersonalData(inputs, personalData)) {
+        return true
+    }
+
     return true
 }
 
-function validPersonalData(e) {
-    if (e.checked) {
+function validPersonalData(inputs, personalData) {
+
+    for (let j = 0; j < inputs.length; j++) {
+        let input = inputs[j];
+
+        if (input.tagName === 'TEXTAREA') {
+            if (input.textLength === 0) {
+                return false
+            }
+        }
+
+        if (input.type === 'tel') {
+            let lastSymbol = input.value[input.value.length-1];
+            if (lastSymbol === '_') {
+                return false
+            }
+        }
+    }
+
+    if (personalData.checked) {
         return true
     } else {
         return false
