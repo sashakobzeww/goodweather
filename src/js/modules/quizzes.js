@@ -103,6 +103,8 @@ function checkedOne(checkboxesOfStep) {
 let selectionQuizPrev = document.getElementById('secondQuizPrev');
 let selectionQuizNext = document.getElementById('secondQuizNext');
 let selectionQuizStep = document.querySelectorAll(".selection__step");
+let selectionQuizThanks = document.querySelector(".selection__thanks");
+let selectionQuizList = document.querySelector(".selection__steps");
 
 selectionQuizPrev.addEventListener('click', decrementSelection);
 selectionQuizNext.addEventListener('click', incrementSelection);
@@ -147,8 +149,8 @@ function changeQuizStep2(e) {
         selectionQuizNext.disabled = true;
         selectionQuizNext.removeEventListener("click", increment);
         selectionQuizNext.addEventListener("click", function () {
-            modalThanks.classList.add("modal--active");
-            modalThanks.classList.remove("modal--un-active");
+            selectionQuizThanks.classList.add('selection__thanks--active');
+            selectionQuizList.classList.add('selection__steps--thanks');
             selectionForm.classList.add('selection__form--send');
         });
     }

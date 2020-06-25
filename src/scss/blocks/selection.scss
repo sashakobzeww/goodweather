@@ -1,10 +1,13 @@
 .selection {
     padding-top: 130px;
     position: relative;
+    transition: 300ms;
+    min-height: 800px;
 
     &__wrapper {
         position: relative;
         z-index: 1;
+        transition: 300ms;
     }
 
     &__form {
@@ -17,6 +20,7 @@
         grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
         grid-template-rows: auto auto;
         grid-column-gap: 48px;
+        transition: 300ms;
         grid-template-areas:
             's__step s__right'
             's__bottom s__right';
@@ -34,19 +38,10 @@
         }
 
         &--send {
-            grid-template: 0 400px / 0;
-            grid-gap: 0;
-            align-items: center;
-            justify-content: center;
-
-            .selection__right {
-                width: 100%;
-                height: 100%;
-                margin: auto;
-            }
 
             .selection__bottom {
-                visibility: hidden;
+                opacity: 0;
+                pointer-events: none;
             }
 
             @media (max-width: $_media_laptop) {
@@ -62,6 +57,10 @@
     &__steps {
         position: relative;
         overflow: hidden;
+
+        &--thanks {
+            width: min(440px, 90vw);
+        }
     }
 
     &__step {
@@ -93,6 +92,31 @@
             transform: translateX(-100vw);
             position: absolute;
         }
+    }
+
+    &__thanks {
+        min-height: 200px;
+        grid-area: s__step;
+        display: grid;
+        grid-template-rows: auto auto;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: 600ms;
+        transform: translateX(100vw);
+        grid-row-gap: 40px;
+        position: absolute;
+
+        &--active {
+            position: relative;
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(0);
+            transition: 600ms;
+        }
+
     }
 
     &__left {
@@ -161,6 +185,8 @@
 
     &__bottom {
         grid-area: s__bottom;
+        opacity: 1;
+        pointer-events: auto;
+        transition: 600ms;
     }
-
 }
