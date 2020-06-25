@@ -14,6 +14,7 @@ import "./modules/modals";
 import "./modules/animations";
 import "./modules/quizzes";
 import "./modules/map";
+import "./modules/validForm";
 
 import './includes/header';
 import './includes/footer';

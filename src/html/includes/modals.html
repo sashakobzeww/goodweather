@@ -6,20 +6,20 @@
 
         <img src="../dist/img/close--blue.svg" alt="" class="modal__close">
 
-        <form class="modal-request__form modal-request__form--active">
+        <form class="modal-request__form modal-request__form--active form-valid">
             <h3 class="title__1" id="modal-title">Получите презентацию квартир</h3>
             <div class="modal-request__fields">
                 <div class="f-field">
                     <p class="f-field__title">Ваше имя</p>
-                    <input class="f-field__input" type="text">
+                    <input class="f-field__input" type="text" required>
                 </div>
                 <div class="f-field">
                     <p class="f-field__title">Ваш телефон</p>
-                    <input class="f-field__input" type="tel" placeholder="+7 (___) ___ __ __">
+                    <input class="f-field__input" type="tel" placeholder="+7 (___) ___ __ __" required>
                 </div>
             </div>
             <div class="personal-data">
-                <input type="checkbox" class="personal-data__input" id="personal-data--2" checked>
+                <input type="checkbox" class="personal-data__input" id="personal-data--2" checked required>
                 <label class="personal-data__label" for="personal-data--2">
                     <p class="personal-data__p">
                         Я согласен
