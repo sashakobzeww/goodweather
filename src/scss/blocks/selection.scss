@@ -116,6 +116,8 @@
         grid-row-gap: 40px;
         position: absolute;
         @media (max-width: $_media_mobile) {
+            grid-row-gap: 2vw;
+            margin-bottom: 10px;
             min-height: auto;
         }
 
