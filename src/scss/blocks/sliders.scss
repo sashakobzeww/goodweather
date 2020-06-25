@@ -172,13 +172,16 @@
 
     &-slider {
         &__img {
-            height: 23vw;
+            height: 440px;
             margin-bottom: 20px;
             min-width: 100%;
             max-width: 100%;
             object-fit: cover;
             object-position: center;
             border-radius: 30px 30px 30px 0;
+            @media (max-width: $_media_4K) {
+                height: 23vw;
+            }
             @media (max-width: $_media_laptop) {
                 height: 33vw;
             }
@@ -201,11 +204,14 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: 11.5vw;
+        top: calc( 440px / 2 );
         border-radius: 50%;
         width: 68px;
         height: 68px;
         background: $bodyBackground;
+        @media (max-width: $_media_4K) {
+            top: 11.5vw;
+        }
         @media (max-width: $_media_laptop_2) {
             top: calc( ( 23vw - 10px) / 2);
         }
@@ -272,11 +278,14 @@
 
     &-slider__img {
         max-width: 100%;
-        height: 23vw;
+        height: 440px;
         min-width: 100%;
         object-fit: cover;
         object-position: center;
         border-radius: 30px 30px 30px 0;
+        @media (max-width: $_media_4K) {
+            height: 23vw;
+        }
         @media (max-width: $_media_mobile) {
             height: 38vh;
         }
@@ -293,11 +302,14 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: calc( 11.5vw - 14px );
+        top: calc( 440px / 2 );
         border-radius: 50%;
         width: 68px;
         height: 68px;
         background: $_orange;
+        @media (max-width: $_media_4K) {
+            top: calc( 11.5vw - 14px );
+        }
         @media (max-width: $_media_mobile) {
             display: none;
         }
@@ -365,11 +377,14 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: calc( 6.5vw - 14px);
+        top: calc( 250px / 2);
         border-radius: 50%;
         width: 68px;
         height: 68px;
         background: $_orange;
+        @media (max-width: $_media_4K) {
+            top: calc( 6.5vw - 14px);
+        }
         @media (max-width: $_media_laptop) {
             top: calc( 8.5vw - 14px);
         }
@@ -394,12 +409,15 @@
 
     &-slider {
         &__img {
-            height: 13vw;
+            height: 250px;
             min-width: 100%;
             max-width: 100%;
             object-fit: cover;
             object-position: center;
             border-radius: 30px 30px 30px 0;
+            @media (max-width: $_media_4K) {
+                height: 13vw;
+            }
             @media (max-width: $_media_laptop) {
                 height: 17vw;
             }
