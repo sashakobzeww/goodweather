@@ -11,30 +11,34 @@
     }
 
     &__form {
-        margin-top: 60px;
         padding: 4vw;
         background: $bodyBackground;
         box-shadow: 0 20px 60px $_grayLight;
         border-radius: 46px;
-        display: grid;
-        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-        grid-template-rows: auto auto;
-        grid-column-gap: 48px;
-        transition: 300ms;
-        grid-template-areas:
-            's__step s__right'
-            's__bottom s__right';
-        @media (max-width: $_media_laptop) {
-            grid-template: 30vw auto auto / 1fr;
+        margin-top: 60px;
+
+        &-wrapper {
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            grid-template-rows: auto auto;
+            grid-column-gap: 48px;
+            transition: 300ms;
             grid-template-areas:
-                's__right'
-                's__step'
-                's__bottom';
-        }
-        @media (max-width: $_media_mobile) {
-            grid-template-rows: 50vw auto auto;
-            grid-template-columns: 1fr;
-            grid-gap: 4vw;
+                's__step s__right'
+                's__bottom s__right';
+            @media (max-width: $_media_laptop) {
+                grid-template: 30vw auto auto / 1fr;
+                grid-template-areas:
+                    's__right'
+                    's__step'
+                    's__bottom';
+            }
+            @media (max-width: $_media_mobile) {
+                grid-template-rows: 50vw auto auto;
+                grid-template-columns: 1fr;
+                grid-gap: 4vw;
+            }
         }
 
         &--send {
@@ -42,10 +46,14 @@
             .selection__bottom {
                 opacity: 0;
                 pointer-events: none;
+                @media (max-width: $_media_laptop) {
+                    max-height: 0;
+                    overflow: hidden;
+                }
             }
 
             @media (max-width: $_media_laptop) {
-                grid-template: 300px 0 0 / 1fr;
+                grid-template: 300px auto auto / 1fr;
                 .selection__right {
                     width: auto;
                 }
@@ -107,6 +115,9 @@
         transform: translateX(100vw);
         grid-row-gap: 40px;
         position: absolute;
+        @media (max-width: $_media_mobile) {
+            min-height: auto;
+        }
 
         &--active {
             position: relative;
