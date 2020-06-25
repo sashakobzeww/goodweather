@@ -4,17 +4,31 @@ for (let i = 0; i < forms.length; i++) {
     let form = forms[i];
     let send = form.querySelector('.btn');
     let inputs = form.querySelectorAll('[required]');
+    let personalData = form.querySelector('.personal-data__input');
 
     for (let j = 0; j < inputs.length; j++) {
         inputs[j].addEventListener('keyup', () => {
-            let valid = validation(inputs);
-            console.log(valid);
+            let valid = validTextInputs(inputs);
+            if (valid) {
+                send.disabled = false;
+            } else {
+                send.disabled = true;
+            }
         });
+
     }
+    personalData.addEventListener('change', () => {
+        let valid = validPersonalData(personalData);
+        if (valid) {
+            send.disabled = false;
+        } else {
+            send.disabled = true;
+        }
+    })
 
 }
 
-function validation(inputs) {
+function validTextInputs(inputs) {
 
     for (let j = 0; j < inputs.length; j++) {
         let input = inputs[j];
@@ -34,4 +48,12 @@ function validation(inputs) {
     }
 
     return true
+}
+
+function validPersonalData(e) {
+    if (e.checked) {
+        return true
+    } else {
+        return false
+    }
 }
