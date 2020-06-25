@@ -16,6 +16,7 @@
         @media (max-width: $_media_mobile) {
             width: 90%;
             overflow: hidden;
+            margin-top: $_titleBottom;
         }
 
         &--2 {
@@ -129,6 +130,7 @@
         z-index: 1;
         @media (max-width: $_media_mobile) {
             clip-path: ellipse(145% 50% at 50% 50%);
+            padding: $_verticalPaddingEllipse 0;
         }
     }
 
@@ -152,6 +154,9 @@
             grid-gap: 50px;
             padding: 0;
         }
+        @media (max-width: $_media_mobile) {
+            grid-gap: $_titleBottom;
+        }
 
         &--near {
             grid-template-columns: 560px 1fr;
@@ -164,6 +169,9 @@
             }
             @media (max-width: $_media_laptop) {
                 grid-template: auto / auto;
+            }
+            @media (max-width: $_media_mobile) {
+                grid-gap: $_titleBottom;
             }
         }
     }
@@ -269,6 +277,7 @@
 
     @media (max-width: $_media_mobile) {
         clip-path: ellipse(145% 50% at 50% 50%);
+        padding: $_verticalPaddingEllipse 0;
     }
 
     &__title-h3 {
@@ -338,7 +347,7 @@
     background: $_light3;
     overflow-x: hidden;
     @media (max-width: $_media_mobile) {
-        padding: 70px 0;
+        padding: $_verticalPadding 0;
     }
 
     &__h2 {

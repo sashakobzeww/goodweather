@@ -5,6 +5,9 @@
 .infographics {
     background-color: $_light3;
     padding: calc( 90  * 100vw / var(--abc)) 0 calc( 110 * 100vw / var(--abc));
+    @media (max-width: $_media_mobile) {
+        padding: $_verticalPadding 0;
+    }
 
     &__ul {
         transform: translateX(-2vw);

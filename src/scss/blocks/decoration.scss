@@ -17,7 +17,7 @@
     padding-bottom: 166px;
     background-color: $_light3;
     @media (max-width: $_media_mobile) {
-        padding-bottom: 80px;
+        padding: 0 0 $_verticalPadding 0;
     }
 
     &__ul {
@@ -26,6 +26,7 @@
         grid-gap: 2.6vw;
         margin-top: 85px;
         @media (max-width: $_media_mobile) {
+            margin-top: $_titleBottom;
             grid-gap: 12vw;
             grid-column-gap: 5vw;
         }

@@ -1,7 +1,7 @@
 .contacts {
     padding: 130px 0 160px;
     @media (max-width: $_media_mobile) {
-        padding: 90px 0 150px;
+        padding: $_verticalPadding 0 150px;
     }
 
     &__h3 {
@@ -20,6 +20,9 @@
             grid-gap: 5%;
             grid-template: auto auto / 1fr;
             margin-top: 10vw;
+        }
+        @media (max-width: $_media_mobile) {
+            margin-top: $_titleBottom;
         }
     }
 

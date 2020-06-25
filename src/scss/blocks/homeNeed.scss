@@ -2,12 +2,16 @@
     margin-top: 130px;
     margin-bottom: 200px;
     position: relative;
+    @media (max-width: $_media_mobile) {
+        margin-top: 0;
+        padding: $_verticalPadding 0 0 0;
+    }
 
     &__h2 {
         margin-bottom: 65px;
         mix-blend-mode: multiply;
         @media (max-width: $_media_mobile) {
-            margin-bottom: 40px;
+            margin-bottom: $_titleBottom;
         }
     }
 

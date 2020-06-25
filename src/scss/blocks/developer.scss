@@ -36,5 +36,8 @@
     &__h2 {
         margin: 20px 0 35px;
         transform: translateX(-2px);
+        @media (max-width: $_media_mobile) {
+            margin: 20px 0 $_titleBottom;
+        }
     }
 }

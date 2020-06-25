@@ -2,6 +2,10 @@
     margin-top: 130px;
     margin-bottom: 150px;
     padding: 0;
+    @media (max-width: $_media_mobile) {
+        margin: 0;
+        padding: $_verticalPadding 0;
+    }
 
     &__header {
         display: grid;
@@ -11,6 +15,9 @@
             grid-template: auto / auto;
             padding: 0;
             margin-bottom: 0;
+        }
+        @media (max-width: $_media_mobile) {
+            grid-gap: $_titleBottom;
         }
     }
 

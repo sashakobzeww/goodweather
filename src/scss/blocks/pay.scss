@@ -1,5 +1,9 @@
 .pay {
     margin-top: 130px;
+    @media (max-width: $_media_mobile) {
+        margin-top: 0;
+        padding: $_verticalPadding 0;
+    }
 
     &__header {
         display: grid;
@@ -11,7 +15,7 @@
         }
 
         @media (max-width: $_media_mobile) {
-            grid-gap: 30px;
+            grid-gap: $_titleBottom;
             margin-bottom: 40px;
         }
     }

@@ -3,6 +3,9 @@
     position: relative;
     transition: 300ms;
     min-height: 800px;
+    @media (max-width: $_media_mobile) {
+        padding: $_verticalPadding 0 0 0;
+    }
 
     &__wrapper {
         position: relative;
@@ -16,6 +19,9 @@
         box-shadow: 0 20px 60px $_grayLight;
         border-radius: 46px;
         margin-top: 60px;
+        @media (max-width: $_media_mobile) {
+            margin-top: $_titleBottom;
+        }
 
         &-wrapper {
             overflow: hidden;

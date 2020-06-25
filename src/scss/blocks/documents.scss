@@ -4,7 +4,7 @@
     clip-path: ellipse(115% 50% at 50% 50%);
     @media (max-width: $_media_mobile) {
         clip-path: ellipse(145% 50% at 50% 50%);
-        padding: 100px 0 120px;
+        padding: $_verticalPaddingEllipse 0;
     }
 
     &__wrapper {
@@ -18,7 +18,7 @@
         margin-bottom: 72px;
         @media (max-width: $_media_mobile) {
             display: grid;
-            grid-gap: 5vw;
+            grid-gap: $_titleBottom;
         }
     }
 

@@ -8,8 +8,9 @@
     @media (max-width: $_media_mobile) {
         display: grid;
         grid-template: auto 90vw / 1fr;
-        margin-bottom: 50px;
         grid-gap: 10vw;
+        padding: $_verticalPadding 0 $_verticalPadding 0;
+        margin: 0 auto;
     }
 
     &__left, &__right {
@@ -25,6 +26,9 @@
 
     &__p {
         margin: 21px 0 42px;
+        @media (max-width: $_media_mobile) {
+            margin: $_titleBottom 0 42px;
+        }
     }
 
     &__right {
