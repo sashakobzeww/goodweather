@@ -91,6 +91,9 @@
 
         &--1 {
             padding-top: 65px;
+            @media (max-width: $_media_mobile) {
+                padding-top: 45px;
+            }
         }
 
         &--3 {
