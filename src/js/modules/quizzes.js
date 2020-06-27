@@ -103,6 +103,13 @@ function checkedOne(checkboxesOfStep) {
 
 }
 
+window.addEventListener('keyup', function (e) {
+    if (e.code === 'Escape') {
+    debugger
+        close();
+    }
+});
+
 /*Квиз второй*/
 let selectionQuizPrev = document.getElementById('secondQuizPrev');
 let selectionQuizNext = document.getElementById('secondQuizNext');

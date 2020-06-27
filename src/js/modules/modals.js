@@ -27,6 +27,12 @@ modalBackground.onclick = () => {
     modalClose();
 };
 
+window.addEventListener('keyup', function (e) {
+    if (e.code === 'Escape' && modalRequest.classList.contains('modal--active')) {
+        modalClose();
+    }
+});
+
 for (let i = 0; i < buttonModalRequest.length; i++) {
     buttonModalRequest[i].onclick = (e) => {
         document.body.classList.add('overflow-hidden');
@@ -67,6 +73,12 @@ modalPlanBackground.onclick = () => {
     modalPlanClose();
 };
 
+window.addEventListener('keyup', function (e) {
+    if (e.code === 'Escape' && modalPlan.classList.contains('modal--active')) {
+        modalPlanClose();
+    }
+});
+
 for (let i = 0; i < buttonsModalPlan.length; i++) {
     buttonsModalPlan[i].onclick = () => {
         document.body.classList.add('overflow-hidden')
@@ -99,6 +111,12 @@ modalThanksBackground.onclick = () => {
 modalThanksCloseBtn.onclick = () => {
     modalThanksClose();
 };
+
+window.addEventListener('keyup', function (e) {
+    if (e.code === 'Escape' && modalThanks.classList.contains('modal--active')) {
+        modalThanksClose();
+    }
+});
 
 for (let i = 0; i < buttonsModalThanks.length; i++) {
     buttonsModalThanks[i].onclick = () => {
