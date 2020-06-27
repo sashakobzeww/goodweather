@@ -1,3 +1,5 @@
+/* Модальное окно формы */
+
 let modalRequest = document.querySelector(".modal-request");
 let modalBackground = document.querySelector('.modal-request .modal__background');
 let modalCloseIco = document.querySelector('.modal-request .modal__close');
@@ -9,40 +11,33 @@ let modalCloseBtn = document.querySelector('.modal-request-thanks .btn');
 let modalTitle = document.getElementById('modal-title');
 let modalBtn = document.getElementById('modal-btn');
 let modalText = document.getElementById('modal-text');
-
-modalSend.onclick = () => {
-    modalRequestForm.classList.remove('modal-request__form--active');
-    modalRequestThanks.classList.add('modal-request-thanks--active');
-};
-
-modalCloseIco.onclick = () => {
-    modalClose();
-};
-
-modalCloseBtn.onclick = () => {
-    modalClose();
-};
-
-modalBackground.onclick = () => {
-    modalClose();
-};
-
-window.addEventListener('keyup', function (e) {
-    if (e.code === 'Escape' && modalRequest.classList.contains('modal--active')) {
-        modalClose();
-    }
-});
+let elementsCloseModalRequest = [modalCloseIco, modalCloseBtn, modalBackground];
 
 for (let i = 0; i < buttonModalRequest.length; i++) {
-    buttonModalRequest[i].onclick = (e) => {
+    buttonModalRequest[i].addEventListener('click', () => {
         document.body.classList.add('overflow-hidden');
         modalRequest.classList.add('modal--active');
         modalRequest.classList.remove('modal--un-active');
         modalTitle.textContent = buttonModalRequest[i].dataset.title;
         modalBtn.textContent = buttonModalRequest[i].dataset.btn;
         modalText.textContent = buttonModalRequest[i].dataset.text;
-    };
+    });
 }
+
+modalSend.addEventListener('click', () => {
+    modalRequestForm.classList.remove('modal-request__form--active');
+    modalRequestThanks.classList.add('modal-request-thanks--active');
+});
+
+for (let el of elementsCloseModalRequest) {
+    el.addEventListener('click', modalClose);
+}
+
+window.addEventListener('keyup', function (e) {
+    if (e.code === 'Escape' && modalRequest.classList.contains('modal--active')) {
+        modalClose();
+    }
+});
 
 function modalClose() {
     document.body.classList.remove('overflow-hidden');
@@ -54,24 +49,26 @@ function modalClose() {
     }, 500)
 }
 
-/*---------*/
+/* Модальное окно плана помещения */
+
 let modalPlan = document.querySelector(".modal-plan");
 let modalPlanBackground = document.querySelector('.modal-plan .modal__background');
 let modalPlanCloseIco = document.querySelector('.modal-plan .modal__close');
 let buttonsModalPlan = document.querySelectorAll(".plans__tab path");
 let modalPlanBack = document.querySelector('.modal-plan__back');
+let elementsCloseModalPlan = [modalPlanCloseIco, modalPlanBack, modalPlanBackground];
 
-modalPlanBack.onclick = () => {
-    modalPlanClose();
-};
+for (let i = 0; i < buttonsModalPlan.length; i++) {
+    buttonsModalPlan[i].addEventListener('click', () => {
+        document.body.classList.add('overflow-hidden');
+        modalPlan.classList.add('modal--active');
+        modalPlan.classList.remove('modal--un-active');
+    });
+}
 
-modalPlanCloseIco.onclick = () => {
-    modalPlanClose();
-};
-
-modalPlanBackground.onclick = () => {
-    modalPlanClose();
-};
+for (let el of elementsCloseModalPlan) {
+    el.addEventListener('click', modalPlanClose);
+}
 
 window.addEventListener('keyup', function (e) {
     if (e.code === 'Escape' && modalPlan.classList.contains('modal--active')) {
@@ -79,38 +76,32 @@ window.addEventListener('keyup', function (e) {
     }
 });
 
-for (let i = 0; i < buttonsModalPlan.length; i++) {
-    buttonsModalPlan[i].onclick = () => {
-        document.body.classList.add('overflow-hidden')
-        modalPlan.classList.add('modal--active');
-        modalPlan.classList.remove('modal--un-active');
-    };
-}
-
 function modalPlanClose() {
     document.body.classList.remove('overflow-hidden');
     modalPlan.classList.remove('modal--active');
     modalPlan.classList.add('modal--un-active');
 }
 
-/*---------*/
+/* Модальное благодарности */
+
 export let modalThanks = document.querySelector(".modal-thanks");
 let modalThanksBackground = document.querySelector('.modal-thanks .modal__background');
 let modalThanksCloseIco = document.querySelector('.modal-thanks .modal__close');
 let modalThanksCloseBtn = document.querySelector('.modal-thanks .btn');
 let buttonsModalThanks = document.querySelectorAll(".btn-thanks");
+let elementsCloseModalThanks = [modalThanksCloseIco, modalThanksCloseBtn, modalThanksBackground];
 
-modalThanksCloseIco.onclick = () => {
-    modalThanksClose();
-};
+for (let i = 0; i < buttonsModalThanks.length; i++) {
+    buttonsModalThanks[i].addEventListener('click', () => {
+        document.body.classList.add('overflow-hidden');
+        modalThanks.classList.add('modal--active');
+        modalThanks.classList.remove('modal--un-active');
+    });
+}
 
-modalThanksBackground.onclick = () => {
-    modalThanksClose();
-};
-
-modalThanksCloseBtn.onclick = () => {
-    modalThanksClose();
-};
+for (let el of elementsCloseModalThanks) {
+    el.addEventListener('click', modalThanksClose);
+}
 
 window.addEventListener('keyup', function (e) {
     if (e.code === 'Escape' && modalThanks.classList.contains('modal--active')) {
@@ -118,16 +109,8 @@ window.addEventListener('keyup', function (e) {
     }
 });
 
-for (let i = 0; i < buttonsModalThanks.length; i++) {
-    buttonsModalThanks[i].onclick = () => {
-        document.body.classList.add('overflow-hidden')
-        modalThanks.classList.add('modal--active');
-        modalThanks.classList.remove('modal--un-active');
-    };
-}
-
 function modalThanksClose() {
-    document.body.classList.remove('overflow-hidden')
+    document.body.classList.remove('overflow-hidden');
     modalThanks.classList.remove('modal--active');
     modalThanks.classList.add('modal--un-active');
 }
