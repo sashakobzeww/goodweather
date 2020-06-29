@@ -831,23 +831,6 @@ li, button, label, input, textarea {
         top: -60%;
     }
 
-    &--homeNeed-2 {
-        max-width: 40vw;
-        right: 0;
-        top: 0;
-        transform: scale(1);
-        opacity: 1;
-        @media (max-width: $_media_4K) {
-            right: -200px;
-        }
-        @media (max-width: $_media_laptop) {
-            top: auto;
-            bottom: -160px;
-            max-width: 470px;
-            left: 20vw;
-        }
-    }
-
     &--developer {
         left: -10vw;
         top: -10%;

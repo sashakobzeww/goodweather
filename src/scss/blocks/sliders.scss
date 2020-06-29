@@ -345,7 +345,7 @@
 .near {
     padding: 140px 0 100px 0;
     background: $_light3;
-    overflow-x: hidden;
+    overflow: hidden;
     @media (max-width: $_media_mobile) {
         padding: $_verticalPadding 0;
     }
@@ -389,7 +389,7 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: calc( 250px / 2);
+        top: calc( 250px / 2 - 13px);
         border-radius: 50%;
         width: 68px;
         height: 68px;

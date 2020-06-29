@@ -7,10 +7,6 @@ for (let i = 0; i < spotTriggers.length; i++) {
         spots[i].classList.add("scale-in-center-transform")
     });
 
-    spotTriggers[i].addEventListener('mouseout', function () {
-        spots[i].classList.remove("scale-in-center-transform")
-    });
-
 }
 
 /*----*/

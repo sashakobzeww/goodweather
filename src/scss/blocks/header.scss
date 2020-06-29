@@ -215,6 +215,19 @@ $pfx: "header";
         &:after {
             background-image: url(../img/header__right--2.svg);
             bottom: -20px;
+            right: -9vw;
+
+            @media (max-width: $_media_4K) {
+                right: auto;
+                left: 0vw;
+                width: 100vw;
+            }
+            @media (max-width: $_media_laptop) {
+                left: auto;
+                width: 100%;
+                background-position: bottom;
+
+            }
         }
 
         &-wrapper {
